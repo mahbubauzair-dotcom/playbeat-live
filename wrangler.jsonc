@@ -12,11 +12,12 @@
   "observability": {
     "enabled": true
   },
-  "account_id": "0935a1089ed3050082d9a2b69fff2bd7",
+  "account_id": "268d70036461fa09d670d62be71cb78a",
   "kv_namespaces": [
-    { "binding": "VOD_CACHE", "id": "e581041184334233a24f47381c34c9eb" }
+    { "binding": "VOD_CACHE", "id": "da8ab0a7b441440ba0c734fe48b6ff47" }
   ],
   "vars": {},
+  "workers_dev": true,
   "routes": [
     { "pattern": "playbeat.live", "custom_domain": true },
     { "pattern": "www.playbeat.live", "custom_domain": true }

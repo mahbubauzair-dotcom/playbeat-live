@@ -2,7 +2,7 @@
 # PlayBeat TV → Cloudflare Workers + playbeattv.buzz (one command, needs CF_API_TOKEN)
 set -euo pipefail
 : "${CF_API_TOKEN:?export CF_API_TOKEN=<cloudflare api token>}"
-: "${CF_ACCOUNT_ID:=0935a1089ed3050082d9a2b69fff2bd7}"
+: "${CF_ACCOUNT_ID:=268d70036461fa09d670d62be71cb78a}"
 
 cd /home/z/my-project
 
