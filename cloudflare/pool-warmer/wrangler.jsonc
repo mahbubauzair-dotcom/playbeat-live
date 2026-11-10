@@ -1,0 +1,16 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "playbeat-pool-warmer",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-16",
+  "account_id": "0935a1089ed3050082d9a2b69fff2bd7",
+  "kv_namespaces": [
+    { "binding": "VOD_CACHE", "id": "e581041184334233a24f47381c34c9eb" }
+  ],
+  "triggers": {
+    "crons": ["*/20 * * * *"]
+  },
+  "observability": {
+    "enabled": true
+  }
+}

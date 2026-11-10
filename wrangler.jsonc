@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "playbeat-live",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-10-16",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "html_handling": "none",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "account_id": "0935a1089ed3050082d9a2b69fff2bd7",
+  "kv_namespaces": [
+    { "binding": "VOD_CACHE", "id": "e581041184334233a24f47381c34c9eb" }
+  ],
+  "vars": {},
+  "routes": [
+    { "pattern": "playbeat.live", "custom_domain": true },
+    { "pattern": "www.playbeat.live", "custom_domain": true }
+  ]
+}

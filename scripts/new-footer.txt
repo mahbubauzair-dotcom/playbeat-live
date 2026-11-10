@@ -1,0 +1,268 @@
+      {/* ============================ FOOTER ============================ */}
+      <footer className="relative mt-auto overflow-hidden border-t border-white/5 bg-[#05050c] pb-[env(safe-area-inset-bottom)]">
+        {/* ambient accents */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-theme/70 to-transparent"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-48 left-1/2 h-80 w-[54rem] max-w-[90vw] -translate-x-1/2 rounded-full bg-theme/10 blur-[130px]"
+        />
+
+        {/* CTA band */}
+        <div className="relative mx-auto w-full max-w-[1600px] px-4 pt-12 sm:px-6">
+          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-theme/15 via-white/[0.02] to-transparent p-6 sm:p-9">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -right-20 -top-28 size-80 rounded-full bg-theme/20 blur-[100px]"
+            />
+            <div className="relative flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
+              <div>
+                <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.24em] text-theme/80">
+                  PlayBeat TV · Free forever
+                </p>
+                <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
+                  {total.toLocaleString()}+ live channels from {countriesCount} countries.{" "}
+                  <span className="text-zinc-500">No account needed.</span>
+                </h2>
+                <p className="mt-2 max-w-lg text-sm leading-relaxed text-zinc-400">
+                  Breaking news and live sports, Hollywood to Bollywood movies, binge-worthy
+                  dramas — streaming free in your browser or as an installable app.
+                </p>
+              </div>
+              <div className="flex shrink-0 flex-wrap items-center gap-3">
+                <Link
+                  href="/live-tv"
+                  className="inline-flex items-center gap-2 rounded-xl bg-theme px-5 py-2.5 text-sm font-semibold text-zinc-950 shadow-lg shadow-theme/25 transition hover:brightness-110 active:scale-[0.98]"
+                >
+                  <Tv className="size-4" />
+                  Watch Live TV
+                </Link>
+                <Link
+                  href="/movies"
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-semibold text-zinc-100 transition hover:border-theme/50 hover:text-theme active:scale-[0.98]"
+                >
+                  <Film className="size-4" />
+                  Browse Movies
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* link columns */}
+        <div className="relative mx-auto grid w-full max-w-[1600px] gap-10 px-4 py-12 sm:px-6 md:grid-cols-2 lg:grid-cols-[1.4fr_0.9fr_1.3fr_0.9fr_0.9fr]">
+          {/* brand */}
+          <div>
+            <Link href="/" className="inline-flex items-center gap-2">
+              <img
+                src="/brand/logo-mark.png"
+                alt="PlayBeat TV logo"
+                className="size-8 rounded-lg object-cover ring-1 ring-theme/30"
+              />
+              <span className="text-lg font-extrabold tracking-tight">
+                PLAYBEAT <span className="bg-theme bg-clip-text text-transparent">TV</span>
+              </span>
+            </Link>
+            <p className="mt-3 max-w-xs text-xs leading-relaxed text-zinc-500">
+              Turn up the moment. Free live television, movies and dramas — no
+              account, no cost, no catch.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-1.5">
+              {["No login", "No tracking", "Installable app"].map((t) => (
+                <span
+                  key={t}
+                  className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-medium text-zinc-400"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+            <a
+              href="mailto:playbeatdigital@gmail.com"
+              className="mt-5 inline-flex items-center gap-1.5 text-xs text-zinc-500 transition-colors hover:text-theme"
+            >
+              <Mail className="size-3.5" />
+              playbeatdigital@gmail.com
+            </a>
+          </div>
+
+          {/* watch */}
+          <div>
+            <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-500">
+              Watch
+            </h3>
+            <ul className="mt-4 space-y-2.5">
+              {[
+                { href: "/live-tv", label: "Live TV" },
+                { href: "/movies", label: "Movies" },
+                { href: "/series", label: "Series & Dramas" },
+                { href: "/sports", label: "Sports" },
+                { href: "/news", label: "News" },
+              ].map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    className="text-xs text-zinc-400 transition-colors hover:text-theme"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/live-tv"
+                  className="inline-flex items-center gap-1 text-xs font-medium text-theme transition-colors"
+                >
+                  All channels →
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* categories — full crawlable directory */}
+          <div>
+            <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-500">
+              Categories
+            </h3>
+            {/* every discovery page is reachable from every page via
+                crawlable HTML links */}
+            <ul className="mt-4 grid max-w-md grid-cols-2 gap-x-6 space-y-0">
+              {[...categories]
+                .sort(
+                  (a, b) =>
+                    (catCounts[b.id] ?? 0) - (catCounts[a.id] ?? 0) ||
+                    a.name.localeCompare(b.name)
+                )
+                .map((cat) => (
+                  <li key={cat.id} className="mt-2.5">
+                    <Link
+                      href={categoryHref(cat.id)}
+                      className="text-xs text-zinc-400 transition-colors hover:text-theme"
+                    >
+                      {categoryNames[cat.id] ?? cat.name}
+                    </Link>
+                  </li>
+                ))}
+            </ul>
+          </div>
+
+          {/* explore */}
+          <div>
+            <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-500">
+              Explore
+            </h3>
+            <ul className="mt-4 space-y-2.5">
+              <li>
+                <Link href="/" className="text-xs text-zinc-400 transition-colors hover:text-theme">
+                  Browse
+                </Link>
+              </li>
+              <li>
+                <Link href="/countries" className="text-xs text-zinc-400 transition-colors hover:text-theme">
+                  Countries
+                </Link>
+              </li>
+              <li>
+                <Link href="/collection" className="text-xs text-zinc-400 transition-colors hover:text-theme">
+                  Collection
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-xs text-zinc-400 transition-colors hover:text-theme">
+                  About
+                </Link>
+              </li>
+              <InstallAppButton variant="footer" />
+            </ul>
+          </div>
+
+          {/* legal */}
+          <div>
+            <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-500">
+              Legal
+            </h3>
+            <ul className="mt-4 space-y-2.5">
+              <li>
+                <Link href="/privacy-policy" className="text-xs text-zinc-400 transition-colors hover:text-theme">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="text-xs text-zinc-400 transition-colors hover:text-theme">
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link href="/dmca" className="text-xs text-zinc-400 transition-colors hover:text-theme">
+                  DMCA &amp; Copyright
+                </Link>
+              </li>
+              <li>
+                <Link href="/content-policy" className="text-xs text-zinc-400 transition-colors hover:text-theme">
+                  Content Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-1.5 text-xs text-zinc-400 transition-colors hover:text-theme"
+                >
+                  <Info className="size-3" /> About &amp; credits
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* bottom bar */}
+        <div className="relative border-t border-white/5">
+          <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-4 px-4 py-5 sm:px-6">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <nav aria-label="Legal" className="flex flex-wrap items-center gap-x-4 gap-y-1.5">
+                <Link href="/privacy-policy" className="text-[11px] text-zinc-500 transition-colors hover:text-theme">
+                  Privacy Policy
+                </Link>
+                <Link href="/terms" className="text-[11px] text-zinc-500 transition-colors hover:text-theme">
+                  Terms of Service
+                </Link>
+                <Link href="/dmca" className="text-[11px] text-zinc-500 transition-colors hover:text-theme">
+                  DMCA &amp; Copyright
+                </Link>
+                <Link href="/content-policy" className="text-[11px] text-zinc-500 transition-colors hover:text-theme">
+                  Content Policy
+                </Link>
+                <Link href="/about" className="text-[11px] text-zinc-500 transition-colors hover:text-theme">
+                  About
+                </Link>
+              </nav>
+              <button
+                type="button"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-[11px] font-medium text-zinc-400 transition-colors hover:border-theme/50 hover:text-theme"
+              >
+                <ArrowUp className="size-3.5" />
+                Back to top
+              </button>
+            </div>
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-[11px] leading-relaxed text-zinc-600">
+                © 2026 Playbeat TV · Hosts no media — a player &amp; directory for publicly
+                available free-to-air streams. Not affiliated with broadcasters.
+              </p>
+              <p className="text-[11px] text-zinc-600">
+                Catalog generated {generatedAt} · {total.toLocaleString()} channels ·{" "}
+                {countriesCount} countries
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* giant wordmark */}
+        <div aria-hidden className="pointer-events-none relative select-none px-2">
+          <p className="bg-gradient-to-b from-white/[0.05] to-transparent bg-clip-text text-center text-[clamp(3.5rem,13vw,11rem)] font-black leading-[0.85] tracking-tighter text-transparent">
+            PLAYBEAT TV
+          </p>
+        </div>
+      </footer>

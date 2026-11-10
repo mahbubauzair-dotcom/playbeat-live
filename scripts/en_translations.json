@@ -1,0 +1,1353 @@
+{
+ "ddmf": {
+  "name": "DanDan Magic",
+  "summary": "Popular domestic and international shows, including adult films (requires VPN).",
+  "summaryShort": "Popular domestic and international shows, including adult films (requires VPN)",
+  "notes": "Updated based on user feedback: Popular domestic and international shows, including adult films (requires VPN); Screenshot status is not an indicator of the project's status, which will be refreshed automatically later.",
+  "tags": [
+   "Online Movies",
+   "Popular Shows",
+   "Chinese"
+  ]
+ },
+ "sorani": {
+  "name": "Blue Sky Dimension",
+  "summary": "Considered the top anime streaming site by users.",
+  "summaryShort": "Considered the top anime streaming site by users",
+  "notes": "Updated based on user feedback: Considered the top anime streaming site by users; Screenshot status is not an indicator of the project's status, which will be refreshed automatically later.",
+  "tags": [
+   "Online Movies",
+   "Anime",
+   "Streaming"
+  ]
+ },
+ "appmovie": {
+  "name": "APP Cinema",
+  "summary": "Popular domestic and international shows, clean and ad-free.",
+  "summaryShort": "Popular domestic and international shows, clean and ad-free",
+  "notes": "Included based on screenshot information: 5-star recommendation, review notes indicate popular domestic and international shows, clean and ad-free; Screenshot status is not an indicator of the project's status, which will be refreshed automatically later.",
+  "tags": [
+   "Online Movies",
+   "Popular Shows",
+   "Ad-Free"
+  ]
+ },
+ "ai-movie": {
+  "name": "Love Movie",
+  "summary": "Latest popular movies and TV shows.",
+  "summaryShort": "Latest popular movies and TV shows (requires VPN)",
+  "notes": "Included based on screenshot information: 5-star recommendation, review notes indicate latest popular movies and TV shows; Screenshot status is not an indicator of the project's status, further verification needed for access speed, ad interference, copyright and security risks.",
+  "tags": [
+   "Online Movies",
+   "Movies",
+   "TV Shows"
+  ]
+ },
+ "jpyy": {
+  "name": "Gold Medal Movies",
+  "summary": "VIP resources across all platforms (requires VPN for access).",
+  "summaryShort": "VIP resources across all platforms (requires VPN for access)",
+  "notes": "Maintainer feedback indicates the website is inaccessible; Removed from the curated online movies list, with resource records and historical verification information retained.",
+  "tags": [
+   "Online Movies",
+   "VIP Resources",
+   "Chinese"
+  ]
+ },
+ "tv-937": {
+  "name": "937 Movies",
+  "summary": "Watch movies and TV shows from all platforms.",
+  "summaryShort": "Watch movies and TV shows from all platforms (requires VPN)",
+  "notes": "Included based on screenshot information: 5-star recommendation, review notes indicate watching movies and TV shows from all platforms; Screenshot status is not an indicator of the project's status, further verification needed for access speed, ad interference, copyright and security risks.",
+  "tags": [
+   "Online Movies",
+   "Movies & TV",
+   "Chinese"
+  ]
+ },
+ "no-video": {
+  "name": "NoVideo",
+  "summary": "An online streaming site focusing on overseas movies and TV shows.",
+  "summaryShort": "Overseas movies and TV shows aggregator (requires VPN)",
+  "notes": "Updated the access URL from https://www.novipnoad.cc/ to https://novipnoad.org/ based on user feedback; focuses on overseas movies and TV shows, content sources, copyright status, and site security require continuous monitoring.",
+  "tags": [
+   "Online Streaming",
+   "Overseas Drama",
+   "Chinese"
+  ]
+ },
+ "gaze-red": {
+  "name": "GazeVideo",
+  "summary": "An online streaming site focusing on domestic and overseas movies and TV shows, access may require proxy network.",
+  "summaryShort": "Domestic and overseas movies and TV shows (requires VPN)",
+  "notes": "User-recommended resource, focusing on domestic and overseas movies and TV shows; submission notes indicate VPN access is required, content sources, copyright status, and site security require continuous monitoring.",
+  "tags": [
+   "Online Streaming",
+   "Domestic Drama",
+   "Overseas Drama",
+   "Requires VPN"
+  ]
+ },
+ "sotvla": {
+  "name": "SOTVLa",
+  "summary": "An online streaming site focusing on domestic and overseas high-definition movies and TV shows.",
+  "summaryShort": "Domestic and overseas high-definition movies and TV shows",
+  "notes": "User-recommended resource, focusing on domestic and overseas high-definition movies and TV shows; content sources, copyright status, and site security require continuous monitoring.",
+  "tags": [
+   "Online Streaming",
+   "HD Streaming",
+   "Domestic Drama",
+   "Overseas Drama"
+  ]
+ },
+ "xlys": {
+  "name": "XueLuo Video",
+  "summary": "An online streaming site focusing on domestic and overseas movies and TV shows.",
+  "summaryShort": "Domestic and overseas movies and TV shows (requires VPN)",
+  "notes": "Maintainer reported the website is inaccessible; removed from the curated online streaming list, but resource records and historical verification information are preserved.",
+  "tags": [
+   "Online Streaming",
+   "Domestic Drama",
+   "Overseas Drama",
+   "Chinese"
+  ]
+ },
+ "duonao-video": {
+  "name": "DuoNao Video",
+  "summary": "Online cinema for overseas Chinese, access may require proxy network.",
+  "summaryShort": "Online cinema for overseas Chinese (requires VPN)",
+  "notes": "Maintainer confirmed the website is inaccessible; removed from the curated online streaming list, but resource records and historical verification information are preserved.",
+  "tags": [
+   "Online Streaming",
+   "Overseas Chinese",
+   "Requires VPN"
+  ]
+ },
+ "tdgo": {
+  "name": "Freeloaders' Alliance",
+  "summary": "Popular trending shows, ad-free pages, fast access speed (requires VPN).",
+  "summaryShort": "Popular trending shows, ad-free and fast (requires VPN)",
+  "notes": "Updated based on new screenshots: the same URL was originally recorded as 'Huoche Tai Du' (Train Too Crowded), now adjusted to 'Freeloaders Alliance' per the screenshot display name; recommendation index is 5 stars, review notes describe it as popular trending shows, ad-free and fast (requires VPN); screenshot status is not used as the basis for this project's status, which will be updated by the automatic availability detection.",
+  "tags": [
+   "Online Streaming",
+   "Trending Shows",
+   "Ad-Free"
+  ]
+ },
+ "iyf": {
+  "name": "AiYiFan",
+  "summary": "Overseas Chinese video streaming site (requires VPN/VIP restrictions).",
+  "summaryShort": "Overseas Chinese video streaming site (requires VPN/VIP restrictions)",
+  "notes": "Updated based on user input: recommendation rating adjusted to 4 stars, summary updated to overseas Chinese video streaming site (requires VPN/VIP restrictions); subsequent access status will be refreshed by automatic detection.",
+  "tags": [
+   "Online Video",
+   "Overseas Chinese",
+   "Requires VPN"
+  ]
+ },
+ "czzymovie": {
+  "name": "ChangZhang Resources",
+  "summary": "High definition, instant playback without buffering, contains ads.",
+  "summaryShort": "High definition, instant playback without buffering, contains ads",
+  "notes": "Included based on screenshot information: recommendation rating 3 stars, review notes as high definition, instant playback without buffering, contains ads; screenshot status is not used as the basis for this project's status, subsequent verification of access speed, ad interference, copyright and security risks needs to be supplemented.",
+  "tags": [
+   "Online Video",
+   "HD Video",
+   "Has Ads"
+  ]
+ },
+ "libvio": {
+  "name": "LIBVIO",
+  "summary": "A well-established overseas video website, release page www.libvio.app.",
+  "summaryShort": "A well-established overseas video website, release page www.libvio.app",
+  "notes": "Included based on screenshot information: recommendation rating 4 stars, review notes as a well-established overseas video website, release page www.libvio.app; screenshot status is not used as the basis for this project's status, subsequent verification of access speed, ad interference, copyright and security risks needs to be supplemented.",
+  "tags": [
+   "Online Video",
+   "Overseas Video",
+   "Release Page"
+  ]
+ },
+ "auete-video": {
+  "name": "Auete Video",
+  "summary": "Bluray ultra-high quality premium video, release page https://auete.pro.",
+  "summaryShort": "Bluray ultra-high quality premium video, release page auete.pro",
+  "notes": "Updated based on user input: access address changed from https://au1080.com to https://www.aeete.com; recommendation rating 5 stars, review notes as bluray ultra-high quality premium video, release page https://auete.pro; subsequent access status will be refreshed by automatic detection.",
+  "tags": [
+   "Online Video",
+   "HD Video",
+   "Release Page"
+  ]
+ },
+ "dyrs": {
+  "name": "Movie Life",
+  "summary": "Watch HD movies online.",
+  "summaryShort": "Watch HD movies online",
+  "notes": "Included based on screenshot information: recommendation rating 5 stars, review notes as watch HD movies online; screenshot status is not used as the basis for this project's status, subsequent access status will be refreshed by automatic detection.",
+  "tags": [
+   "Online Video",
+   "Movies",
+   "HD Video"
+  ]
+ },
+ "netflixgc": {
+  "name": "Netflix Factory",
+  "summary": "Focuses on the latest American TV shows, ad-free interface (requires VPN).",
+  "summaryShort": "Latest American TV shows, ad-free (requires VPN)",
+  "notes": "Included based on screenshot information: recommendation rating 5 stars, review notes as latest American TV shows, ad-free (requires VPN); screenshot status is not used as the basis for this project's status, subsequent access status will be refreshed by automatic detection.",
+  "tags": [
+   "Online Video",
+   "American TV Shows",
+   "Ad-Free"
+  ]
+ },
+ "nfyingshi": {
+  "name": "Naifei Movie",
+  "summary": "Popular American TV series (requires VPN/VIP restrictions).",
+  "summaryShort": "Popular American TV series (requires VPN/VIP restrictions)",
+  "notes": "Updated based on user feedback: Recommendation rating adjusted to 3 stars, summary is 'Popular American TV series (requires VPN/VIP restrictions)'; subsequent availability status will be refreshed by automated detection.",
+  "tags": [
+   "Online Video",
+   "American TV",
+   "No Ads"
+  ]
+ },
+ "nivod": {
+  "name": "Ni Video",
+  "summary": "Popular Chinese TV series with fast updates and no ads.",
+  "summaryShort": "Popular Chinese TV, fast updates, no ads",
+  "notes": "Maintainer feedback indicates the website is inaccessible; removed from the featured online video list, with resource records and historical verification information retained.",
+  "tags": [
+   "Online Video",
+   "Chinese TV",
+   "No Ads"
+  ]
+ },
+ "ppnix": {
+  "name": "PPnix",
+  "summary": "Watch movies and TV series online.",
+  "summaryShort": "Watch movies and TV series online",
+  "notes": "Re-included based on user feedback; page loads and lists movies and TV series. Recommendation rating 5 stars, summary: Watch movies and TV series online. Subsequent availability will be continuously monitored by GitHub Actions.",
+  "tags": [
+   "Online Video",
+   "Movies",
+   "TV Series"
+  ]
+ },
+ "dbku": {
+  "name": "Duboku",
+  "summary": "No ads on the page, providing a clean experience.",
+  "summaryShort": "No ads on page, clean",
+  "notes": "Included based on screenshot information: Recommendation rating 4 stars, review notes 'no ads on page, clean'; screenshot status is not used as the status basis for this project, subsequent availability will be refreshed by automated detection.",
+  "tags": [
+   "Online Video",
+   "Clean",
+   "No Ads"
+  ]
+ },
+ "bubu-zhuiju": {
+  "name": "Bubu TV",
+  "summary": "Fast speed with acceptable ads.",
+  "summaryShort": "Fast speed, acceptable ads",
+  "notes": "Included based on user feedback: Recommendation rating 4 stars, summary is 'fast speed with acceptable ads'; submission status is not used as the status basis for this project, subsequent availability will be refreshed by automated detection.",
+  "tags": [
+   "Online Video",
+   "TV Shows",
+   "Has Ads"
+  ]
+ },
+ "yingmao-cangku": {
+  "name": "Yingmang Warehouse",
+  "summary": "Popular movies and TV series with acceptable ads.",
+  "summaryShort": "Popular movies and TV series, acceptable ads",
+  "notes": "Included based on user feedback: Recommendation rating 4 stars, summary is 'popular movies and TV series with acceptable ads'; submission status is not used as the status basis for this project, subsequent availability will be refreshed by automated detection.",
+  "tags": [
+   "Online Video",
+   "Popular Movies",
+   "Has Ads"
+  ]
+ },
+ "kazumi": {
+  "name": "Kazumi",
+  "summary": "Free, ad-free / Online anime series.",
+  "summaryShort": "Free, ad-free / Online anime series",
+  "notes": "Added Kazumi download page based on user contribution; Summary is 'Free, ad-free / Online anime series', supports Android / iOS / Windows / macOS / HarmonyOS. Application installation sources, content sources, copyright status, and privacy security require continuous observation.",
+  "tags": [
+   "MovieApp",
+   "Anime",
+   "Series",
+   "AdFree",
+   "Android",
+   "iOS",
+   "Windows",
+   "macOS",
+   "HarmonyOS"
+  ]
+ },
+ "selenetv-app": {
+  "name": "SeleneTV",
+  "summary": "Cross-platform MoonTV client.",
+  "summaryShort": "Cross-platform MoonTV client",
+  "notes": "Added SeleneTV download instruction page based on user contribution; Summary is 'Cross-platform MoonTV client', supports Android, iOS, macOS and Windows. Application installation sources, content sources, copyright status, and privacy security require continuous observation.",
+  "tags": [
+   "MovieApp",
+   "MoonTV",
+   "Helios",
+   "Client",
+   "Android",
+   "iOS",
+   "macOS",
+   "Windows"
+  ]
+ },
+ "ios-yingshi-app": {
+  "name": "iOS MovieApp",
+  "summary": "Collection of various available iOS movie apps.",
+  "summaryShort": "Collection of various available apps",
+  "notes": "Maintainer personally tested and included multiple free iOS movie apps that are disguised and listed on the App Store; The apps contain ads, and their listing status, content sources, copyright, and privacy security require continuous observation.",
+  "tags": [
+   "MovieApp",
+   "iOS",
+   "Series",
+   "AppCollection"
+  ]
+ },
+ "zimuku": {
+  "name": "Zimuku",
+  "summary": "Subtitle downloads.",
+  "summaryShort": "Subtitle downloads",
+  "notes": "Included based on screenshot information: Recommended index 5 stars, review note is 'Subtitle downloads'; Screenshot status is not used as the basis for this project's status. Later, access speed, ad interference, copyright, and download security verification need to be supplemented.",
+  "tags": [
+   "Subtitle",
+   "SubtitleDownload",
+   "Chinese"
+  ]
+ },
+ "assrt": {
+  "name": "Assrt",
+  "summary": "Subtitle downloads.",
+  "summaryShort": "Subtitle downloads",
+  "notes": "Included based on screenshot information: Recommended index 5 stars, review note is 'Subtitle downloads'; Screenshot status is not used as the basis for this project's status. Later, access speed, ad interference, copyright, and download security verification need to be supplemented.",
+  "tags": [
+   "Subtitle",
+   "SubtitleDownload",
+   "Chinese"
+  ]
+ },
+ "subhd": {
+  "name": "SubHD",
+  "summary": "Platform for sharing and downloading subtitles.",
+  "summaryShort": "Platform for sharing and downloading subtitles",
+  "notes": "Included based on screenshot information: Recommended index 5 stars, review note is 'Platform for sharing and downloading subtitles'; Screenshot status is not used as the basis for this project's status. Later, access speed, ad interference, copyright, and download security verification need to be supplemented.",
+  "tags": [
+   "Subtitle",
+   "SubtitleDownload",
+   "SharingPlatform"
+  ]
+ },
+ "aikanbot": {
+  "name": "AiKan Bot",
+  "summary": "Popular movies and TV shows (with redirect ads).",
+  "summaryShort": "Popular movies and TV shows (with redirect ads)",
+  "notes": "Adjusted recommendation index from 5 stars to 3 stars based on user feedback, summary updated to Popular movies and TV shows (with redirect ads); subsequent automatic detection will refresh accessibility status, with continuous observation of redirect ads, copyright status, and site security.",
+  "tags": [
+   "Online Video",
+   "Movies",
+   "TV Shows",
+   "Has Ads",
+   "Redirect Ads"
+  ]
+ },
+ "duse91": {
+  "name": "91DuShe",
+  "summary": "Latest Netflix new shows, 4K HD (accessible).",
+  "summaryShort": "Latest Netflix new shows, 4K HD (accessible)",
+  "notes": "Updated summary to Latest Netflix new shows, 4K HD (accessible) based on user feedback; submission status is not used as the project status basis, subsequent automatic detection will refresh accessibility status.",
+  "tags": [
+   "Online Video",
+   "Netflix",
+   "4K",
+   "HD Video"
+  ]
+ },
+ "guangsu-yingshi": {
+  "name": "GuangSu TV",
+  "summary": "As an alternative, clean and ad-free.",
+  "summaryShort": "As an alternative, clean and ad-free",
+  "notes": "Upon maintainer review, the website is inaccessible and was removed from the curated online streaming list on 2026-09-12. Resource records and historical verification information are retained.",
+  "tags": [
+   "Online Video",
+   "Alternative",
+   "No Ads"
+  ]
+ },
+ "haohaokan": {
+  "name": "HaoHaoKan",
+  "summary": "4K HD Netflix new shows (requires VPN for access).",
+  "summaryShort": "4K HD Netflix new shows (requires VPN for access)",
+  "notes": "Updated summary to 4K HD Netflix new shows (requires VPN for access) based on user feedback; submission status is not used as the project status basis, subsequent automatic detection will refresh accessibility status.",
+  "tags": [
+   "Online Video",
+   "Netflix",
+   "4K",
+   "HD Video"
+  ]
+ },
+ "ifn": {
+  "name": "IFN",
+  "summary": "One of the few true 4K sources, partially free.",
+  "summaryShort": "One of the few true 4K sources, partially free",
+  "notes": "Maintainer feedback indicates IFN has been deleted; removed from the Featured Online Movies list, with resource records and historical verification information retained.",
+  "tags": [
+   "Online Video",
+   "4K",
+   "Partially Free"
+  ]
+ },
+ "animeko-app": {
+  "name": "Animeko",
+  "summary": "Online danmaku anime following platform.",
+  "summaryShort": "Online danmaku anime following platform",
+  "notes": "Added Animeko download page based on user submission; summary is Online danmaku anime following platform, supporting Android, Windows, macOS, Linux, and iOS. Application installation sources, content sources, copyright status, and privacy security require continuous observation.",
+  "tags": [
+   "Video App",
+   "Anime",
+   "Anime Following",
+   "Danmaku",
+   "Android",
+   "Windows",
+   "macOS",
+   "Linux",
+   "iOS"
+  ]
+ },
+ "kodi": {
+  "name": "Kodi",
+  "summary": "Open-source, cross-platform home theater software.",
+  "summaryShort": "Open-source, cross-platform home theater",
+  "notes": "Official website and download link accessible; third-party plugin risks require individual assessment.",
+  "tags": [
+   "Open Source",
+   "Player",
+   "Cross-Platform"
+  ]
+ },
+ "iptv-org": {
+  "name": "IPTV-org",
+  "summary": "Community-maintained collection of public IPTV channels and related data.",
+  "summaryShort": "Community-maintained public IPTV channel collection",
+  "notes": "Repository accessible; channel availability and licensing status vary by source.",
+  "tags": [
+   "IPTV",
+   "Open Source",
+   "Source"
+  ]
+ },
+ "fan-tai-ying": {
+  "name": "Fan Tai Ying",
+  "summary": "Media warehouse configuration address.",
+  "summaryShort": "Media warehouse configuration address",
+  "notes": "User-submitted media warehouse configuration addresses, included with 5-star rating; users must independently evaluate configuration content, interface stability, copyright status, and security risks, with subsequent automatic detection refreshing accessibility status.",
+  "tags": [
+   "Media Warehouse",
+   "Config Address",
+   "TVBox"
+  ]
+ },
+ "fei-mao": {
+  "name": "Fei Mao",
+  "summary": "Media warehouse configuration address.",
+  "summaryShort": "Media warehouse configuration address",
+  "notes": "User-submitted media warehouse configuration addresses, included with 5-star rating; users must independently evaluate configuration content, interface stability, copyright status, and security risks, with subsequent automatic detection refreshing accessibility status.",
+  "tags": [
+   "Media Warehouse",
+   "Config Address",
+   "TVBox"
+  ]
+ },
+ "lao-liu-bei": {
+  "name": "Lao Liu Bei",
+  "summary": "Media warehouse configuration address.",
+  "summaryShort": "Media warehouse configuration address",
+  "notes": "User-submitted media warehouse configuration addresses, included with 4-star rating; users must independently evaluate configuration content, interface stability, copyright status, and security risks, with subsequent automatic detection refreshing accessibility status.",
+  "tags": [
+   "Media Warehouse",
+   "Config Address",
+   "TVBox"
+  ]
+ },
+ "xiao-ma": {
+  "name": "Xiao Ma",
+  "summary": "Media warehouse configuration address.",
+  "summaryShort": "Media warehouse configuration address",
+  "notes": "User-submitted media warehouse configuration addresses, included with 4-star rating; users must independently evaluate configuration content, interface stability, copyright status, and security risks, with subsequent automatic detection refreshing accessibility status.",
+  "tags": [
+   "Media Warehouse",
+   "Config Address",
+   "TVBox"
+  ]
+ },
+ "mo-yu-er": {
+  "name": "Mo Yu Er",
+  "summary": "Movie warehouse configuration address.",
+  "summaryShort": "Movie warehouse configuration address",
+  "notes": "User-submitted movie warehouse configuration address, included with 5 stars; users need to judge the configuration content, interface stability, copyright status and security risks by themselves, and the subsequent automatic detection will refresh the accessibility status.",
+  "tags": [
+   "Movie Warehouse",
+   "Configuration Address",
+   "TVBox"
+  ]
+ },
+ "wang-er-xiao": {
+  "name": "Wang Er Xiao",
+  "summary": "Movie warehouse configuration address.",
+  "summaryShort": "Movie warehouse configuration address",
+  "notes": "User-submitted movie warehouse configuration address, included with 5 stars; users need to judge the configuration content, interface stability, copyright status and security risks by themselves, and the subsequent automatic detection will refresh the accessibility status.",
+  "tags": [
+   "Movie Warehouse",
+   "Configuration Address",
+   "TVBox"
+  ]
+ },
+ "xiao-he-zi-4k": {
+  "name": "Xiao He Zi 4K",
+  "summary": "Movie warehouse configuration address.",
+  "summaryShort": "Movie warehouse configuration address",
+  "notes": "User-submitted movie warehouse configuration address, included with 5 stars; users need to judge the configuration content, interface stability, copyright status and security risks by themselves, and the subsequent automatic detection will refresh the accessibility status.",
+  "tags": [
+   "Movie Warehouse",
+   "Configuration Address",
+   "TVBox"
+  ]
+ },
+ "xiao-he-zi-single": {
+  "name": "Xiao He Zi Single",
+  "summary": "Movie warehouse configuration address.",
+  "summaryShort": "Movie warehouse configuration address",
+  "notes": "User-submitted movie warehouse configuration address, included with 4 stars; users need to judge the configuration content, interface stability, copyright status and security risks by themselves, and the subsequent automatic detection will refresh the accessibility status.",
+  "tags": [
+   "Movie Warehouse",
+   "Configuration Address",
+   "TVBox"
+  ]
+ },
+ "vox": {
+  "name": "VOX",
+  "summary": "Movie warehouse configuration address.",
+  "summaryShort": "Movie warehouse configuration address",
+  "notes": "User-submitted movie warehouse configuration address, included with 4 stars; users need to judge the configuration content, interface stability, copyright status and security risks by themselves, and the subsequent automatic detection will refresh the accessibility status.",
+  "tags": [
+   "Movie Warehouse",
+   "Configuration Address",
+   "TVBox"
+  ]
+ },
+ "ao-wu": {
+  "name": "Ao Wu",
+  "summary": "Movie warehouse configuration address.",
+  "summaryShort": "Movie warehouse configuration address",
+  "notes": "User-submitted movie warehouse configuration address, included with 4 stars; users need to judge the configuration content, interface stability, copyright status and security risks by themselves, and the subsequent automatic detection will refresh the accessibility status.",
+  "tags": [
+   "Movie Warehouse",
+   "Configuration Address",
+   "TVBox"
+  ]
+ },
+ "wu-ming": {
+  "name": "Wu Ming",
+  "summary": "Movie warehouse configuration address.",
+  "summaryShort": "Movie warehouse configuration address",
+  "notes": "User-submitted movie warehouse configuration address, included with 4 stars; configuration content, interface stability, copyright status, and security risks need to be judged by the user, and subsequent automatic detection will refresh the accessibility status.",
+  "tags": [
+   "Movie Warehouse",
+   "Configuration Address",
+   "TVBox"
+  ]
+ },
+ "xiao-he-zi-multi": {
+  "name": "Xiao Hezi Multi",
+  "summary": "Movie warehouse configuration address.",
+  "summaryShort": "Movie warehouse configuration address",
+  "notes": "User-submitted movie warehouse configuration address, included with 5 stars; configuration content, interface stability, copyright status, and security risks need to be judged by the user, and subsequent automatic detection will refresh the accessibility status.",
+  "tags": [
+   "Movie Warehouse",
+   "Configuration Address",
+   "TVBox"
+  ]
+ },
+ "shi-guang-multi": {
+  "name": "Shiguang Multi Store",
+  "summary": "Movie store configuration address.",
+  "summaryShort": "Movie store configuration address",
+  "notes": "User-submitted movie store configuration addresses are accepted with 5 stars. Users must judge configuration content, interface stability, copyright status, and security risks. Subsequent automatic detection will refresh the accessibility status.",
+  "tags": [
+   "Movie Store",
+   "Config Address",
+   "TVBox"
+  ]
+ },
+ "ting-hao-share-multi": {
+  "name": "Ting Hao Share Multi Store",
+  "summary": "Movie store configuration address.",
+  "summaryShort": "Movie store configuration address",
+  "notes": "User-submitted movie store configuration address, collected with 5 stars; configuration content, interface stability, copyright status, and security risks need to be judged by the user, and subsequent automatic detection will refresh the accessibility status.",
+  "tags": [
+   "Movie Store",
+   "Config Address",
+   "TVBox"
+  ]
+ },
+ "xiao-he-zi": {
+  "name": "Xiao Hezi",
+  "summary": "Professional TV toolbox, free and easy to use.",
+  "summaryShort": "Professional TV toolbox, free and easy to use",
+  "notes": "User-submitted movie store configuration address, accepted with 4 stars. Users must evaluate configuration content, interface stability, copyright status, and security risks. Subsequent automatic detection will update accessibility status.",
+  "tags": [
+   "Movie Store",
+   "TV Toolbox",
+   "Collection Page"
+  ]
+ },
+ "juhebd": {
+  "name": "BD Movie Aggregation",
+  "summary": "Provides the latest HD movie and TV show download resources.",
+  "summaryShort": "Latest HD Movie And TV Show Downloads",
+  "notes": "Added based on user supplement: Recommendation index 5 stars, description is latest HD movie and TV show downloads; submission status is not a basis for this project's status, content sources, copyright status, and link security require continuous observation.",
+  "tags": [
+   "Magnet",
+   "BT",
+   "Movie",
+   "TV Show",
+   "HD"
+  ]
+ },
+ "ainunu": {
+  "name": "AiNuNu",
+  "summary": "Provides green movie and TV download resources.",
+  "summaryShort": "Green movie and TV download",
+  "notes": "Added based on user supplement: Recommended index 4 stars, summary is green movie and TV download; submission status is not a basis for this project's status, content source, copyright status and link security need continuous observation.",
+  "tags": [
+   "Magnet",
+   "BT",
+   "MovieTVDownload"
+  ]
+ },
+ "bdflixs": {
+  "name": "BD Movie Premier",
+  "summary": "Provides 4K Blu-ray HD movie updates.",
+  "summaryShort": "4K Blu-ray HD movie updates",
+  "notes": "Added based on user supplement: Recommended index 5 stars, summary is 4K Blu-ray HD movie updates; submission status is not a basis for this project's status, content source, copyright status and link security need continuous observation.",
+  "tags": [
+   "Magnet",
+   "BT",
+   "Movie",
+   "4K",
+   "Blu-ray"
+  ]
+ },
+ "ldysg": {
+  "name": "Movie Time Finder",
+  "summary": "Provides high-definition, no-watermark movie and TV download resources.",
+  "summaryShort": "High-definition no-watermark movieTV download",
+  "notes": "Added based on user supplement: Recommended index 5 stars, summary is high-definition no-watermark movie and TV download; submission status is not a basis for this project's status, content source, copyright status and link security need continuous observation.",
+  "tags": [
+   "Magnet",
+   "BT",
+   "MovieTVDownload",
+   "HD",
+   "NoWatermark"
+  ]
+ },
+ "meijufen": {
+  "name": "American Drama Fan",
+  "summary": "All HD no ads.",
+  "summaryShort": "All HD no ads",
+  "notes": "Added based on screenshot information: Recommended index 5 stars, review note is all HD no ads; screenshot status is not a basis for this project's status, content source, copyright status and link security need continuous observation.",
+  "tags": [
+   "Magnet",
+   "BT",
+   "AmericanDrama",
+   "HD"
+  ]
+ },
+ "cilixiong": {
+  "name": "Magnet Bear",
+  "summary": "No cuts, no ads.",
+  "summaryShort": "No cuts, no ads",
+  "notes": "Added based on screenshot information: Recommended index 5 stars, review note is no cuts, no ads; screenshot status is not a basis for this project's status, content source, copyright status and link security need continuous observation.",
+  "tags": [
+   "Magnet",
+   "BT",
+   "HD"
+  ]
+ },
+ "ciligou": {
+  "name": "Magnet Dog",
+  "summary": "Clean and easy-to-use magnet resource search.",
+  "summaryShort": "Clean and easy-to-use magnet resource search",
+  "notes": "Updated access address to https://ciligou.net based on user supplement and adjusted recommended index to 3 stars; content source, copyright status and link security need continuous observation.",
+  "tags": [
+   "Magnet",
+   "BT",
+   "ResourceSearch"
+  ]
+ },
+ "cilidi": {
+  "name": "CiliDi",
+  "summary": "Address publication page cldi.top.",
+  "summaryShort": "Address publication page cldi.top",
+  "notes": "Included based on user additions: Recommended rating 5 stars, summary is address publication page cldi.top; submission status is not a basis for this project's status, content source, copyright status and link security require continuous observation.",
+  "tags": [
+   "Magnet",
+   "BT",
+   "Page"
+  ]
+ },
+ "bt-yingshi": {
+  "name": "BT Movie",
+  "summary": "4K HD movie BT downloads.",
+  "summaryShort": "4K HD movie BT downloads",
+  "notes": "Included based on screenshot information: Recommended rating 5 stars, review note is 4K HD movie BT downloads; screenshot status is not a basis for this project's status, content source, copyright status and link security require continuous observation.",
+  "tags": [
+   "Magnet",
+   "BT",
+   "4K",
+   "Movie"
+  ]
+ },
+ "4k-yuanpan": {
+  "name": "POMO",
+  "summary": "Free 4K original disc downloads.",
+  "summaryShort": "Free 4K original disc downloads",
+  "notes": "Updated website name to POMO based on user additions, and confirmed recommended rating 5 stars, summary is free 4K original disc downloads; submission status is not a basis for this project's status, content source, copyright status and link security require continuous observation.",
+  "tags": [
+   "Magnet",
+   "BT",
+   "4K",
+   "Original Disc"
+  ]
+ },
+ "dianyinggang": {
+  "name": "Movie Gang",
+  "summary": "Watermark-free 4K HD BT seed resources.",
+  "summaryShort": "Watermark-free 4K HD BT seed resources",
+  "notes": "Included based on user additions: Recommended rating 4 stars, review note is watermark-free 4K HD BT seed resources; submission status is not a basis for this project's status, content source, copyright status and link security require continuous observation.",
+  "tags": [
+   "Magnet",
+   "BT",
+   "4K",
+   "Movie"
+  ]
+ },
+ "btshijiewang": {
+  "name": "BT World",
+  "summary": "HD movies and US TV shows BT seed Thunder downloads.",
+  "summaryShort": "HD movies and US TV shows BT seed Thunder downloads",
+  "notes": "Included based on user additions: Recommended rating 5 stars, review note is HD movies and US TV shows BT seed Thunder downloads; submission status is not a basis for this project's status, content source, copyright status and link security require continuous observation.",
+  "tags": [
+   "Magnet",
+   "BT",
+   "Movie",
+   "US TV Shows"
+  ]
+ },
+ "gaoqing-mp4": {
+  "name": "HD MP4",
+  "summary": "Free 1080P and 4K movies.",
+  "summaryShort": "Free 1080P and 4K movies",
+  "notes": "Included based on user additions: Recommended rating 4 stars, review note is free 1080P and 4K movies; submission status is not a basis for this project's status, content source, copyright status and link security require continuous observation.",
+  "tags": [
+   "Magnet",
+   "BT",
+   "1080P",
+   "4K"
+  ]
+ },
+ "gaoqingzu": {
+  "name": "HD Family",
+  "summary": "1080P movie downloads, 4K movie downloads.",
+  "summaryShort": "1080P movie downloads, 4K movie downloads",
+  "notes": "Added based on user supplement: Recommendation index 3 stars, review notes as 1080P movie downloads, 4K movie downloads; submission status is not used as the project status basis, content source, copyright status and link security need continuous observation.",
+  "tags": [
+   "Magnet",
+   "BT",
+   "1080P",
+   "4K"
+  ]
+ },
+ "kuake-so-1": {
+  "name": "PanSou",
+  "summary": "A clean Quark cloud drive resource search engine.",
+  "summaryShort": "A clean Quark cloud drive resource search engine",
+  "notes": "Candidate resources have been included as featured; aggregates public cloud drive sharing links, content copyright and link security need to be judged by the user. Submitter risk note: No ads.",
+  "tags": [
+   "Cloud Drive Search",
+   "Quark Cloud Drive",
+   "Chinese"
+  ]
+ },
+ "kuakeso": {
+  "name": "KK Cloud Drive Search",
+  "summary": "A cloud drive search site that supports Quark and Baidu cloud drive resource search.",
+  "summaryShort": "Quark and Baidu Cloud Drive Search",
+  "notes": "User-recommended resource, supports Quark and Baidu cloud drive search; content source, copyright status and link security need continuous observation.",
+  "tags": [
+   "Cloud Drive Search",
+   "Quark Cloud Drive",
+   "Baidu Cloud Drive",
+   "Chinese"
+  ]
+ },
+ "zhuiju-us": {
+  "name": "TV Show Tracker",
+  "summary": "A search site for movie and TV show cloud drive resources.",
+  "summaryShort": "Domestic and international popular movie and TV show cloud drive resource search",
+  "notes": "User-recommended resource, focuses on movie and TV show cloud drive resource search; content source, copyright status and link security need continuous observation.",
+  "tags": [
+   "Cloud Drive Search",
+   "Movie and TV Resources",
+   "Chinese"
+  ]
+ },
+ "gugeso": {
+  "name": "Google Search",
+  "summary": "A cloud drive search site that supports multiple cloud drive resource searches.",
+  "summaryShort": "A comprehensive search site supporting 9 cloud drives",
+  "notes": "User-recommended resource, supports multiple cloud drive searches; content source, copyright status and link security need continuous observation.",
+  "tags": [
+   "Cloud Drive Search",
+   "Multi-Cloud Drive",
+   "Chinese"
+  ]
+ },
+ "moontvplus": {
+  "name": "MoonTVPlus",
+  "summary": "MoonTVPlus is an enhanced version of the MoonTV v100-based movie and TV show aggregation player.",
+  "summaryShort": "MoonTV enhanced movie and TV show aggregation player",
+  "notes": "Included based on GitHub public repository information; star count and repository update time from GitHub API.",
+  "tags": [
+   "Open Source Project",
+   "Movie and TV Aggregation",
+   "Player"
+  ]
+ },
+ "zyfun": {
+  "name": "zyfun",
+  "summary": "zyfun is a cross-platform desktop video resource player.",
+  "summaryShort": "Cross-platform desktop video resource player",
+  "notes": "Included based on GitHub public repository information; star count and repository update time from GitHub API.",
+  "tags": [
+   "Open Source Project",
+   "Video Player",
+   "Cross-Platform"
+  ]
+ },
+ "iptv-api": {
+  "name": "iptv-api",
+  "summary": "iptv-api is an IPTV live source auto-update platform supporting collection, filtering, speed testing, and generation.",
+  "summaryShort": "IPTV live source auto-collection and filtering update platform",
+  "notes": "Included based on GitHub public repository information; star count and repository update time from GitHub API.",
+  "tags": [
+   "Open Source Project",
+   "IPTV",
+   "Live Source"
+  ]
+ },
+ "iptv-org-iptv": {
+  "name": "iptv",
+  "summary": "iptv-org/iptv collects globally available public IPTV channels.",
+  "summaryShort": "Global public IPTV channel collection",
+  "notes": "Included based on GitHub public repository information; star count and repository update time from GitHub API.",
+  "tags": [
+   "Open Source Project",
+   "IPTV",
+   "Live Source"
+  ]
+ },
+ "pansou": {
+  "name": "pansou",
+  "summary": "PanSou is a high-performance cloud drive resource search API service, supporting TG channel and plugin search.",
+  "summaryShort": "High-performance cloud drive resource search API service",
+  "notes": "Included based on GitHub public repository information; star count and repository update time from GitHub API.",
+  "tags": [
+   "Open Source Project",
+   "Cloud Drive Search",
+   "API"
+  ]
+ },
+ "cloudsaver": {
+  "name": "CloudSaver",
+  "summary": "CloudSaver is a cloud drive resource search and transfer tool based on Vue 3 and Express.",
+  "summaryShort": "Cloud drive resource search and transfer tool",
+  "notes": "Included based on GitHub public repository information; star count and repository update time from GitHub API.",
+  "tags": [
+   "Open Source Project",
+   "Cloud Drive Search",
+   "Transfer"
+  ]
+ },
+ "quark-auto-save": {
+  "name": "quark-auto-save",
+  "summary": "quark-auto-save supports Quark cloud drive check-in, auto-transfer, naming organization, and push notifications.",
+  "summaryShort": "Quark cloud drive auto-check-in and transfer organization tool",
+  "notes": "Included based on GitHub public repository information; star count and repository update time from GitHub API.",
+  "tags": [
+   "Open Source Project",
+   "Quark Cloud Drive",
+   "Auto Transfer"
+  ]
+ },
+ "animeko": {
+  "name": "Animeko",
+  "summary": "Animeko is an all-in-one danmaku platform for finding, following, and watching anime.",
+  "summaryShort": "All-in-one danmaku anime platform",
+  "notes": "Included based on public GitHub repository information; star count and repository update time from GitHub API.",
+  "tags": [
+   "Open Source",
+   "Anime",
+   "Danmaku"
+  ]
+ },
+ "predidit-kazumi": {
+  "name": "Kazumi",
+  "summary": "Kazumi is a free, ad-free anime scraping and online viewing project.",
+  "summaryShort": "Free ad-free anime scraping and online viewing",
+  "notes": "Included based on public GitHub repository information; star count and repository update time from GitHub API.",
+  "tags": [
+   "Open Source",
+   "Anime",
+   "Online Viewing",
+   "Ad-Free"
+  ]
+ },
+ "selenetv": {
+  "name": "SeleneTV",
+  "summary": "SeleneTV is a client based on MoonTV v100 / Helios backend.",
+  "summaryShort": "MoonTV v100/Helios backend client",
+  "notes": "Included based on public GitHub repository information; star count and repository update time from GitHub API.",
+  "tags": [
+   "Open Source",
+   "MoonTV",
+   "Helios",
+   "Client"
+  ]
+ },
+ "webhometv": {
+  "name": "WebHomeTV",
+  "summary": "WebHomeTV is an Android media app based on a secondary development of FongMi / CatVod.",
+  "summaryShort": "Android media app based on FongMi/CatVod fork",
+  "notes": "Included based on public GitHub repository information; star count and repository update time from GitHub API.",
+  "tags": [
+   "Open Source",
+   "Android",
+   "FongMi",
+   "CatVod",
+   "Media App"
+  ]
+ },
+ "webhometv2": {
+  "name": "WebHomeTV2",
+  "summary": "WebHomeTV2 is a fork of WebHomeTV that supports TMDB posters.",
+  "summaryShort": "Fork of WebHomeTV with TMDB poster support",
+  "notes": "Included based on public GitHub repository information; star count and repository update time from GitHub API.",
+  "tags": [
+   "Open Source",
+   "Android",
+   "WebHomeTV",
+   "TMDB",
+   "Media App"
+  ]
+ },
+ "tv-xn-yhqu5zs87a-top-3": {
+  "name": "FongMi Movie",
+  "summary": "TVBox fork with video sources, tested on mobile and tablet",
+  "summaryShort": "TVBox fork with video sources, tested on mobile and tablet",
+  "notes": "Maintainer @laoma2053 has confirmed inclusion with ok. Test info: 2026-07-10 Mainland. Submitter risk note: No ads",
+  "tags": [
+   "TVBox"
+  ]
+ },
+ "yangke-peekpro": {
+  "name": "Yangke PeekPro",
+  "summary": "A fork of FongMi with optimizations for themes and danmaku.",
+  "summaryShort": "A fork of FongMi with optimizations for themes and danmaku",
+  "notes": "A TVBox/Yingshicang shell resource added by a maintainer, rated 5 stars; based on a fork of FongMi with optimizations for themes, danmaku, and player experience. Subsequently refreshed by automatic detection of accessible status.",
+  "tags": [
+   "TVBox",
+   "Yingshicang",
+   "FongMi",
+   "Android TV"
+  ]
+ },
+ "webhometv-player": {
+  "name": "WebHomeTV",
+  "summary": "A fork of FongMi / CatVod with 8 enhancements.",
+  "summaryShort": "A fork of FongMi / CatVod with 8 enhancements",
+  "notes": "A TVBox/Yingshicang shell resource added by a maintainer, rated 5 stars; based on a fork of FongMi / CatVod with 8 key enhancements, especially for the homepage. Subsequently refreshed by automatic detection of accessible status.",
+  "tags": [
+   "TVBox",
+   "Yingshicang",
+   "FongMi",
+   "CatVod",
+   "Android TV"
+  ]
+ },
+ "ok-yingshi-player": {
+  "name": "OK Movie",
+  "summary": "OK Movie = FongMi Fengmi version + various new features.",
+  "summaryShort": "OK Movie = FongMi Fengmi version + various new features",
+  "notes": "A TVBox/Yingshicang shell resource added by a maintainer, rated 5 stars; OK Movie = FongMi Fengmi version + various new features. Subsequently refreshed by automatic detection of accessible status.",
+  "tags": [
+   "TVBox",
+   "Yingshicang",
+   "FongMi",
+   "Android TV"
+  ]
+ },
+ "fongmi-fengmi": {
+  "name": "FongMi Fengmi",
+  "summary": "A fork of CatVod, supporting Android TV and mobile devices.",
+  "summaryShort": "A fork of CatVod, supporting Android TV and mobile devices",
+  "notes": "A TVBox/Yingshicang shell resource added by a maintainer, rated 5 stars; based on a fork of CatVod, supporting Android TV screens and mobile devices. Subsequently refreshed by automatic detection of accessible status.",
+  "tags": [
+   "TVBox",
+   "Yingshicang",
+   "FongMi",
+   "CatVod",
+   "Android TV",
+   "Android"
+  ]
+ },
+ "yingshicang-player": {
+  "name": "Yingshicang",
+  "summary": "A fork of TVBox, the most famous among modified versions.",
+  "summaryShort": "A fork of TVBox, the most famous among modified versions",
+  "notes": "A TVBox/Yingshicang shell resource added by a maintainer, rated 5 stars; a fork of TVBox, it is a well-known shell application among modified versions. Subsequently refreshed by automatic detection of accessible status.",
+  "tags": [
+   "TVBox",
+   "Yingshicang",
+   "Android TV"
+  ]
+ },
+ "sidhub-cc-7": {
+  "name": "SeedHub",
+  "summary": "A platform for sharing movies and anime with a clean, ad-free interface.",
+  "summaryShort": "A platform for sharing movies and anime with a clean, ad-free interface",
+  "notes": "Approved for inclusion by maintainer @laoma2053. Test info: July 14, 2026, Mainland China. Maintainer notes: A platform for sharing movies and anime with a clean, ad-free interface; 5-star recommendation. Submitter risk note: None",
+  "tags": [
+   "Magnet & BT"
+  ]
+ },
+ "acg-rip-10": {
+  "name": "ACG.RIP",
+  "summary": "A torrent-focused platform for anime and OSTs, no ads.",
+  "summaryShort": "A torrent-focused platform for anime and OSTs, no ads",
+  "notes": "Maintainer @laoma2053 has confirmed inclusion with ok. Test info: 2026-7-19, Japan. Submitter risk note: No ads, redirects, inducement to download or privacy issues found yet. Copyright status unknown. No payment functionality. **Not accessible in mainland China**.",
+  "tags": [
+   "Magnet & BT"
+  ]
+ },
+ "github-com-12": {
+  "name": "sky-tv",
+  "summary": "A modern cross-platform video player shell application.",
+  "summaryShort": "A modern cross-platform video player shell application",
+  "notes": "Maintainer @laoma2053 has confirmed inclusion with ok. Test info: 206-7-20. Submitter risk note: sky-tv is just a shell player:\n\n- No built-in movies, TV, live streams, channel guides, or parsing services.\n- No video content, download content, or copyright resources are provided.\n- The project developer is not liable for any user's usage behavior.\n- Users should use this software in compliance with the laws and regulations of their country or region.\n- This project is open source software developed for technical learning and exchange purposes.",
+  "tags": [
+   "Open Source"
+  ]
+ },
+ "fongmi-tv": {
+  "name": "FongMi TV",
+  "summary": "FongMi TV is an open-source Android media application based on CatVod.",
+  "summaryShort": "An open-source Android media application based on CatVod",
+  "notes": "Included based on GitHub public repository information. Star count and repository update time from GitHub API.",
+  "tags": [
+   "Open Source",
+   "Android",
+   "FongMi",
+   "CatVod",
+   "Media App"
+  ]
+ },
+ "4kvm-cc-18": {
+  "name": "4KVideo",
+  "summary": "Has ads (acceptable, requires VPN/VIP restrictions).",
+  "summaryShort": "Has ads (acceptable, requires VPN/VIP restrictions)",
+  "notes": "Per user supplement, the recommendation index for 4K Movies was adjusted from 4 stars to 3 stars, and the summary updated to 'Has ads (acceptable, requires VPN/VIP restrictions)'; GitHub Actions will continue to monitor availability, ad presence, VIP restrictions, copyright status, and site security.",
+  "tags": [
+   "Online Movies & TV",
+   "Has Ads",
+   "Requires VPN",
+   "VIP Restrictions"
+  ]
+ },
+ "fdzys": {
+  "name": "FanDazi Movies",
+  "summary": "Latest popular movies, TV shows, anime, and variety shows.",
+  "summaryShort": "Latest popular movies, TV shows, anime, and variety shows",
+  "notes": "Included online movie resource: Fan Dai Zi Movie & TV (https://fdzys.com, 5-star recommendation, summary: Latest popular movies, TV shows, anime, and variety shows); submission status does not reflect the status of this project. GitHub Actions will continue to monitor availability, copyright status, and site security.",
+  "tags": [
+   "Online Movies & TV",
+   "Movies",
+   "TV Shows",
+   "Anime",
+   "Variety Shows"
+  ]
+ },
+ "sa-video": {
+  "name": "SA Video",
+  "summary": "Latest movies, TV shows, anime, and variety shows (accessible).",
+  "summaryShort": "Latest movies, TV shows, anime, and variety shows (accessible)",
+  "notes": "Included online movie resource: SA Video (https://www.lsjys11.com/, 5-star recommendation, summary: Latest movies, TV shows, anime, and variety shows); This page timed out, availability not determined based on this. GitHub Actions will continue to monitor and observe copyright status and site security.",
+  "tags": [
+   "Online Movies & TV",
+   "Movies",
+   "TV Shows",
+   "Anime",
+   "Variety Shows"
+  ]
+ },
+ "naifei-fyi-19": {
+  "name": "Naifei Factory",
+  "summary": "Accessible in mainland China, ad-free content",
+  "summaryShort": "Accessible in mainland China, ad-free content",
+  "notes": "Maintainer @laoma2053 has confirmed inclusion with ok. Test info: 2026-08-05, mainland China. Submitter risk note: None found",
+  "tags": [
+   "Online Movies"
+  ]
+ },
+ "juok": {
+  "name": "JuOK",
+  "summary": "Latest TV series and movies.",
+  "summaryShort": "Latest TV series and movies",
+  "notes": "Online movie resource added based on user submission: JuOK (https://juok3.top/, recommendation index 5 stars, description: Latest TV series and movies); Submission status is not the basis for this project's status. GitHub Actions will automatically detect availability in the future, and continue to monitor copyright status and site security.",
+  "tags": [
+   "Online Movies",
+   "Movies",
+   "TV Series"
+  ]
+ },
+ "dandanqi": {
+  "name": "Dandanqi",
+  "summary": "Latest TV series and movies, no ads.",
+  "summaryShort": "Latest TV series/movies/no ads",
+  "notes": "According to maintainer review, the website is no longer accessible. Removed from the curated online streaming list on 2026-09-12. Resource record and historical verification information are retained.",
+  "tags": [
+   "Online Movies",
+   "Movies",
+   "TV Series",
+   "No Ads"
+  ]
+ },
+ "zndy": {
+  "name": "Zhai Nan Movie",
+  "summary": "Watch whatever you want.",
+  "summaryShort": "Watch whatever you want",
+  "notes": "Online movie resource added based on user submission: Zhai Nan Movie (https://zndy.top/, recommendation index 4 stars, description: Watch whatever you want); Submission status is not the basis for this project's status. GitHub Actions will automatically detect availability in the future, and continue to monitor copyright status and site security.",
+  "tags": [
+   "Online Movies"
+  ]
+ },
+ "yingshidaquan": {
+  "name": "Movie Collection",
+  "summary": "Online search and playback, official solution without ads.",
+  "summaryShort": "Online search and playback, official solution without ads",
+  "notes": "According to maintainer review, the website is no longer accessible. Removed from the curated online streaming list on 2026-09-12. Resource record and historical verification information are retained.",
+  "tags": [
+   "Online Movies",
+   "Search",
+   "No Ads"
+  ]
+ },
+ "juzong": {
+  "name": "Ju Zong Cinema",
+  "summary": "SVIP early updates for domestic and international content.",
+  "summaryShort": "SVIP early updates for domestic and international content",
+  "notes": "Online movie resource added based on user submission: Ju Zong Cinema (https://www.juzong01.me/, recommendation index 5 stars, description: SVIP early updates for domestic and international content); Submission status is not the basis for this project's status. GitHub Actions will automatically detect availability in the future, and continue to monitor copyright status and site security.",
+  "tags": [
+   "Online Movies",
+   "Domestic & International",
+   "SVIP"
+  ]
+ },
+ "jianyunys": {
+  "name": "Jianyun Movie",
+  "summary": "Pure ad-free, 1080P HD instant playback.",
+  "summaryShort": "Pure ad-free/1080P HD instant playback",
+  "notes": "User-submitted online movie resource: Jianyun Movie (https://jianyunys.com/, 5-star rating, description: Pure ad-free/1080P HD instant playback); submission status does not reflect the status of this project. Availability will be automatically detected by GitHub Actions, with continuous monitoring of copyright status and site security.",
+  "tags": [
+   "Online Movie",
+   "Ad-Free",
+   "1080P",
+   "Instant Playback"
+  ]
+ },
+ "pianku": {
+  "name": "Pianku",
+  "summary": "Pure ad-free, 1080P HD instant playback.",
+  "summaryShort": "Pure ad-free/1080P HD instant playback",
+  "notes": "User-submitted online movie resource: Pianku (https://4k01.pianku.online/, 5-star rating, description: Pure ad-free/1080P HD instant playback); submission status does not reflect the status of this project. Availability will be automatically detected by GitHub Actions, with continuous monitoring of copyright status and site security.",
+  "tags": [
+   "Online Movie",
+   "Ad-Free",
+   "1080P",
+   "Instant Playback"
+  ]
+ },
+ "66-dapianwang": {
+  "name": "66 Dapianwang",
+  "summary": "Free movies online.",
+  "summaryShort": "Free movies online",
+  "notes": "User-submitted online movie resource: 66 Dapianwang (https://www.77dpw.vip/, 5-star rating, description: Free movies online); submission status does not reflect the status of this project. Availability will be automatically detected by GitHub Actions, with continuous monitoring of copyright status and site security.",
+  "tags": [
+   "Online Movie",
+   "Movie",
+   "Free"
+  ]
+ },
+ "didahd": {
+  "name": "Didahd",
+  "summary": "Hub for high-rated movies, ultra HD instant playback.",
+  "summaryShort": "Hub for high-rated movies, ultra HD instant playback",
+  "notes": "User-submitted online movie resource: Didahd (https://www.didahd.xyz/, 5-star rating, description: Hub for high-rated movies, ultra HD instant playback); submission status does not reflect the status of this project. Availability will be automatically detected by GitHub Actions, with continuous monitoring of copyright status and site security.",
+  "tags": [
+   "Online Movie",
+   "Movie",
+   "Ultra HD",
+   "Instant Playback"
+  ]
+ },
+ "zhuiying": {
+  "name": "Zhuiying",
+  "summary": "Blu-ray HD, ad-free free online instant playback.",
+  "summaryShort": "Blu-ray HD, ad-free free online instant playback",
+  "notes": "User-submitted online movie resource: Zhuiying (https://zhuiying3.cc/, 5-star rating, description: Blu-ray HD, ad-free free online instant playback); submission status does not reflect the status of this project. Availability will be automatically detected by GitHub Actions, with continuous monitoring of copyright status and site security.",
+  "tags": [
+   "Online Movie",
+   "Blu-ray",
+   "HD",
+   "Ad-Free",
+   "Instant Playback"
+  ]
+ },
+ "wbbb": {
+  "name": "Waibababu",
+  "summary": "HD videos free online (accessible)",
+  "summaryShort": "HD videos free online (accessible)",
+  "notes": "User-submitted online movie resource: Waibababu (https://wbbb1.com/, 5-star rating, description: HD videos free online); submission status does not reflect the status of this project. Availability will be automatically detected by GitHub Actions, with continuous monitoring of copyright status and site security.",
+  "tags": [
+   "Online Movie",
+   "HD",
+   "Free"
+  ]
+ },
+ "kxyy": {
+  "name": "Happy Cinema",
+  "summary": "Latest movies and popular TV series.",
+  "summaryShort": "Latest movies and popular TV series",
+  "notes": "Online streaming resources added by users: Happy Cinema (https://www.kxyy1.cc/, Recommendation Index: 5 stars, Description: Latest movies and popular TV series); Submission status is not the basis for this project's status. GitHub Actions will automatically detect availability and continuously monitor copyright status and site security.",
+  "tags": [
+   "Online Streaming",
+   "Movies",
+   "TV Series"
+  ]
+ },
+ "dhvideo": {
+  "name": "Douhua Movie Website",
+  "summary": "Latest free movies to watch online.",
+  "summaryShort": "Latest free movies to watch online",
+  "notes": "Online streaming resources added by users: Douhua Movie Website (https://dhvideo.cc/, Recommendation Index: 5 stars, Description: Latest free movies to watch online); Submission status is not the basis for this project's status. GitHub Actions will automatically detect availability and continuously monitor copyright status and site security.",
+  "tags": [
+   "Online Streaming",
+   "Movies",
+   "Free"
+  ]
+ },
+ "czy0729-bangumi": {
+  "name": "Bangumi",
+  "summary": "Bangumi is a Douban-like series-following client specializing in ACG.",
+  "summaryShort": "Douban-like series-following client for ACG",
+  "notes": "Added based on user contributions and GitHub repository information; Star count from GitHub project page, repository update time from source submission.",
+  "tags": [
+   "Open Source",
+   "ACG",
+   "Series Following",
+   "Android",
+   "iOS",
+   "React Native"
+  ]
+ },
+ "zip0": {
+  "name": "ZIP0",
+  "summary": "Online movie and TV search and playback.",
+  "summaryShort": "Online movie and TV search and playback",
+  "notes": "Updated ZIP0 link from https://zip0.com/ to https://zip0.com/?r=KBDIG8 based on user contribution; GitHub Actions will automatically detect availability and continuously monitor copyright status and site security.",
+  "tags": [
+   "Online Streaming",
+   "Search",
+   "Online Playback"
+  ]
+ },
+ "aipan-me-25": {
+  "name": "Aipan",
+  "summary": "4K movie and TV resource aggregation site",
+  "summaryShort": "4K movie and TV resource aggregation site",
+  "notes": "Maintainer @laoma2053 has confirmed inclusion with ok. Test information: 2026-09-05, China. Submitter's risk disclosure: No ads, no pop-ups, no misleading download prompts; no login required, no payment; resource links aggregated from the public network, this site does not store files, copyright risk is the same as similar cloud-drive search sites. Interest disclosure: The submitter is the site operator themselves.",
+  "tags": [
+   "Online Streaming"
+  ]
+ },
+ "103-39-111-180-29": {
+  "name": "Keke Cinema",
+  "summary": "Latest Netflix new shows (accessible).",
+  "summaryShort": "Latest Netflix new shows (accessible)",
+  "notes": "Maintainer @laoma2053 has confirmed inclusion with ok. Test information: 2026-9-10, China. Submitter's risk disclosure: Some videos have ads",
+  "tags": [
+   "Online Streaming"
+  ]
+ },
+ "skr-skr1-cc-9": {
+  "name": "Sakura no Sora",
+  "summary": "A wide selection of domestic and international anime",
+  "summaryShort": "A wide selection of domestic and international anime",
+  "notes": "Maintainer @laoma2053 has confirmed inclusion with ok. Test information: 2026-07-18, Mainland China. Submitter's risk note: Ad banners may appear on the website sidebar, but normal viewing is not affected.\n\nMost video resources are ad-free, but resources on specific channels for some anime may contain ads",
+  "tags": [
+   "Online Movies"
+  ]
+ },
+ "tv-lxyy-club-36": {
+  "name": "Luo Xue TV",
+  "summary": "4K ad-free (Contributed by @anyongki)",
+  "summaryShort": "4K ad-free (Contributed by @anyongki)",
+  "notes": "Maintainer @laoma528 has confirmed inclusion. Test information: 2026-10-03, Mainland China. Submitter's risk note: Ads: No ads, no pop-ups, no forced redirects. Redirects/Inducement to download: None. Does not host any movie files or provide online playback, only indexes publicly shared links from third-party cloud drives (Quark/Baidu). Privacy: No registration or login required, no collection of personal information like phone numbers. Payment: Completely free, no paid services or inducements to top up. Copyright: The indexed cloud drive resources are shared by netizens and may contain unauthorized content, which is truthfully marked as 'Medium-High'. Interest disclosure: The submitter is the admin of this site and has a direct interest relationship with it, which is hereby disclosed.",
+  "tags": [
+   "Online Movies"
+  ]
+ },
+ "iptv-cqshushu-com-31": {
+  "name": "IPTV Pro",
+  "summary": "Free IPTV live sources (Contributed by @goodsand)",
+  "summaryShort": "Free IPTV live sources (Contributed by @goodsand)",
+  "notes": "Maintainer @laoma528 has confirmed inclusion with ok. Test information: 2026-9-15, Mainland China. Submitter's risk note: None",
+  "tags": [
+   "IPTV Subscription Source"
+  ]
+ },
+ "kanmovie-com-34": {
+  "name": "Xigua Movie",
+  "summary": "No resource is unsearchable (Contributed by @miaodongsu7)",
+  "summaryShort": "No resource is unsearchable (Contributed by @miaodongsu7)",
+  "notes": "Maintainer @laoma528 has confirmed inclusion with ok. Test information: 2026-10-1, Mainland China. Submitter's risk note: No risks related to redirects, ad inducements, downloads, privacy, copyright, and payment have been found at present",
+  "tags": [
+   "Online Movies"
+  ]
+ },
+ "ys-cxkjg-cn-39": {
+  "name": "Chuang Xiang Movie",
+  "summary": "Ad-free, instant playback on three networks during peak hours (Contributed by @zxaay)",
+  "summaryShort": "Ad-free, instant playback on three networks during peak hours (Contributed by @zxaay)",
+  "notes": "Maintainer @laoma528 has confirmed inclusion with ok in reply to Issue #39. Submitter's test information: 2026-10-04 Mainland China. Submitter's risk note: Do not trust the advertisements in the videos. 2026-10-10 manually confirmed HTTPS homepage is accessible; playback speed and ad situation were not independently verified.",
+  "tags": [
+   "Online Movies"
+  ]
+ }
+}

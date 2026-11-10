@@ -1,0 +1,51 @@
+name: Propose refreshed IPTV directory
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 4 * * 1"
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch public iptv-org API snapshots
+        run: |
+          mkdir -p scripts/iptv_cache
+          python - <<'PY'
+          import urllib.request,os,json
+          for key in ("channels","streams","countries","categories","logos","blocks"):
+              url=f"https://iptv-org.github.io/api/{key}.json"
+              with urllib.request.urlopen(url, timeout=45) as response:
+                  content=response.read()
+              data=json.loads(content)
+              if not isinstance(data,list) or not data: raise ValueError(f"Empty {key} data")
+              with open(f"scripts/iptv_cache/{key}.json","wb") as out:out.write(content)
+              print(key,len(data))
+          PY
+      - name: Build candidate catalog
+        run: |
+          python scripts/build_stream_catalog.py
+          python - <<'PY'
+          import json
+          j=json.load(open('src/data/stream-catalog.json'))
+          if len(j['channels'])<2500:raise SystemExit("Rejecting unexpectedly small catalog")
+          print("Candidate channels:",len(j['channels']))
+          PY
+      - name: Propose changes (requires review before deployment)
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "chore(catalog): refresh public channel directory snapshot"
+          branch: "automation/refresh-channel-catalog"
+          delete-branch: true
+          title: "Refresh PlayBeat TV channel catalog"
+          body: "Updated source data from iptv-org. Review counts, availability and removed channels before merging. This job does not certify stream health."
+          add-paths: |
+            src/data/stream-catalog.json
+            public/data/stream-catalog.json

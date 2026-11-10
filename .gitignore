@@ -1,0 +1,84 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+local-*
+.claude
+.z-ai-config
+*.log
+dev.log
+dev.out.log
+test
+prompt
+
+server.log
+# Skills directory
+/skills/
+# analysis scratch: third-party repo clone (has its own git history), tool artifacts, verification screenshots
+/repo_analysis/
+/tool-results/
+/scripts/iptv_cache/
+/scripts/*.png
+upload/
+# stream health-check runtime artifacts (large state, logs, backup of pre-filter catalog)
+/scripts/health-state.json
+/scripts/health-run.log
+/scripts/catalog-backup-pre-health.json
+
+# seo audit volatile report
+/scripts/seo-audit-report.json
+
+# separate project: ApnaFlix (own git repo, do NOT mix)
+/apnaflix/
+.wrangler/
+
+# Stream app lives in its own repo (mahbubakhanam177-ai/playbeat-stream)
+/stream-site/
+
+# build output & local artifacts (added 2026-11-09)
+/.open-next/
+/download/
+/seo-audit-work/
+/seo-audit-report.json
+/upload/
+/db/
+/scripts/.warm_token
+.dev.vars

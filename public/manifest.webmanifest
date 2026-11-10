@@ -1,0 +1,63 @@
+{
+  "id": "/",
+  "name": "Playbeat TV — Free Live TV & Streaming",
+  "short_name": "Playbeat TV",
+  "description": "Watch 7,985+ public free-to-air TV channels free — live news, sports, movies, series and anime. No login, no tracking, powered by the open-source iptv-org index.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#080F1F",
+  "theme_color": "#080F1F",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["entertainment", "news", "sports", "music"],
+  "icons": [
+    {
+      "src": "/icons/pwa-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/pwa-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/pwa-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/pwa-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Live TV",
+      "short_name": "Live TV",
+      "description": "Browse all 7,985 live channels",
+      "url": "/live-tv"
+    },
+    {
+      "name": "Sports",
+      "short_name": "Sports",
+      "url": "/sports"
+    },
+    {
+      "name": "News",
+      "short_name": "News",
+      "url": "/news"
+    },
+    {
+      "name": "Movies",
+      "short_name": "Movies",
+      "url": "/movies"
+    }
+  ]
+}

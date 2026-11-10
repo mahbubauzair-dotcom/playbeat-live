@@ -1,0 +1,237 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ==================================================================
+   NEXA design tokens — neutral near-black canvas, 3 surface levels,
+   white ink tiers, switchable accent (data-theme → --theme-c).
+   ================================================================== */
+
+:root,
+.dark {
+  --radius: 1rem;
+
+  /* NEXA core */
+  --canvas: #06080e;
+  --surface-1: #0e1320;
+  --surface-2: #161c2e;
+  --surface-3: #1f273d;
+  --ink: #ffffff;
+  --ink-2: #ffffffc2;
+  --ink-3: #cbd5e1;
+  --ink-4: #94a3b8;
+  --theme-c: #ef4444; /* PlayBeat gold */
+  --theme-glow: rgba(239, 68, 68, 0.45);
+
+  /* shadcn mapping (storefront is always dark) */
+  --background: var(--canvas);
+  --foreground: var(--ink);
+  --card: var(--surface-1);
+  --card-foreground: var(--ink);
+  --popover: var(--surface-2);
+  --popover-foreground: var(--ink);
+  --primary: var(--theme-c);
+  --primary-foreground: #ffffff;
+  --secondary: var(--surface-2);
+  --secondary-foreground: var(--ink);
+  --muted: var(--surface-2);
+  --muted-foreground: var(--ink-3);
+  --accent: var(--surface-3);
+  --accent-foreground: var(--ink);
+  --destructive: #e84848;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.12);
+  --ring: var(--theme-c);
+  --chart-1: var(--theme-c);
+  --chart-2: #4aa480;
+  --chart-3: #e8c83c;
+  --chart-4: #ec5aa0;
+  --chart-5: #4a90cd;
+  --sidebar: var(--surface-1);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--theme-c);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--surface-2);
+  --sidebar-accent-foreground: var(--ink);
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: var(--theme-c);
+}
+
+[data-theme="playbeat-gold"] { --theme-c: #ef4444; --theme-glow: rgba(239, 68, 68, 0.45); }
+
+/* Other accent tokens remain available for backwards compatibility. */
+[data-theme="violet"] { --theme-c: #ef4444; --theme-glow: rgba(239, 68, 68, 0.45); }
+[data-theme="azure"]  { --theme-c: #ef4444; --theme-glow: rgba(239, 68, 68, 0.45); }
+[data-theme="sky"]    { --theme-c: #ef4444; --theme-glow: rgba(239, 68, 68, 0.45); }
+[data-theme="teal"]   { --theme-c: #ef4444; --theme-glow: rgba(239, 68, 68, 0.45); }
+[data-theme="jade"]   { --theme-c: #ef4444; --theme-glow: rgba(239, 68, 68, 0.45); }
+[data-theme="lime"]   { --theme-c: #ef4444; --theme-glow: rgba(239, 68, 68, 0.45); }
+[data-theme="yellow"] { --theme-c: #ef4444; --theme-glow: rgba(239, 68, 68, 0.45); }
+[data-theme="amber"]  { --theme-c: #ef4444; --theme-glow: rgba(239, 68, 68, 0.45); }
+[data-theme="ember"]  { --theme-c: #ef4444; --theme-glow: rgba(239, 68, 68, 0.45); }
+[data-theme="red"]    { --theme-c: #ef4444; --theme-glow: rgba(239, 68, 68, 0.45); }
+[data-theme="rose"]   { --theme-c: #ef4444; --theme-glow: rgba(239, 68, 68, 0.45); }
+[data-theme="pink"]   { --theme-c: #ef4444; --theme-glow: rgba(239, 68, 68, 0.45); }
+[data-theme="orchid"] { --theme-c: #ef4444; --theme-glow: rgba(239, 68, 68, 0.45); }
+[data-theme="plum"]   { --theme-c: #ef4444; --theme-glow: rgba(239, 68, 68, 0.45); }
+[data-theme="steel"]  { --theme-c: #ef4444; --theme-glow: rgba(239, 68, 68, 0.45); }
+[data-theme="white"]  { --theme-c: #ef4444; --theme-glow: rgba(239, 68, 68, 0.45); }
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-mona), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* NEXA utilities: bg-canvas, bg-surface-1, text-ink-2, bg-theme, text-theme … */
+  --color-canvas: var(--canvas);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-ink-4: var(--ink-4);
+  --color-theme: var(--theme-c);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    background-color: var(--canvas);
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ---------- Playbeat TV storefront utilities ---------- */
+
+/* bold display titles (hero / banners) */
+.font-display {
+  font-family: var(--font-mona), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+/* thin neutral scrollbars */
+.scrollbar-slim {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+.scrollbar-slim::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-slim::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+}
+.scrollbar-slim::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* hide horizontal scrollbars on carousels */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* gentle scroll-reveal for homepage sections */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* big outlined rank numeral for "Top 10 Today" */
+.rank-numeral {
+  font-family: var(--font-mona), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  text-shadow:
+    0 2px 18px rgba(0, 0, 0, 0.75),
+    0 0 2px rgba(0, 0, 0, 0.9);
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Cinema Gold — reusable visual treatments. */
+html { scroll-behavior: smooth; }
+body { 
+  background: 
+    radial-gradient(ellipse 90% 650px at 50% -50px, rgba(35, 75, 135, 0.48), transparent 75%),
+    radial-gradient(ellipse 70% 500px at 90% 25%, rgba(109, 40, 217, 0.22), transparent 70%),
+    radial-gradient(ellipse 70% 500px at 10% 55%, rgba(226, 179, 78, 0.16), transparent 70%),
+    #050814; 
+  color: #f8fafc;
+  overflow-x: clip; 
+}
+.pb-gold-text { background:linear-gradient(115deg,#fff3c3,#e4ae45 62%,#bb7824); background-clip:text; -webkit-background-clip:text; color:transparent; }
+.pb-gold-button { background:linear-gradient(120deg,#fff0ad,#edbb5a 50%,#c98a30); color:#071321; box-shadow:0 8px 28px rgba(218,162,57,.25),inset 0 1px 0 rgba(255,255,255,.45); }
+.pb-home .pb-hero { box-shadow:0 20px 65px rgba(0,0,0,.3),0 0 0 1px rgba(229,177,76,.18); }
+.pb-home .pb-hero::after { content:""; pointer-events:none; position:absolute; inset:auto 0 0; height:2px; background:linear-gradient(90deg,transparent,#d7a34b 22%,#ffe4a0 50%,#d7a34b 80%,transparent); box-shadow:0 0 20px #d7a34b80; }
+.pb-home .pb-install { background:radial-gradient(ellipse at 0 100%,rgba(230,168,48,.22),transparent 52%),linear-gradient(105deg,#101c2d,#081221 75%,#18243a); box-shadow:0 0 26px rgba(224,166,55,.13); }
+.pb-home .pb-top-ten .rank-numeral { color:#f3c56a; text-shadow:0 3px 20px #000; }
+.pb-home a:focus-visible,.pb-home button:focus-visible { outline:2px solid #f5ce7a;outline-offset:3px; }
+@media(max-width:640px){ .pb-home .pb-hero { border-radius:18px; } .pb-home .pb-install img { max-width:180px; } }
+@media(prefers-reduced-motion:reduce){html {scroll-behavior:auto;} .pb-home .pb-hero img {transition:none!important;}}

@@ -1,0 +1,31 @@
+{
+  "name": "playbeat-tv-catalog",
+  "main": "tv-catalog-worker.js",
+  "compatibility_date": "2026-10-16",
+  "account_id": "20c83732a1af52f80655768cd4dfc251",
+  "assets": {
+    "directory": "./assets",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "routes": [
+    {
+      "pattern": "playbeat.live/api/tv/*",
+      "zone_name": "playbeat.live"
+    },
+    {
+      "pattern": "www.playbeat.live/api/tv/*",
+      "zone_name": "playbeat.live"
+    },
+    {
+      "pattern": "playbeat.live/api/catalog",
+      "zone_name": "playbeat.live"
+    },
+    {
+      "pattern": "www.playbeat.live/api/catalog",
+      "zone_name": "playbeat.live"
+    }
+  ]
+}

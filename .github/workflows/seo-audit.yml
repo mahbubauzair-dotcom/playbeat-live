@@ -1,0 +1,49 @@
+name: SEO audit
+
+# Technical SEO audit against the live production site.
+# - weekly schedule + manual runs + pushes that touch SEO-relevant files
+# - exits non-zero on critical problems (fails the run)
+# - uploads the machine-readable report as a build artifact
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1" # Mondays 06:00 UTC
+  push:
+    branches: [main]
+    paths:
+      - "src/app/**"
+      - "src/components/stream/**"
+      - "src/lib/seo.ts"
+      - "src/lib/category-pages.ts"
+      - "src/data/stream-catalog.json"
+      - "scripts/seo-audit.mjs"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run technical SEO audit against production
+        env:
+          BASE_URL: https://playbeattv.buzz
+          AUDIT_SHA: ${{ github.sha }}
+        run: node scripts/seo-audit.mjs
+
+      - name: Upload audit report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-audit-report
+          path: seo-audit-report.json
+          retention-days: 90
