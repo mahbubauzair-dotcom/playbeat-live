@@ -116,3 +116,14 @@ html[data-site] .pb-home .pb-install {
   background: radial-gradient(ellipse at 0 100%, color-mix(in srgb, var(--theme-c) 22%, transparent), transparent 52%), linear-gradient(105deg, var(--surface-2), var(--surface-1) 75%, var(--surface-3));
   box-shadow: 0 0 26px var(--theme-glow);
 }
+
+/* ---------- footer category ticker: continuous marquee (shared) ---------- */
+@keyframes pb-ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-50% - 0.25rem)); } /* half the 0.5rem track gap -> seamless loop */
+}
+.pb-ticker-track { animation: pb-ticker-scroll 45s linear infinite; will-change: transform; }
+.pb-ticker-viewport:hover .pb-ticker-track { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .pb-ticker-track { animation: none; }
+}
