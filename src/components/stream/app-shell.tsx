@@ -1137,6 +1137,9 @@ export function AppShell({
                 <Link href="/about" className="text-[11px] text-zinc-500 transition-colors hover:text-theme">
                   About
                 </Link>
+                <Link href="/contact" className="text-[11px] text-zinc-500 transition-colors hover:text-theme">
+                  Contact
+                </Link>
               </nav>
               <button
                 type="button"

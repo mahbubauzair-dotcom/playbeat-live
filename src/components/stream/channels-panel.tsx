@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { logoFallback } from "@/lib/logo-fallback";
 import { Loader2, Play, Radio, Search, SearchX } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
@@ -216,9 +217,7 @@ export function ChannelsPanel({
                       loading="lazy"
                       referrerPolicy="no-referrer"
                       className="max-h-full max-w-full object-contain"
-                      onError={(e) => {
-                        (e.currentTarget as HTMLImageElement).style.display = "none";
-                      }}
+                      onError={logoFallback}
                     />
                   ) : (
                     <Radio className="size-4 text-zinc-400" />

@@ -13,6 +13,7 @@ import { pageMetadata, webPageJsonLd } from "@/lib/seo";
 import { JsonLd } from "@/components/stream/json-ld";
 
 export const metadata: Metadata = pageMetadata({
+  robots: { index: false, follow: false },
   title: "Movies — PlayBeat TV",
   description:
     "Browse thousands of movies on PlayBeat TV — 2026 new releases, Hollywood, Netflix originals and more, free in your browser.",

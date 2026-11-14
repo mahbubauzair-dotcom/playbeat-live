@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 /* Fullscreen movie player. */
 
 import { notFound } from "next/navigation";
@@ -6,6 +7,9 @@ import { vodCardById } from "@/lib/vod-catalog";
 import { VodPlayer } from "@/components/stream/vod-player";
 
 export const revalidate = 300;
+
+/* Fullscreen player page — must stay out of search indexes. */
+export const metadata: Metadata = { robots: { index: false, follow: false } };
 
 export default async function WatchMoviePage({
   params,

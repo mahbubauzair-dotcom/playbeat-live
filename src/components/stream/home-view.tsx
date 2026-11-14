@@ -1,6 +1,7 @@
 "use client";
 
 import { memo, useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { logoFallback } from "@/lib/logo-fallback";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -1197,9 +1198,7 @@ function SpotlightCard({
               loading="lazy"
               referrerPolicy="no-referrer"
               className="max-h-full max-w-full object-contain"
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).style.display = "none";
-              }}
+              onError={logoFallback}
             />
           ) : (
             <Radio className="size-8 text-zinc-500" />
@@ -1273,9 +1272,7 @@ function ChannelSpotlightCard({
               loading="lazy"
               referrerPolicy="no-referrer"
               className="max-h-full max-w-full object-contain"
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).style.display = "none";
-              }}
+              onError={logoFallback}
             />
           ) : (
             <Radio className="size-5 text-zinc-500" />
@@ -1609,9 +1606,7 @@ export const PosterCard = memo(function PosterCard({
             loading="lazy"
             referrerPolicy="no-referrer"
             className="absolute inset-0 m-auto max-h-[42%] max-w-[70%] rounded-lg object-contain drop-shadow-[0_6px_24px_rgba(0,0,0,0.7)] transition-transform duration-300 group-hover:scale-105"
-            onError={(e) => {
-              (e.currentTarget as HTMLImageElement).style.opacity = "0";
-            }}
+            onError={logoFallback}
           />
         ) : (
           <Radio className="absolute inset-0 m-auto size-8 text-zinc-700" />
@@ -1714,9 +1709,7 @@ const WideCard = memo(function WideCard({
             loading="lazy"
             referrerPolicy="no-referrer"
             className="absolute inset-0 m-auto max-h-[46%] max-w-[54%] rounded-lg object-contain drop-shadow-[0_6px_24px_rgba(0,0,0,0.7)] transition-transform duration-300 group-hover:scale-105"
-            onError={(e) => {
-              (e.currentTarget as HTMLImageElement).style.opacity = "0";
-            }}
+            onError={logoFallback}
           />
         ) : (
           <Radio className="absolute inset-0 m-auto size-7 text-zinc-700" />

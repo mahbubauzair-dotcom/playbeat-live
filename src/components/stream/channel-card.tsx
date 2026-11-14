@@ -1,6 +1,7 @@
 "use client";
 
 import { memo } from "react";
+import { logoFallback } from "@/lib/logo-fallback";
 import Link from "next/link";
 import { Heart, Play, TvMinimalPlay } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -61,9 +62,7 @@ export const ChannelCard = memo(function ChannelCard({
             loading="lazy"
             referrerPolicy="no-referrer"
             className="max-h-20 max-w-[80%] rounded-lg object-contain drop-shadow-[0_6px_20px_rgba(0,0,0,0.7)] transition-transform duration-300 group-hover:scale-105"
-            onError={(e) => {
-              (e.currentTarget as HTMLImageElement).style.opacity = "0";
-            }}
+            onError={logoFallback}
           />
         ) : (
           <TvMinimalPlay className="size-8 text-zinc-700" />

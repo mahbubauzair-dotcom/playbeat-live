@@ -13,6 +13,7 @@ import { pageMetadata, webPageJsonLd } from "@/lib/seo";
 import { JsonLd } from "@/components/stream/json-ld";
 
 export const metadata: Metadata = pageMetadata({
+  robots: { index: false, follow: false },
   title: "Web Series & Dramas — PlayBeat TV",
   description:
     "Binge web series from Netflix, Prime, ULLU & Hoichoi, plus Pakistani and Indian dramas — new episodes daily on PlayBeat TV.",

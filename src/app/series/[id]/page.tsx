@@ -20,6 +20,7 @@ export async function generateMetadata({
   const card = await vodCardById("series", id);
   const name = data?.info?.name || card?.name || "Series";
   return {
+    robots: { index: false, follow: false },
     title: `${name} — Watch Free | PlayBeat TV`,
     description:
       (data?.info?.plot || `Watch ${name} free on PlayBeat TV.`).slice(0, 200),

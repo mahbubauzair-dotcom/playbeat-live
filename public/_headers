@@ -1,0 +1,19 @@
+# Pages that must never be indexed: the VOD (movies / series) section,
+# players, APIs and utility pages. Meta robots in the page HTML is the
+# primary control; this file adds the header for static/ISR responses.
+/movies
+  X-Robots-Tag: noindex, nofollow
+/series
+  X-Robots-Tag: noindex, nofollow
+/movie/*
+  X-Robots-Tag: noindex, nofollow
+/series/*
+  X-Robots-Tag: noindex, nofollow
+/watch/*
+  X-Robots-Tag: noindex, nofollow
+/api/*
+  X-Robots-Tag: noindex, nofollow
+/admin
+  X-Robots-Tag: noindex, nofollow
+/offline
+  X-Robots-Tag: noindex, nofollow

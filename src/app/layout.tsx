@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import localFont from "next/font/local";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -31,6 +32,9 @@ const geistMono = Geist_Mono({
 
 /* restores the visitor's chosen accent before paint (no FOUC) */
 const THEME_INIT = `try{var t=localStorage.getItem("pb-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}`;
+
+/* GA4 — set NEXT_PUBLIC_GA_ID (build-time) or GA4_ID (worker var) to activate; empty = no analytics script. */
+const GA4_ID = process.env.NEXT_PUBLIC_GA_ID || process.env.GA4_ID || "";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -97,6 +101,18 @@ export default function RootLayout({
         <JsonLd data={websiteJsonLd()} />
         {children}
         <Toaster />
+        {GA4_ID ? (
+          <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`} strategy="afterInteractive" />
+            <Script
+              id="ga4-init"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA4_ID}',{anonymize_ip:true});`,
+              }}
+            />
+          </>
+        ) : null}
       </body>
     </html>
   );

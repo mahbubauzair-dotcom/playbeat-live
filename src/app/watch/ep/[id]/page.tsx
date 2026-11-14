@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 /* Fullscreen episode player with next-episode support. */
 
 import { notFound } from "next/navigation";
@@ -5,6 +6,9 @@ import { getSeriesInfo, type Episode } from "@/lib/vod";
 import { VodPlayer } from "@/components/stream/vod-player";
 
 export const revalidate = 300;
+
+/* Fullscreen player page — must stay out of search indexes. */
+export const metadata: Metadata = { robots: { index: false, follow: false } };
 
 export default async function WatchEpisodePage({
   params,

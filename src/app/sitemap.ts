@@ -12,6 +12,7 @@ const pages: { path: string; frequency: "daily" | "weekly" | "monthly"; priority
   { path: "/news", frequency: "daily", priority: 0.8 },
   { path: "/countries", frequency: "weekly", priority: 0.7 },
   { path: "/about", frequency: "monthly", priority: 0.5 },
+  { path: "/contact", frequency: "monthly", priority: 0.4 },
   { path: "/content-policy", frequency: "monthly", priority: 0.4 },
   { path: "/dmca", frequency: "monthly", priority: 0.4 },
   { path: "/privacy-policy", frequency: "monthly", priority: 0.4 },

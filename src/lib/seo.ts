@@ -29,6 +29,8 @@ interface PageSeoInput {
   path: string;
   /** Open Graph type — "website" for pages, "profile"/"article" etc. rarely needed. */
   ogType?: "website" | "article";
+  /** VOD/utility pages pass { index: false, follow: false } to stay out of search indexes. */
+  robots?: Metadata["robots"];
 }
 
 /**
@@ -40,11 +42,13 @@ export function pageMetadata({
   description,
   path,
   ogType = "website",
+  robots,
 }: PageSeoInput): Metadata {
   const canonical = path.startsWith("http") ? path : new URL(path, SITE_URL).toString();
   return {
     title,
     description,
+    robots,
     alternates: { canonical },
     openGraph: {
       title,
