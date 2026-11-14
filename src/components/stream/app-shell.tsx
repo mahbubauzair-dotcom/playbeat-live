@@ -151,49 +151,56 @@ const REGIONAL_NETWORK_HUBS = [
 
 function RegionalNetworkBar() {
   return (
-    <section
-      aria-label="Playbeat Regional Network"
-      className="relative mx-auto w-full max-w-[1600px] px-5 pb-2 pt-8 sm:px-7"
-    >
-      <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-300">
-        Playbeat Regional Network
-      </h3>
-      <p className="mt-2 max-w-xl text-xs leading-relaxed text-zinc-500">
-        One free streaming network, five regional hubs — jump between our
-        worldwide, American, European, Asian and Middle Eastern portals.
-      </p>
-      <ul className="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-5">
+    <div className="mt-8 border-t border-white/10 pt-6">
+      {/* Playbeat Regional Streaming Network (SEO Cross-Linking & Region Switcher) */}
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-theme">
+            Playbeat Regional Network
+          </p>
+          <p className="text-xs text-zinc-400">
+            Switch to your local regional broadcast hub for faster streams and local channels:
+          </p>
+        </div>
+      </div>
+      <div className="mt-3 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-5">
         {REGIONAL_NETWORK_HUBS.map((hub) => {
-          const isCurrent = hub.url === SITE_URL;
+          const isCurrent =
+            typeof SITE_URL === "string" &&
+            SITE_URL.replace(/\/$/, "").toLowerCase().includes(hub.url.replace("https://", ""));
           return (
-            <li key={hub.url}>
-              <a
-                href={hub.url}
-                title={hub.title}
-                aria-current={isCurrent ? "page" : undefined}
-                className={
-                  "flex h-full flex-col gap-1 rounded-2xl border px-4 py-3 transition-colors " +
-                  (isCurrent
-                    ? "border-amber-400/50 bg-amber-400/10"
-                    : "border-white/10 bg-white/[0.03] hover:border-amber-300/40 hover:bg-amber-300/10")
-                }
-              >
-                <span className="flex items-center gap-2 text-xs font-bold text-zinc-100">
-                  <span aria-hidden>{hub.flag}</span>
-                  {hub.name}
+            <a
+              key={hub.url}
+              href={hub.url}
+              title={hub.title}
+              aria-current={isCurrent ? "page" : undefined}
+              className={
+                isCurrent
+                  ? "flex items-center gap-2.5 rounded-xl border border-theme/40 bg-theme/10 px-3 py-2.5 text-left transition-all"
+                  : "flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2.5 text-left transition-all hover:border-theme/40 hover:bg-white/[0.07]"
+              }
+            >
+              <span className="text-lg leading-none" aria-hidden="true">
+                {hub.flag}
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="flex items-center gap-1.5 text-xs font-bold text-white">
+                  <span className="truncate">{hub.name}</span>
                   {isCurrent && (
-                    <span className="ml-auto rounded-full bg-amber-400 px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wide text-slate-950">
-                      You are here
+                    <span className=" shrink-0 rounded-full bg-theme/20 px-1.5 py-0.5 text-[9px] font-semibold text-theme">
+                      Active
                     </span>
                   )}
                 </span>
-                <span className="text-[11px] text-zinc-500">{hub.region}</span>
-              </a>
-            </li>
+                <span className="mt-0.5 block truncate text-[10px] text-zinc-400">
+                  {hub.region}
+                </span>
+              </span>
+            </a>
           );
         })}
-      </ul>
-    </section>
+      </div>
+    </div>
   );
 }
 
