@@ -7,7 +7,7 @@
 import type { Metadata } from "next";
 
 export const SITE_NAME = "Playbeat Live";
-export const SITE_URL = "https://playbeat.live";
+export const SITE_URL = "https://www.playbeat.live";
 
 /** Branded Open Graph image (official logo artwork — never regenerated). */
 export const OG_IMAGE = {
