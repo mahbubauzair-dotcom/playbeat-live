@@ -60,6 +60,7 @@ import {
   type StreamChannel,
 } from "@/lib/stream";
 import type { CountryChip, HeroItem, HomeRow } from "@/lib/spotlight";
+import { SITE_URL } from "@/lib/seo";
 
 type View = "home" | "tv" | "category" | "vod" | "about" | "legal";
 
@@ -107,6 +108,95 @@ const EXTRA_CAT_ICONS: Record<string, React.ReactNode> = {
  * /about , legal pages) renders this shell with the
  * matching `view` prop and its own content. No login.
  */
+/* Playbeat Regional Network — cross-links between the five regional hubs.
+   Self-hub (hub.url === SITE_URL) is highlighted, all hubs are real
+   followed links so users and search engines can navigate the network. */
+const REGIONAL_NETWORK_HUBS = [
+  {
+    name: "Playbeat TV Global",
+    region: "Worldwide · 4,819 Channels",
+    flag: "🌍",
+    url: "https://www.playbeattv.buzz",
+    title: "Playbeat TV — Watch 4,819+ Free Global Live TV Channels",
+  },
+  {
+    name: "Playbeat Live",
+    region: "USA & North America · 868 Channels",
+    flag: "🇺🇸",
+    url: "https://www.playbeat.live",
+    title: "Playbeat Live — Watch Free USA & North America 24/7 Live TV & News",
+  },
+  {
+    name: "Playbeat Arena Europe",
+    region: "Europe & Football · 1,473 Channels",
+    flag: "🇪🇺",
+    url: "https://www.playbeatarena.online",
+    title: "Playbeat Arena Europe — Live European Sports, Football & Cinema TV",
+  },
+  {
+    name: "Playbeat Arena Asia",
+    region: "Cricket & Desi TV · 852 Channels",
+    flag: "🌏",
+    url: "https://www.playbeatarena.asia",
+    title: "Playbeat Arena Asia — Live Cricket, Pakistani & Indian Dramas & Asian TV",
+  },
+  {
+    name: "Playbeat Digital World",
+    region: "Middle East & Arabic · 263 Channels",
+    flag: "🌙",
+    url: "https://www.playbeatdigital.world",
+    title: "Playbeat Digital World — Free Live Arabic, Gulf & Islamic TV Channels",
+  },
+] as const;
+
+function RegionalNetworkBar() {
+  return (
+    <section
+      aria-label="Playbeat Regional Network"
+      className="relative mx-auto w-full max-w-[1600px] px-5 pb-2 pt-8 sm:px-7"
+    >
+      <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-300">
+        Playbeat Regional Network
+      </h3>
+      <p className="mt-2 max-w-xl text-xs leading-relaxed text-zinc-500">
+        One free streaming network, five regional hubs — jump between our
+        worldwide, American, European, Asian and Middle Eastern portals.
+      </p>
+      <ul className="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-5">
+        {REGIONAL_NETWORK_HUBS.map((hub) => {
+          const isCurrent = hub.url === SITE_URL;
+          return (
+            <li key={hub.url}>
+              <a
+                href={hub.url}
+                title={hub.title}
+                aria-current={isCurrent ? "page" : undefined}
+                className={
+                  "flex h-full flex-col gap-1 rounded-2xl border px-4 py-3 transition-colors " +
+                  (isCurrent
+                    ? "border-amber-400/50 bg-amber-400/10"
+                    : "border-white/10 bg-white/[0.03] hover:border-amber-300/40 hover:bg-amber-300/10")
+                }
+              >
+                <span className="flex items-center gap-2 text-xs font-bold text-zinc-100">
+                  <span aria-hidden>{hub.flag}</span>
+                  {hub.name}
+                  {isCurrent && (
+                    <span className="ml-auto rounded-full bg-amber-400 px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wide text-slate-950">
+                      You are here
+                    </span>
+                  )}
+                </span>
+                <span className="text-[11px] text-zinc-500">{hub.region}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}
+
 export function AppShell({
   view,
   activeCategory = null,
@@ -1016,6 +1106,9 @@ export function AppShell({
             ))}
           </div>
         </div>
+
+        {/* Playbeat Regional Network cross-links */}
+        <RegionalNetworkBar />
 
         {/* bottom bar */}
         <div className="relative border-t border-white/5">
