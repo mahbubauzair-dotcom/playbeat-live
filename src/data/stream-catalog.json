@@ -5,14 +5,14 @@
     "sourceUrl": "https://github.com/iptv-org",
     "api": "https://iptv-org.github.io/api/",
     "criteria": [
-      "HTTPS .m3u8 streams only (browser-playable)",
+      "HTTPS .m3u8 streams served direct; plain-http HLS, DASH (.mpd) and redirect sources proxied same-origin via /api/stream-proxy (browser-playable)",
       "NSFW channels excluded",
       "Blocked streams excluded (iptv-org blocks.json)",
       "Closed channels excluded",
       "Stream health verified (manifest, playlist and segment probes)"
     ],
-    "channels": 1221,
-    "countries": 49,
+    "channels": 1426,
+    "countries": 63,
     "categories": 28,
     "healthCheck": {
       "checkedAt": "2026-10-14T12:55:16Z",
@@ -35,6 +35,13 @@
       "source": "iptv-org movie-channels dataset (upload/iptv-org-movie-channels.xlsx, generated 2026-11-14)",
       "addedChannels": 353,
       "note": "Movie-category channels merged from the iptv-org movies export; streams are HTTPS .m3u8 per catalog criteria; names/URLs deduped against the existing catalog."
+    },
+    "moviesAugment2": {
+      "addedAt": "2026-11-14T00:00:00Z",
+      "source": "iptv-org movie-channels dataset (upload/iptv-org-movie-channels.xlsx, generated 2026-11-14)",
+      "addedChannels": 1,
+      "appendedSources": 0,
+      "note": "Round 2: remaining movie channels (plain-http HLS, DASH, short-links) listed with playback via same-origin /api/stream-proxy (HLS/MPD rewrite, Range passthrough) and dash.js for .mpd; extra URLs on existing channels act as fallback sources."
     }
   },
   "countries": [
@@ -42,6 +49,16 @@
       "code": "AE",
       "name": "United Arab Emirates",
       "flag": "🇦🇪"
+    },
+    {
+      "code": "AL",
+      "name": "Albania",
+      "flag": "🇦🇱"
+    },
+    {
+      "code": "AM",
+      "name": "Armenia",
+      "flag": "🇦🇲"
     },
     {
       "code": "AR",
@@ -57,6 +74,11 @@
       "code": "AU",
       "name": "Australia",
       "flag": "🇦🇺"
+    },
+    {
+      "code": "BD",
+      "name": "Bangladesh",
+      "flag": "🇧🇩"
     },
     {
       "code": "BG",
@@ -84,6 +106,11 @@
       "flag": "🇨🇭"
     },
     {
+      "code": "CL",
+      "name": "Chile",
+      "flag": "🇨🇱"
+    },
+    {
       "code": "CM",
       "name": "Cameroon",
       "flag": "🇨🇲"
@@ -97,6 +124,11 @@
       "code": "CO",
       "name": "Colombia",
       "flag": "🇨🇴"
+    },
+    {
+      "code": "CZ",
+      "name": "Czech Republic",
+      "flag": "🇨🇿"
     },
     {
       "code": "DE",
@@ -134,9 +166,19 @@
       "flag": "🇫🇷"
     },
     {
+      "code": "GR",
+      "name": "Greece",
+      "flag": "🇬🇷"
+    },
+    {
       "code": "GT",
       "name": "Guatemala",
       "flag": "🇬🇹"
+    },
+    {
+      "code": "HK",
+      "name": "Hong Kong",
+      "flag": "🇭🇰"
     },
     {
       "code": "HR",
@@ -144,9 +186,19 @@
       "flag": "🇭🇷"
     },
     {
+      "code": "HU",
+      "name": "Hungary",
+      "flag": "🇭🇺"
+    },
+    {
       "code": "ID",
       "name": "Indonesia",
       "flag": "🇮🇩"
+    },
+    {
+      "code": "IL",
+      "name": "Israel",
+      "flag": "🇮🇱"
     },
     {
       "code": "IN",
@@ -164,6 +216,16 @@
       "flag": "🇮🇹"
     },
     {
+      "code": "KG",
+      "name": "KG",
+      "flag": "🇰🇬"
+    },
+    {
+      "code": "KH",
+      "name": "Cambodia",
+      "flag": "🇰🇭"
+    },
+    {
       "code": "KZ",
       "name": "Kazakhstan",
       "flag": "🇰🇿"
@@ -177,6 +239,11 @@
       "code": "LV",
       "name": "Latvia",
       "flag": "🇱🇻"
+    },
+    {
+      "code": "MM",
+      "name": "Myanmar",
+      "flag": "🇲🇲"
     },
     {
       "code": "MN",
@@ -197,6 +264,11 @@
       "code": "NG",
       "name": "Nigeria",
       "flag": "🇳🇬"
+    },
+    {
+      "code": "NL",
+      "name": "Netherlands",
+      "flag": "🇳🇱"
     },
     {
       "code": "NP",
@@ -257,6 +329,11 @@
       "code": "TR",
       "name": "Turkiye",
       "flag": "🇹🇷"
+    },
+    {
+      "code": "TW",
+      "name": "Taiwan",
+      "flag": "🇹🇼"
     },
     {
       "code": "UA",
@@ -681,6 +758,22 @@
       ]
     },
     {
+      "id": "312kino",
+      "name": "312 Kino",
+      "country": "KG",
+      "flag": "🇰🇬",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://176.126.166.43:1935/live/312kino/playlist.m3u8",
+          "q": 406
+        }
+      ]
+    },
+    {
       "id": "3ABNFrench.us",
       "name": "3ABN French",
       "country": "US",
@@ -726,6 +819,22 @@
       "srcs": [
         {
           "u": "https://dai.google.com/linear/hls/event/JUr94WL2QAiVpGNHY5n5dA/master.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "4evercinema",
+      "name": "4ever Cinema",
+      "country": "UA",
+      "flag": "🇺🇦",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/258/index.m3u8",
           "q": 1080
         }
       ]
@@ -1104,6 +1213,22 @@
         {
           "u": "https://2-fss-1.streamhoster.com/pl_154/amlst:205432-2055980/playlist.m3u8",
           "q": 720
+        }
+      ]
+    },
+    {
+      "id": "action24",
+      "name": "Action 24",
+      "country": "GR",
+      "flag": "🇬🇷",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://actionlive.siliconweb.com/actionabr/actiontv/playlist.m3u8",
+          "q": 1080
         }
       ]
     },
@@ -1676,6 +1801,86 @@
       ]
     },
     {
+      "id": "amc",
+      "name": "AMC",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://41.205.93.154/AMC/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "amceurope",
+      "name": "AMC Europe",
+      "country": "UK",
+      "flag": "🇬🇧",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://212.70.131.37:8000/play/a05k",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "amclatinamerica",
+      "name": "AMC Latin America",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://15.204.246.24:8080/AMCHD/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "amediahit",
+      "name": "Amedia Hit",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/162/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "amediapremium",
+      "name": "Amedia Premium",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://31.148.48.15/Amedia_Premium_HD/index.m3u8",
+          "q": 720
+        }
+      ]
+    },
+    {
       "id": "AmericasTestKitchen.us",
       "name": "America's Test Kitchen",
       "country": "US",
@@ -1704,6 +1909,22 @@
         {
           "u": "https://content.uplynk.com/channel/26bd482ffe364a1282bc3df28bd3c21f.m3u8",
           "q": 720
+        }
+      ]
+    },
+    {
+      "id": "americanhorrors",
+      "name": "American Horrors",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://107.167.7.162:8081/playlist/amhor/playlist.m3u8",
+          "q": 480
         }
       ]
     },
@@ -1783,6 +2004,22 @@
       "srcs": [
         {
           "u": "https://5e50264bd6766.streamlock.net/mexiquense2/videomexiquense2/playlist.m3u8",
+          "q": 720
+        }
+      ]
+    },
+    {
+      "id": "aneflixlive",
+      "name": "Aneflix Live",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "https://stream-cdn-iad.vaughnsoft.net/play/live_a_neflix01.flv",
           "q": 720
         }
       ]
@@ -1892,6 +2129,22 @@
         },
         {
           "u": "https://aegis-cloudfront-1.tubi.video/453e03c1-3a9f-415c-9370-5c744b19a748/playlist.m3u8",
+          "q": 720
+        }
+      ]
+    },
+    {
+      "id": "armeniapremium",
+      "name": "Armenia Premium",
+      "country": "AM",
+      "flag": "🇦🇲",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/123/index.m3u8",
           "q": 720
         }
       ]
@@ -2080,6 +2333,22 @@
       ]
     },
     {
+      "id": "avirewind",
+      "name": "AVI Rewind",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://45.70.201.81:8000/play/a010/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "AWE.us",
       "name": "AWE",
       "country": "US",
@@ -2132,6 +2401,178 @@
       ]
     },
     {
+      "id": "axn",
+      "name": "AXN",
+      "country": "BR",
+      "flag": "🇧🇷",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://170.83.16.50/AXN/index.m3u8",
+          "q": 720
+        },
+        {
+          "u": "http://188.115.15.121:8000/play/a02z",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "axnadria",
+      "name": "AXN Adria",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://5.57.74.130:8000/play/a0at/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "axnasia",
+      "name": "AXN Asia",
+      "country": "SG",
+      "flag": "🇸🇬",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://125.227.210.55:4050/VideoInput/play.ts",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "axnblack",
+      "name": "AXN Black",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://85.14.32.26:8800/udp/239.100.10.17:5000",
+          "q": 0
+        },
+        {
+          "u": "http://46.244.99.71:8181/stream/35/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "axncee",
+      "name": "AXN CEE",
+      "country": "ES",
+      "flag": "🇪🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://85.11.144.9:4222/AXN",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "axncrime",
+      "name": "AXN Crime",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://88.212.7.14/live/viasat_film/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "axnlatinamerica",
+      "name": "AXN Latin America",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://181.78.8.199:8000/play/a0cu/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "axnmovies",
+      "name": "AXN Movies",
+      "country": "PT",
+      "flag": "🇵🇹",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://50.7.120.34:8080/AXN_BLACK/index.m3u8",
+          "q": 720
+        },
+        {
+          "u": "https://cdn.stmify.com/zapitv/stream/AXN_MOVIES/axn_white.mpd",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "axnpoland",
+      "name": "AXN Poland",
+      "country": "PL",
+      "flag": "🇵🇱",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://92.114.85.87:8015/play/a00f/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "axnwhite",
+      "name": "AXN White",
+      "country": "PL",
+      "flag": "🇵🇱",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://92.114.85.87:8014/play/a004/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
       "id": "AXSTV.us",
       "name": "AXS TV",
       "country": "US",
@@ -2144,6 +2585,22 @@
         {
           "u": "https://tvsen3.aynaott.com/P2fJzfsg/index.m3u8",
           "q": 576
+        }
+      ]
+    },
+    {
+      "id": "azcinema",
+      "name": "Az Cinema",
+      "country": "MX",
+      "flag": "🇲🇽",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://15.204.196.147:22880/CABLE-MAGES-AZCINEMA/video.m3u8",
+          "q": 1080
         }
       ]
     },
@@ -2688,6 +3145,22 @@
       ]
     },
     {
+      "id": "blokbaster",
+      "name": "Blokbaster",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/364/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "BloombergOriginals.us",
       "name": "Bloomberg Originals",
       "country": "US",
@@ -2745,6 +3218,38 @@
       ]
     },
     {
+      "id": "bollygold",
+      "name": "Bollygold",
+      "country": "IN",
+      "flag": "🇮🇳",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "https://jmp2.uk/stvp-IN4000600Q",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "bollywood",
+      "name": "Bollywood",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://176.118.197.101/Bollywood_HD/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
       "id": "bollywoodclassic",
       "name": "Bollywood Classic",
       "country": "RO",
@@ -2757,6 +3262,38 @@
         {
           "u": "https://hls02ns.antenaplay.ro/hls/bollywood-sd/index.m3u8",
           "q": 576
+        }
+      ]
+    },
+    {
+      "id": "bollywoodhd",
+      "name": "Bollywood HD",
+      "country": "RO",
+      "flag": "🇷🇴",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://103.213.31.109:90/BollywoodHD/playlist.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "bolt",
+      "name": "Bolt",
+      "country": "UA",
+      "flag": "🇺🇦",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/73/index.m3u8",
+          "q": 1080
         }
       ]
     },
@@ -2905,6 +3442,54 @@
         {
           "u": "https://aegis-cloudfront-1.tubi.video/c95700f8-e51c-4a36-ad46-56f70fc9f1d9/playlist.m3u8",
           "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "btvaction",
+      "name": "bTV Action",
+      "country": "BG",
+      "flag": "🇧🇬",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://213.91.179.28:8000/play/a04n",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "btvcinema",
+      "name": "bTV Cinema",
+      "country": "BG",
+      "flag": "🇧🇬",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://213.91.179.28:8000/play/a04i",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "btvlady",
+      "name": "bTV Lady",
+      "country": "BG",
+      "flag": "🇧🇬",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://213.91.179.28:8000/play/a05i",
+          "q": 0
         }
       ]
     },
@@ -3230,6 +3815,22 @@
       ]
     },
     {
+      "id": "canalactioneurope",
+      "name": "Canal+ Action Europe",
+      "country": "NL",
+      "flag": "🇳🇱",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://151.80.18.177:86/Canal+_Family_HD/index.m3u8",
+          "q": 720
+        }
+      ]
+    },
+    {
       "id": "CatholicFaithNetwork.us",
       "name": "Catholic Faith Network",
       "country": "US",
@@ -3480,6 +4081,70 @@
       ]
     },
     {
+      "id": "cctv6",
+      "name": "CCTV-6",
+      "country": "CN",
+      "flag": "🇨🇳",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://69.30.245.50/live/cctv6.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "cctvstormtheater",
+      "name": "CCTV-Storm Theater",
+      "country": "CN",
+      "flag": "🇨🇳",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://38.75.136.137:98/gslb/dsdqpub/fyjc.m3u8?auth=testpub",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "cctvthefirsttheater",
+      "name": "CCTV-The First Theater",
+      "country": "CN",
+      "flag": "🇨🇳",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://38.75.136.137:98/gslb/dsdqpub/dyjc.m3u8?auth=testpub",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "celestialmovies",
+      "name": "Celestial Movies",
+      "country": "HK",
+      "flag": "🇭🇰",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://103.58.160.157:8278/720-CELESTIALMOVIES/playlist.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
       "id": "CerritosTV3.us",
       "name": "Cerritos TV3",
       "country": "US",
@@ -3539,6 +4204,22 @@
       "srcs": [
         {
           "u": "https://fast-channels.sinclairstoryline.com/CHARGE/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "chcaction",
+      "name": "CHC Action",
+      "country": "CN",
+      "flag": "🇨🇳",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://39.134.19.68/dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226465/index.m3u8",
           "q": 1080
         }
       ]
@@ -3741,6 +4422,22 @@
       ]
     },
     {
+      "id": "cinefamiliar",
+      "name": "Cine Familiar",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/cinefamiliar.stream/playlist.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "cinefriki",
       "name": "Cine Friki",
       "country": "ES",
@@ -3752,6 +4449,22 @@
       "srcs": [
         {
           "u": "https://d2mr4fu91mjx9m.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rb0tx75ojbc5u/CineFriki_ES.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "cinehispano",
+      "name": "Cine Hispano",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/cinehispano.stream/playlist.m3u8",
           "q": 1080
         }
       ]
@@ -3801,6 +4514,22 @@
         {
           "u": "https://jmp2.uk/plu-5cf968040ab7d8f181e6a68b.m3u8",
           "q": 0
+        }
+      ]
+    },
+    {
+      "id": "cinepremium",
+      "name": "Cine Premium",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/cinepremium.stream/playlist.m3u8",
+          "q": 1080
         }
       ]
     },
@@ -3881,6 +4610,10 @@
         {
           "u": "https://a-cdn.klowdtv.com/live1/cine_720p/playlist.m3u8",
           "q": 720
+        },
+        {
+          "u": "http://186.148.196.82:8001/play/a0a4",
+          "q": 720
         }
       ]
     },
@@ -3929,6 +4662,10 @@
         {
           "u": "https://amg00711-zylo-amg00711c8-rakuten-uk-2686.playouts.now.amagi.tv/playlist/amg00711-zylofast-cinewestern-rakutenuk/playlist.m3u8",
           "q": 1080
+        },
+        {
+          "u": "https://d2nq34q0i1r3la.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-awohw8g217ho8/CineWestern_ES.m3u8",
+          "q": 1080
         }
       ]
     },
@@ -3944,6 +4681,102 @@
       "srcs": [
         {
           "u": "https://jmp2.uk/plu-65cca3e2ec452d0008af3a65.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "cine",
+      "name": "Cine+",
+      "country": "UA",
+      "flag": "🇺🇦",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://777905.live.tvstitch.com/playlist.m3u8?master=567&source=aHR0cDovLzE3Ni4xMjIuMTAzLjUxOjcwMDAvY2gzMy90cmFja3MtdjJhMS9tb25vLm0zdTg/bGl2ZT0xJmlwPTE3OC4xMzYuNDIuMjIwJmlkPTk0ODg2NSZzZWNyZXQ9bjF1N3VpMDYmc3NsPTEmMjF5bz0wJmU9MTc5MDc1MjM2MiZzdD12bmp2elZKY2JtUndKMkFzY1l0UWpR",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "cineclassic",
+      "name": "Cine+ Classic",
+      "country": "FR",
+      "flag": "🇫🇷",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://99.27.51.147/CineClassic/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "cinefrisson",
+      "name": "Cine+ Frisson",
+      "country": "FR",
+      "flag": "🇫🇷",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://99.27.51.147:8080/CineFrisson/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "cinehit",
+      "name": "Cine+ Hit",
+      "country": "UA",
+      "flag": "🇺🇦",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://777905.live.tvstitch.com/playlist.m3u8?master=539&source=aHR0cDovLzE3Ni4xMjIuMTAzLjI0MTo3MDAwL2NoNDAvdHJhY2tzLXYyYTEvbW9uby5tM3U4P2xpdmU9MSZpcD0xNzguMTM2LjQyLjIyMCZpZD05NDg4NjUmc2VjcmV0PW4xdTd1aTA2JnNzbD0xJjIxeW89MCZlPTE3OTA3NTI3NDUmc3Q9cVZaQ3Vpd2l3UzEwLW1tMzEwMktDZw==",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "cinelegend",
+      "name": "Cine+ Legend",
+      "country": "UA",
+      "flag": "🇺🇦",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://777905.live.tvstitch.com/playlist.m3u8?master=568&source=aHR0cDovLzE3Ni4xMjIuMTAzLjI0MTo3MDAwL2NoMzQvdHJhY2tzLXYxYTEvbW9uby5tM3U4P2xpdmU9MSZpcD0xNzguMTM2LjQyLjIyMCZpZD05NDg4NjUmc2VjcmV0PW4xdTd1aTA2JnNzbD0xJjIxeW89MCZlPTE3OTA3NTI2Mzgmc3Q9RHdRc3AyN2l6V3J1dllqUEZ5aS1yUQ==",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "cinebox",
+      "name": "cine.box",
+      "country": "BG",
+      "flag": "🇧🇬",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://212.70.131.37:8000/play/a08b",
           "q": 0
         }
       ]
@@ -3977,6 +4810,46 @@
         {
           "u": "https://barinaslive1.boldmss.com/CINECANAL/CINECANAL.isml/CINECANAL.m3u8",
           "q": 1080
+        },
+        {
+          "u": "http://138.121.15.230:9002/CINECANAL/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "cinelatino",
+      "name": "CineLatino",
+      "country": "MX",
+      "flag": "🇲🇽",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://168.196.127.137:6001/play/a08o/index.m3u8",
+          "q": 720
+        }
+      ]
+    },
+    {
+      "id": "cinema",
+      "name": "Cinema",
+      "country": "MN",
+      "flag": "🇲🇳",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "https://cdn4.skygo.mn/live/disk1/CinemaTV/DASH-FTA/CinemaTV.mpd",
+          "q": 1080
+        },
+        {
+          "u": "http://flussonic.linkintel.ru/cinema/index.m3u8",
+          "q": 576
         }
       ]
     },
@@ -3992,6 +4865,90 @@
       "srcs": [
         {
           "u": "https://hls02ns.antenaplay.ro/hls/cinemaraton-plus-hd/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "cinemax",
+      "name": "Cinemax",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://23.237.104.106:8080/USA_CINEMAX_WEST/index.m3u8",
+          "q": 720
+        },
+        {
+          "u": "http://88.212.15.50/live/test_cinemax_hd_hevc/playlist.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "cinemax2",
+      "name": "Cinemax 2",
+      "country": "CZ",
+      "flag": "🇨🇿",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://88.212.15.50/live/test_cinemax2_hd_hevc/playlist.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "cinemaxasia",
+      "name": "Cinemax Asia",
+      "country": "SG",
+      "flag": "🇸🇬",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://202.150.165.66:8088/play/104-Cinemax/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "cinemaxclassics",
+      "name": "Cinemax Classics",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://23.237.104.106:8080/USA_5STARMAX/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "cinemaxhits",
+      "name": "Cinemax Hits",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://23.237.104.106:8080/USA_MOREMAX/index.m3u8",
           "q": 1080
         }
       ]
@@ -4029,6 +4986,38 @@
       ]
     },
     {
+      "id": "cinestar1bulgaria",
+      "name": "CineStar 1 Bulgaria",
+      "country": "BG",
+      "flag": "🇧🇬",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://213.91.179.28:8000/play/a05h",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "cinestaractionbulgaria",
+      "name": "CineStar Action Bulgaria",
+      "country": "BG",
+      "flag": "🇧🇬",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://213.91.179.28:8000/play/a06b",
+          "q": 0
+        }
+      ]
+    },
+    {
       "id": "Cinevault80s.us",
       "name": "Cinevault 80s",
       "country": "US",
@@ -4041,6 +5030,10 @@
         {
           "u": "https://gsn-cinevault-80s-2-us.roku.wurl.tv/playlist.m3u8",
           "q": 540
+        },
+        {
+          "u": "https://aegis-cloudfront-1.tubi.video/ea1ab5d1-f554-4f6b-b03f-2611fcd94257/playlist.m3u8",
+          "q": 720
         }
       ]
     },
@@ -4413,6 +5406,22 @@
       ]
     },
     {
+      "id": "clarocinema",
+      "name": "Claro Cinema",
+      "country": "MX",
+      "flag": "🇲🇽",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://45.171.64.30:6060/play/a039/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "ClassicArtsShowcase.us",
       "name": "Classic Arts Showcase",
       "country": "US",
@@ -4620,6 +5629,22 @@
       ]
     },
     {
+      "id": "cndfilmmiddleschoolchannel",
+      "name": "CND Film Middle School Channel",
+      "country": "CN",
+      "flag": "🇨🇳",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://live2.rxip.sc96655.com/live/zxs_4000.m3u8?A=&E=&K=&P=&S=&U=",
+          "q": 0
+        }
+      ]
+    },
+    {
       "id": "CNN.us",
       "name": "CNN",
       "country": "US",
@@ -4708,6 +5733,22 @@
       ]
     },
     {
+      "id": "colorsbanglacinema",
+      "name": "Colors Bangla Cinema",
+      "country": "IN",
+      "flag": "🇮🇳",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://103.135.253.32:8080/COLORS-BANGLA-CINEMA/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
       "id": "colorscineplex",
       "name": "Colors Cineplex",
       "country": "IN",
@@ -4719,6 +5760,38 @@
       "srcs": [
         {
           "u": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/gb/YuppTV/ColorsCineplexUK.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
+      "id": "colorscineplexbollywood",
+      "name": "Colors Cineplex Bollywood",
+      "country": "IN",
+      "flag": "🇮🇳",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://163.61.226.31:9981/stream/channelid/1709941389?profile=pass",
+          "q": 576
+        }
+      ]
+    },
+    {
+      "id": "colorscineplexsuperhits",
+      "name": "Colors Cineplex Superhits",
+      "country": "IN",
+      "flag": "🇮🇳",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://163.61.226.31:9981/stream/channelid/2039746374?profile=pass",
           "q": 576
         }
       ]
@@ -5174,6 +6247,54 @@
       ]
     },
     {
+      "id": "depeliculalatinamerica",
+      "name": "De Pelicula Latin America",
+      "country": "MX",
+      "flag": "🇲🇽",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://15.204.196.147:22880/RECEPCION-DPELICULA-LATAM-FHD/video.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "depeliculaplus",
+      "name": "De Pelicula Plus",
+      "country": "MX",
+      "flag": "🇲🇽",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://200.115.120.1:8000/play/ca030/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "depeliculaus",
+      "name": "De Pelicula US",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://138.121.15.230:9002/DEPELICULA/index.m3u8",
+          "q": 720
+        }
+      ]
+    },
+    {
       "id": "DeadlyWomen.us",
       "name": "Deadly Women",
       "country": "US",
@@ -5303,6 +6424,22 @@
       ]
     },
     {
+      "id": "dhe",
+      "name": "DHE",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://15.204.246.24:8080/DHEHD/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "DidgahTV.us",
       "name": "Didgah TV",
       "country": "US",
@@ -5315,6 +6452,22 @@
         {
           "u": "https://media.streambrothers.com:1936/8276/8276/playlist.m3u8",
           "q": 576
+        }
+      ]
+    },
+    {
+      "id": "diema",
+      "name": "Diema",
+      "country": "BG",
+      "flag": "🇧🇬",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://213.91.179.28:8000/play/a045",
+          "q": 0
         }
       ]
     },
@@ -5471,6 +6624,38 @@
       ]
     },
     {
+      "id": "domkinopremium",
+      "name": "Dom kino Premium",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/108/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "dorama",
+      "name": "Dorama",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/412/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "DoveChannel.us",
       "name": "Dove Channel",
       "country": "US",
@@ -5618,6 +6803,22 @@
       ]
     },
     {
+      "id": "ebcforeignmovie",
+      "name": "EBC Foreign Movie",
+      "country": "TW",
+      "flag": "🇹🇼",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://111.59.139.85:11888/tsfile/live/1217_1.m3u8?key=txiptv",
+          "q": 0
+        }
+      ]
+    },
+    {
       "id": "EbonyTVbyLionsgate.us",
       "name": "Ebony TV by Lionsgate",
       "country": "US",
@@ -5630,6 +6831,10 @@
       "srcs": [
         {
           "u": "https://aegis-cloudfront-1.tubi.video/a0ad4b53-ab3a-48dd-be12-bc7f533c372c/playlist.m3u8",
+          "q": 1080
+        },
+        {
+          "u": "https://pb-6csswagmy4nat.akamaized.net/Ebony_TV_by_Lionsgate.m3u8",
           "q": 1080
         }
       ]
@@ -5774,6 +6979,22 @@
       "srcs": [
         {
           "u": "https://rakutenaa-zylo-emotional-rakuten-r1zkm.amagi.tv/playlist/rakutenAA-zylo-emotional-rakuten/playlist.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "enterfilm",
+      "name": "Enter-Film",
+      "country": "UA",
+      "flag": "🇺🇦",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/322/index.m3u8",
           "q": 1080
         }
       ]
@@ -6049,6 +7270,22 @@
       ]
     },
     {
+      "id": "evrokino",
+      "name": "Evrokino",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/385/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "EWTN.us",
       "name": "EWTN",
       "country": "US",
@@ -6121,6 +7358,22 @@
       ]
     },
     {
+      "id": "fan",
+      "name": "FAN",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://31.148.48.15/Fan/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "FashionFinds.us",
       "name": "Fashion Finds",
       "country": "US",
@@ -6158,6 +7411,22 @@
       ]
     },
     {
+      "id": "fenikspluskino",
+      "name": "Feniks plus Kino",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://31.148.48.15/Feniks_plus_kino/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
       "id": "FernandinaBeachChannel.us",
       "name": "Fernandina Beach Channel",
       "country": "US",
@@ -6190,6 +7459,154 @@
       ]
     },
     {
+      "id": "filmarts",
+      "name": "Film & Arts",
+      "country": "AR",
+      "flag": "🇦🇷",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://15.204.246.24:8080/FilmArtsHD/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "filmcafe",
+      "name": "Film Cafe",
+      "country": "HU",
+      "flag": "🇭🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://88.212.7.14/live/film_cafe/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "filmmania",
+      "name": "Film Mania",
+      "country": "HU",
+      "flag": "🇭🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://205.237.104.26:8080/stream/340/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "film",
+      "name": "Film+",
+      "country": "CZ",
+      "flag": "🇨🇿",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://88.212.15.50/live/test_film_plus_25p/playlist.m3u8",
+          "q": 0
+        },
+        {
+          "u": "http://88.212.7.14/live/film_plus_hun_atk/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "film1action",
+      "name": "Film1 Action",
+      "country": "NL",
+      "flag": "🇳🇱",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://86.87.15.10:8008/play/a01l/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "film1drama",
+      "name": "Film1 Drama",
+      "country": "NL",
+      "flag": "🇳🇱",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://86.87.15.10:8008/play/a01k/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "film1family",
+      "name": "Film1 Family",
+      "country": "NL",
+      "flag": "🇳🇱",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://86.87.15.10:8008/play/a01m/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "film1premiere",
+      "name": "Film1 Premiere",
+      "country": "NL",
+      "flag": "🇳🇱",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://86.87.15.10:8008/play/a01n/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "film4",
+      "name": "Film4",
+      "country": "HU",
+      "flag": "🇭🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://88.212.7.14/live/film4_hun/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
       "id": "filmax",
       "name": "Filmax",
       "country": "PK",
@@ -6202,6 +7619,70 @@
         {
           "u": "https://s3.ideationtec.live/Filmax/Filmax.m3u8",
           "q": 576
+        }
+      ]
+    },
+    {
+      "id": "filmazia",
+      "name": "Filmazia",
+      "country": "PK",
+      "flag": "🇵🇰",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://103.250.28.74:8000/play/a02k/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
+      "id": "filmboxaction",
+      "name": "FILMBOX+ Action",
+      "country": "PL",
+      "flag": "🇵🇱",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://92.114.85.87:8008/play/a007/index.m3u8",
+          "q": 720
+        }
+      ]
+    },
+    {
+      "id": "filmboxcomedy",
+      "name": "FILMBOX+ Comedy",
+      "country": "PL",
+      "flag": "🇵🇱",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://92.114.85.87:8008/play/a009/index.m3u8",
+          "q": 720
+        }
+      ]
+    },
+    {
+      "id": "filmboxemotion",
+      "name": "FILMBOX+ Emotion",
+      "country": "PL",
+      "flag": "🇵🇱",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://88.212.15.50/live/test_filmbox_extra_hd_hun_atk_1200/playlist.m3u8",
+          "q": 1080
         }
       ]
     },
@@ -6250,6 +7731,22 @@
         {
           "u": "https://webtvstream.bhtelecom.ba/filmbox_stars.m3u8",
           "q": 720
+        }
+      ]
+    },
+    {
+      "id": "filmboxone",
+      "name": "FILMBOX+ One",
+      "country": "PL",
+      "flag": "🇵🇱",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://213.91.179.28:8000/play/a06i",
+          "q": 0
         }
       ]
     },
@@ -6779,6 +8276,10 @@
         {
           "u": "https://ca-rt.onetv.app/gemdrama/index-0.m3u8?token=onetv202",
           "q": 0
+        },
+        {
+          "u": "https://ca-rt.onetv.app/gemdramaplus/index-0.m3u8?token=onetv202",
+          "q": 0
         }
       ]
     },
@@ -6843,6 +8344,10 @@
         {
           "u": "https://ca-rt.onetv.app/gemrubix/index-0.m3u8?token=onetv202",
           "q": 0
+        },
+        {
+          "u": "https://ca-rt.onetv.app/gemrubixplus/index-0.m3u8?token=onetv202",
+          "q": 0
         }
       ]
     },
@@ -6874,6 +8379,10 @@
       "srcs": [
         {
           "u": "https://ca-rt.onetv.app/gem/index-0.m3u8?token=onetv202",
+          "q": 0
+        },
+        {
+          "u": "https://ca-rt.onetv.app/gemtvplus/index-0.m3u8?token=onetv202",
           "q": 0
         }
       ]
@@ -7087,6 +8596,38 @@
         {
           "u": "https://rpn.bozztv.com/gusa/gusa-goldentv/index.m3u8",
           "q": 240
+        }
+      ]
+    },
+    {
+      "id": "goldenpremier",
+      "name": "Golden Premier",
+      "country": "MX",
+      "flag": "🇲🇽",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://200.57.28.141:8540/play/a0ln",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "goldenpremier2",
+      "name": "Golden Premier 2",
+      "country": "MX",
+      "flag": "🇲🇽",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://200.57.28.141:8540/play/a0lo",
+          "q": 1080
         }
       ]
     },
@@ -7363,6 +8904,22 @@
       ]
     },
     {
+      "id": "groovytv",
+      "name": "Groovy TV",
+      "country": "GR",
+      "flag": "🇬🇷",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://web.onair-radio.eu:1935/groovytv/groovytv/playlist.m3u8",
+          "q": 360
+        }
+      ]
+    },
+    {
       "id": "GuangdongTVAmerica.us",
       "name": "Guangdong TV America",
       "country": "US",
@@ -7427,6 +8984,22 @@
         {
           "u": "https://dbrb49pjoymg4.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod_default_xumo-ams-aws/master.m3u8?ads.xumo_channelId=99991709",
           "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "hallmarkmystery",
+      "name": "Hallmark Mystery",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://41.205.93.154/HALLMARK/index.m3u8",
+          "q": 720
         }
       ]
     },
@@ -7499,6 +9072,126 @@
       ]
     },
     {
+      "id": "hbo",
+      "name": "HBO",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://tvsen7.aynascope.net/hbo/index.m3u8",
+          "q": 720
+        },
+        {
+          "u": "http://88.212.15.50/live/test_hbo_hd_hevc/playlist.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "hbo2",
+      "name": "HBO 2",
+      "country": "CZ",
+      "flag": "🇨🇿",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://88.212.15.50/live/test_hbo2_hd_hevc/playlist.m3u8",
+          "q": 0
+        },
+        {
+          "u": "http://185.227.34.179:8080/hbo-2-hd/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "hbo2latinamerica",
+      "name": "HBO 2 Latin America",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://45.171.64.30:6060/play/a00i/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "hbo3",
+      "name": "HBO 3",
+      "country": "CZ",
+      "flag": "🇨🇿",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://88.212.15.50/live/test_hbo3_hd_hevc/playlist.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "hboasia",
+      "name": "HBO Asia",
+      "country": "SG",
+      "flag": "🇸🇬",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://202.150.165.66:8088/play/100-HBO/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "hbohits",
+      "name": "HBO Hits",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://tvsen7.aynascope.net/hbo2/index.m3u8",
+          "q": 720
+        }
+      ]
+    },
+    {
+      "id": "hbohitsasia",
+      "name": "HBO Hits Asia",
+      "country": "SG",
+      "flag": "🇸🇬",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://202.150.165.66:8088/play/102-HBOHits/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "hbomundilatinamerica",
       "name": "HBO Mundi Latin America",
       "country": "US",
@@ -7511,6 +9204,38 @@
         {
           "u": "https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/cinemax.stream/chunks.m3u8",
           "q": 0
+        }
+      ]
+    },
+    {
+      "id": "hbosignatureasia",
+      "name": "HBO Signature Asia",
+      "country": "SG",
+      "flag": "🇸🇬",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://202.150.165.66:8088/play/101-HBOSignature/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "hboxtremelatinamerica",
+      "name": "HBO Xtreme Latin America",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://15.204.246.24:8080/HBOXTREMEHD/index.m3u8",
+          "q": 1080
         }
       ]
     },
@@ -7643,6 +9368,22 @@
       ]
     },
     {
+      "id": "hit",
+      "name": "Hit",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/363/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "HMIPROMZNEWS.us",
       "name": "HMI PROMZ NEWS",
       "country": "US",
@@ -7708,6 +9449,38 @@
         {
           "u": "https://di1slo8304ver.cloudfront.net/playlist.m3u8",
           "q": 720
+        }
+      ]
+    },
+    {
+      "id": "hollywood",
+      "name": "Hollywood",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://31.148.48.15/MGM_HD/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "hollywoodukraine",
+      "name": "Hollywood Ukraine",
+      "country": "UA",
+      "flag": "🇺🇦",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://dtv.vol.net.ua/Hollywood-HD/index.m3u8",
+          "q": 576
         }
       ]
     },
@@ -8008,6 +9781,22 @@
       ]
     },
     {
+      "id": "ifc",
+      "name": "IFC",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://23.237.104.106:8080/USA_IFC/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "ifilm2",
       "name": "iFilm 2",
       "country": "IR",
@@ -8122,6 +9911,22 @@
       ]
     },
     {
+      "id": "illusion",
+      "name": "Illusion+",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://176.118.197.101/Illuzion+/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
       "id": "ImagenTV.mx",
       "name": "Imagen TV",
       "country": "MX",
@@ -8199,6 +10004,22 @@
         {
           "u": "https://samitaorigin.tangotv.in/INDIATALKIES/SAMITAORIGIN/index.m3u8",
           "q": 360
+        }
+      ]
+    },
+    {
+      "id": "indiyskoyekino",
+      "name": "Indiyskoye Kino",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://188.113.190.12/329/index.m3u8",
+          "q": 576
         }
       ]
     },
@@ -8380,6 +10201,22 @@
         {
           "u": "https://jlt-jltv-stirr.otteravision.com/jlt/jltv/jltv.m3u8",
           "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "jiangsumoviechannel",
+      "name": "Jiangsu Movie Channel",
+      "country": "CN",
+      "flag": "🇨🇳",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://223.110.243.134/PLTV/4/224/3221225937/index.m3u8",
+          "q": 576
         }
       ]
     },
@@ -8681,6 +10518,122 @@
       ]
     },
     {
+      "id": "kineko",
+      "name": "Kineko",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://31.148.48.15/Kineko_HD/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "kino1",
+      "name": "Kino 1",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://kino-1.catcast.tv/content/38617/index.m3u8",
+          "q": 0
+        },
+        {
+          "u": "http://stream.mcquack.net/395/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "kino2",
+      "name": "Kino 2",
+      "country": "UA",
+      "flag": "🇺🇦",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/465/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "kino24",
+      "name": "Kino 24",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://sirius.greenhosting.ru/Kino24Ru/video.m3u8",
+          "q": 720
+        }
+      ]
+    },
+    {
+      "id": "kinobarrandov",
+      "name": "Kino Barrandov",
+      "country": "CZ",
+      "flag": "🇨🇿",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://88.212.15.50/live/test_kino_barrandov_sd_hevc50/playlist.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "kinonova",
+      "name": "Kino Nova",
+      "country": "BG",
+      "flag": "🇧🇬",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://213.91.179.28:8000/play/a041",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "kinotv",
+      "name": "Kino TV",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://176.118.197.101/KinoTvHD/playlist.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "kinoboevik",
       "name": "KinoBoevik",
       "country": "KZ",
@@ -8693,6 +10646,70 @@
         {
           "u": "https://fs.uplink.kz/kinoboevik/mono.m3u8?token=onlinetv",
           "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "kinohit",
+      "name": "KinoHit",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/126/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
+      "id": "kinoliving",
+      "name": "Kinoliving",
+      "country": "UA",
+      "flag": "🇺🇦",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/445/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "kinomix",
+      "name": "Kinomix",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://93.170.254.17/Kinomiks/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
+      "id": "kinopokaz",
+      "name": "Kinopokaz",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/64/index.m3u8",
+          "q": 576
         }
       ]
     },
@@ -8713,6 +10730,38 @@
       ]
     },
     {
+      "id": "kinosat",
+      "name": "KinoSat",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://31.148.48.15/Kineko/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
+      "id": "kinosemja",
+      "name": "Kinosemja",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/170/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
       "id": "kinoseriya",
       "name": "Kinoseriya",
       "country": "RU",
@@ -8729,6 +10778,22 @@
       ]
     },
     {
+      "id": "kinosvidanie",
+      "name": "Kinosvidanie",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://5.188.159.128:8070/kinosvidanie/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
       "id": "kinoteatr",
       "name": "Kinoteatr",
       "country": "UZ",
@@ -8740,6 +10805,38 @@
       "srcs": [
         {
           "u": "https://stream8.cinerama.uz/1009/tracks-v1a1/playlist.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "kinouzhas",
+      "name": "Kinouzhas",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://s1.merlive.am/Kinoujas/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "kinowood",
+      "name": "Kinowood",
+      "country": "UA",
+      "flag": "🇺🇦",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/446/index.m3u8",
           "q": 1080
         }
       ]
@@ -8826,6 +10923,22 @@
         {
           "u": "https://content.uplynk.com/channel/9deaf22aaa33461f9cac22e030ed00ec.m3u8",
           "q": 720
+        }
+      ]
+    },
+    {
+      "id": "komsantv",
+      "name": "Komsan TV",
+      "country": "KH",
+      "flag": "🇰🇭",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://tv.cootel.com.kh:8077/streams/d/Komsan/playlist.m3u8",
+          "q": 0
         }
       ]
     },
@@ -9020,6 +11133,22 @@
       ]
     },
     {
+      "id": "laxmitvgujarati",
+      "name": "Laxmi TV Gujarati",
+      "country": "IN",
+      "flag": "🇮🇳",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://27.124.71.27/Sun_Bangla/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
       "id": "LegoChannel.us",
       "name": "Lego Channel",
       "country": "US",
@@ -9131,6 +11260,22 @@
       "srcs": [
         {
           "u": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "lifetimemovies",
+      "name": "Lifetime Movies",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://23.237.104.106:8080/USA_LMN/index.m3u8",
           "q": 1080
         }
       ]
@@ -9536,6 +11681,22 @@
       ]
     },
     {
+      "id": "magyarmozitv",
+      "name": "Magyar Mozi TV",
+      "country": "HU",
+      "flag": "🇭🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://88.212.7.14/live/mozi/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
       "id": "mahamovie",
       "name": "Maha Movie",
       "country": "IN",
@@ -9680,6 +11841,22 @@
         {
           "u": "https://maverick-maverick-black-cinema-1-us.samsung.wurl.tv/playlist.m3u8",
           "q": 720
+        }
+      ]
+    },
+    {
+      "id": "max4",
+      "name": "MAX4",
+      "country": "HU",
+      "flag": "🇭🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://141.94.193.53/MAX4_HD/index.m3u8",
+          "q": 1080
         }
       ]
     },
@@ -9942,6 +12119,22 @@
       ]
     },
     {
+      "id": "megaextrenohd",
+      "name": "Mega Extreno HD",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "https://stream-cdn-iad3.vaughnsoft.net/play/live_mega_extremo.flv",
+          "q": 720
+        }
+      ]
+    },
+    {
       "id": "MegaTV.us",
       "name": "Mega TV",
       "country": "US",
@@ -9953,6 +12146,22 @@
       "srcs": [
         {
           "u": "https://mdstrm.com/live-stream-playlist/67ed74e8af482ba71d47fd7b.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "meiahmoviechannel",
+      "name": "Mei Ah Movie Channel",
+      "country": "HK",
+      "flag": "🇭🇰",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://103.172.187.30:12000/stream/mytv/null-2/master.m3u8",
           "q": 1080
         }
       ]
@@ -10373,6 +12582,38 @@
       ]
     },
     {
+      "id": "mosfilmgoldcollection",
+      "name": "Mosfilm Gold Collection",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://31.222.235.15/mosfilm/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
+      "id": "moviebangla",
+      "name": "Movie Bangla",
+      "country": "BD",
+      "flag": "🇧🇩",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://alvetv.com/moviebanglatv/8080/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
       "id": "MovieMusicbyStingray.ca",
       "name": "Movie Music by Stingray",
       "country": "CA",
@@ -10421,6 +12662,22 @@
       ]
     },
     {
+      "id": "moviebox",
+      "name": "MovieBox",
+      "country": "MN",
+      "flag": "🇲🇳",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "https://cdn4.skygo.mn/live/disk1/Moviebox/DASH-FTA/Moviebox.mpd",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "moviedome",
       "name": "Moviedome",
       "country": "US",
@@ -10453,6 +12710,22 @@
       ]
     },
     {
+      "id": "moviesnow",
+      "name": "Movies Now",
+      "country": "IN",
+      "flag": "🇮🇳",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://27.124.71.27/Movies_Now/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
       "id": "moviesthriller",
       "name": "Movies Thriller",
       "country": "SA",
@@ -10481,6 +12754,22 @@
         {
           "u": "https://2-fss-2.streamhoster.com/pl_120/206858-4412962-1/playlist.m3u8",
           "q": 0
+        }
+      ]
+    },
+    {
+      "id": "moviesmartturk",
+      "name": "MovieSmart Turk",
+      "country": "TR",
+      "flag": "🇹🇷",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://playhdnewjj.xyz:8080/recc121412/KVqfhtdJ2nQ7/174",
+          "q": 576
         }
       ]
     },
@@ -10529,6 +12818,38 @@
         {
           "u": "https://void.greenhosting.ru/MovifyKino_Mpeg4/index.m3u8",
           "q": 576
+        }
+      ]
+    },
+    {
+      "id": "mozi",
+      "name": "Mozi+",
+      "country": "HU",
+      "flag": "🇭🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://88.212.7.14/live/mozi_plusz/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "moziverzum",
+      "name": "Moziverzum",
+      "country": "HU",
+      "flag": "🇭🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://88.212.7.14/live/moziverzum/index.m3u8",
+          "q": 0
         }
       ]
     },
@@ -10723,6 +13044,22 @@
       ]
     },
     {
+      "id": "multipremier",
+      "name": "MultiPremier",
+      "country": "MX",
+      "flag": "🇲🇽",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://168.196.127.137:6001/play/a08n/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "MuslimNetworkTV.us",
       "name": "Muslim Network TV",
       "country": "US",
@@ -10739,6 +13076,22 @@
       ]
     },
     {
+      "id": "muzhskoekino",
+      "name": "Muzhskoe kino",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/107/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
       "id": "muzhskoy",
       "name": "Muzhskoy",
       "country": "RU",
@@ -10751,6 +13104,22 @@
         {
           "u": "https://fonbet.mediacdn.ru/live/muzhskoi/playlist.m3u8",
           "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "mwdmovies",
+      "name": "MWD Movies",
+      "country": "MM",
+      "flag": "🇲🇲",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://203.81.84.130/hls/mwd_movie/index.m3u8",
+          "q": 0
         }
       ]
     },
@@ -10851,6 +13220,18 @@
         {
           "u": "https://appletree-mytime-samsungmexico.amagi.tv/playlist.m3u8",
           "q": 720
+        },
+        {
+          "u": "https://appletree-mytime-samsungbrazil.amagi.tv/playlist.m3u8",
+          "q": 720
+        },
+        {
+          "u": "https://appletree-mytimespain-rakuten.amagi.tv/playlist.m3u8",
+          "q": 1080
+        },
+        {
+          "u": "https://appletree-mytimeuk-rakuten.amagi.tv/playlist.m3u8",
+          "q": 1080
         }
       ]
     },
@@ -10887,6 +13268,70 @@
         {
           "u": "https://aegis-cloudfront-1.tubi.video/07f838db-e5bc-47c9-b2b8-6d7037b06b9b/playlist.m3u8",
           "q": 720
+        }
+      ]
+    },
+    {
+      "id": "nashkinopokaz",
+      "name": "Nash Kinopokaz",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://46.53.200.153:7777/play/SRT_Nash_kinopokaz/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
+      "id": "nashe",
+      "name": "Nashe",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/217/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
+      "id": "nashelubimoekinoukraine",
+      "name": "Nashe Lubimoe Kino Ukraine",
+      "country": "UA",
+      "flag": "🇺🇦",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/456/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "nashemuzhskoe",
+      "name": "Nashe muzhskoe",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/362/index.m3u8",
+          "q": 1080
         }
       ]
     },
@@ -11324,6 +13769,22 @@
       ]
     },
     {
+      "id": "nhbollyflix",
+      "name": "NH BollyFlix",
+      "country": "IN",
+      "flag": "🇮🇳",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "https://jmp2.uk/stvp-IN46000140Q",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "nhtamilgold",
       "name": "NH Tamil Gold",
       "country": "IN",
@@ -11388,6 +13849,22 @@
         {
           "u": "https://barinaslive1.boldmss.com/NICK/NICK.isml/NICK.m3u8",
           "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "niledrama",
+      "name": "Nile Drama",
+      "country": "EG",
+      "flag": "🇪🇬",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://185.9.2.18/chid_352/index.m3u8",
+          "q": 576
         }
       ]
     },
@@ -11892,6 +14369,38 @@
       ]
     },
     {
+      "id": "osnmoviesaction",
+      "name": "OSN Movies Action",
+      "country": "AE",
+      "flag": "🇦🇪",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://116.90.120.151:8000/play/a0ax/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "ostrosyuzhetnoye",
+      "name": "Ostrosyuzhetnoye",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/214/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "OutdoorAmerica.us",
       "name": "Outdoor America",
       "country": "US",
@@ -12025,6 +14534,22 @@
         {
           "u": "https://jmp2.uk/plu-5cb0cae7a461406ffe3f5213.m3u8",
           "q": 0
+        }
+      ]
+    },
+    {
+      "id": "paramountnetwork",
+      "name": "Paramount Network",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://23.237.104.106:8080/USA_PARAMOUNT_NETWORK/index.m3u8",
+          "q": 1080
         }
       ]
     },
@@ -12646,6 +15171,10 @@
         {
           "u": "https://jmp2.uk/plu-561d7d484dc7c8770484914a.m3u8",
           "q": 0
+        },
+        {
+          "u": "https://jmp2.uk/plu-61c095861782bd000780e0ba.m3u8",
+          "q": 0
         }
       ]
     },
@@ -12709,6 +15238,10 @@
       "srcs": [
         {
           "u": "https://jmp2.uk/plu-64be7398e4391c0008cdedfe.m3u8",
+          "q": 0
+        },
+        {
+          "u": "https://jmp2.uk/plu-65b915b1dc10a40008d53797.m3u8",
           "q": 0
         }
       ]
@@ -12805,6 +15338,10 @@
       "srcs": [
         {
           "u": "https://jmp2.uk/plu-5f12101f0b12f00007844c7c.m3u8",
+          "q": 0
+        },
+        {
+          "u": "https://jmp2.uk/plu-5f1ac8099c49f600076579b2.m3u8",
           "q": 0
         }
       ]
@@ -13142,6 +15679,10 @@
         {
           "u": "https://jmp2.uk/plu-5c665db3e6c01b72c4977bc2.m3u8",
           "q": 0
+        },
+        {
+          "u": "https://jmp2.uk/plu-5c5c31f2f21b553c1f673fb0.m3u8",
+          "q": 0
         }
       ]
     },
@@ -13285,6 +15826,10 @@
       "srcs": [
         {
           "u": "https://jmp2.uk/plu-608aa17fb9f4490007e6419a.m3u8",
+          "q": 0
+        },
+        {
+          "u": "https://jmp2.uk/plu-61c09515fbb4b50007d221f5.m3u8",
           "q": 0
         }
       ]
@@ -13509,6 +16054,10 @@
       "srcs": [
         {
           "u": "https://jmp2.uk/plu-62ea3f8a38acc80007072d26.m3u8",
+          "q": 0
+        },
+        {
+          "u": "https://jmp2.uk/plu-63a1c9790cc44a0007dc8857.m3u8",
           "q": 0
         }
       ]
@@ -13910,6 +16459,10 @@
         {
           "u": "https://jmp2.uk/plu-66166cb1307fa30008f275e7.m3u8",
           "q": 0
+        },
+        {
+          "u": "https://jmp2.uk/plu-61f9598588f86000078ee7d6.m3u8",
+          "q": 0
         }
       ]
     },
@@ -13973,6 +16526,10 @@
       "srcs": [
         {
           "u": "https://jmp2.uk/plu-6152ee71bf99590007893a11.m3u8",
+          "q": 0
+        },
+        {
+          "u": "https://jmp2.uk/plu-61c1979dfa307000070bbe4d.m3u8",
           "q": 0
         }
       ]
@@ -14102,6 +16659,10 @@
         {
           "u": "https://jmp2.uk/plu-62bdacc96a3751000811842d.m3u8",
           "q": 0
+        },
+        {
+          "u": "https://jmp2.uk/plu-5d4bdb635ce813b38639e6a3.m3u8",
+          "q": 0
         }
       ]
     },
@@ -14166,6 +16727,22 @@
         {
           "u": "https://dfoiz3dv1euv7.cloudfront.net/ptnlive-s3/live1.m3u8",
           "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "polsatfilm",
+      "name": "Polsat Film",
+      "country": "PL",
+      "flag": "🇵🇱",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://92.63.196.180:8080/live/74173747597177/7vfxky4rjx3j/10208.m3u8?token=Q0FaWEpZFFsXAwNWUFMEBwJXAwMDVlpTBgVTVwEHAQNeWgoACVVXVQAVGEZGFUdTUl9qWwIVAlBSAQBdGENHQ10RbVBdEwxDAgANUAJVFxoRRlxfAxUCUU4RQA1QQwheTQ9eFRtUThVQRVoFWT5RU0VbVldEDVYUDl8cRlsPbVRdDlNXXRMMQwQVGEZcEkUUCVxAXgobGgMLR0IFQAQQClYWXlUVE1UOQFlAFkxDDxRjfhceRFJAFQddQw1bDxAKGg4BTAETGkNcRGsWUBJBRFZTWFcUFQJDUhEcRlkASm9bDFxXXFJCCFpZR0YPQwQUHxBYXQheTA4QbEANUEMIXk0PXkQ=",
+          "q": 0
         }
       ]
     },
@@ -14252,6 +16829,22 @@
       ]
     },
     {
+      "id": "premialnoe",
+      "name": "Premialnoe",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/421/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "PresumiendoMexico.mx",
       "name": "Presumiendo Mexico",
       "country": "MX",
@@ -14264,6 +16857,38 @@
         {
           "u": "https://60417ddeaf0d9.streamlock.net/telemetrika/smil:telemetrika.smil/playlist.m3u8",
           "q": 720
+        }
+      ]
+    },
+    {
+      "id": "procinema",
+      "name": "Pro Cinema",
+      "country": "RO",
+      "flag": "🇷🇴",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-ro-procinema/live_fullhd?offsetSeconds=0",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "prokino",
+      "name": "Prokino",
+      "country": "UA",
+      "flag": "🇺🇦",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://dtv.vol.net.ua/ProKino/index.m3u8",
+          "q": 360
         }
       ]
     },
@@ -14417,6 +17042,22 @@
       ]
     },
     {
+      "id": "qtv3",
+      "name": "QTV-3",
+      "country": "CN",
+      "flag": "🇨🇳",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://119.166.53.110:85/tsfile/live/1002_1.m3u8?authid=0&key=txiptv&playlive=1",
+          "q": 0
+        }
+      ]
+    },
+    {
       "id": "QVC.us",
       "name": "QVC",
       "country": "US",
@@ -14561,6 +17202,22 @@
         {
           "u": "https://eu1.servers10.com:8081/8230/index.m3u8",
           "q": 720
+        }
+      ]
+    },
+    {
+      "id": "raimovie",
+      "name": "Rai Movie",
+      "country": "IT",
+      "flag": "🇮🇹",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://team-tv.co:81/raimovie/index.m3u8",
+          "q": 1080
         }
       ]
     },
@@ -14986,6 +17643,22 @@
       ]
     },
     {
+      "id": "rodnoekino",
+      "name": "Rodnoe Kino",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/242/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
       "id": "rotanacinemaegypt",
       "name": "Rotana Cinema Egypt",
       "country": "EG",
@@ -15048,6 +17721,22 @@
       ]
     },
     {
+      "id": "rtshshqip",
+      "name": "RTSH Shqip",
+      "country": "AL",
+      "flag": "🇦🇱",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://178.33.11.6:8696/live/rtshshqip/playlist.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "RTViUS.us",
       "name": "RTVi US",
       "country": "US",
@@ -15092,6 +17781,70 @@
         {
           "u": "https://run-rt-uh-roku.otteravision.com/run/rt_uh/rt_uh.m3u8",
           "q": 720
+        }
+      ]
+    },
+    {
+      "id": "russkiybestseller",
+      "name": "Russkiy Bestseller",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/208/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
+      "id": "russkiydetektiv",
+      "name": "Russkiy Detektiv",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/204/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
+      "id": "russkiyillusion",
+      "name": "Russkiy Illusion",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://31.148.48.15/Russkiy_illusion/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
+      "id": "russkiyroman",
+      "name": "Russkiy roman",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://31.148.48.15/Russkiy_Roman_HD/index.m3u8",
+          "q": 1080
         }
       ]
     },
@@ -15548,6 +18301,22 @@
       ]
     },
     {
+      "id": "shokiruyushchee",
+      "name": "Shokiruyushchee",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/75/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "ShopLC.us",
       "name": "Shop LC",
       "country": "US",
@@ -15690,6 +18459,102 @@
         {
           "u": "https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=71",
           "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "skycinemaaction",
+      "name": "Sky Cinema Action",
+      "country": "IT",
+      "flag": "🇮🇹",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://109.169.87.42:8080/stream/26/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "skycinemacollection",
+      "name": "Sky Cinema Collection",
+      "country": "IT",
+      "flag": "🇮🇹",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://109.169.87.42:8080/stream/18/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "skycinemadue",
+      "name": "Sky Cinema Due",
+      "country": "IT",
+      "flag": "🇮🇹",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://109.169.87.42:8080/stream/10/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "skycinemafamily",
+      "name": "Sky Cinema Family",
+      "country": "IT",
+      "flag": "🇮🇹",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://109.169.87.42:8080/stream/22/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "skycinemasuspense",
+      "name": "Sky Cinema Suspense",
+      "country": "IT",
+      "flag": "🇮🇹",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://109.169.87.42:8080/stream/30/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "skycinemauno",
+      "name": "Sky Cinema Uno",
+      "country": "IT",
+      "flag": "🇮🇹",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://109.169.87.42:8080/stream/2/index.m3u8",
+          "q": 0
         }
       ]
     },
@@ -15968,6 +18833,26 @@
         {
           "u": "https://a-cdn.klowdtv.com/live1/smc_720p/playlist.m3u8",
           "q": 720
+        },
+        {
+          "u": "http://45.177.114.115/SONY_MOVIES/index.m3u8",
+          "q": 720
+        }
+      ]
+    },
+    {
+      "id": "sonymovieslatinamerica",
+      "name": "Sony Movies Latin America",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://15.204.246.24:8080/SonyMoviesHD/index.m3u8",
+          "q": 720
         }
       ]
     },
@@ -16161,6 +19046,50 @@
       ]
     },
     {
+      "id": "starchannel",
+      "name": "Star Channel",
+      "country": "CL",
+      "flag": "🇨🇱",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://138.121.15.230:9002/STAR-CHANNEL/index.m3u8",
+          "q": 720
+        },
+        {
+          "u": "http://190.61.47.54:8000/play/a035/index.m3u8",
+          "q": 1080
+        },
+        {
+          "u": "http://213.91.179.28:8000/play/a0c9",
+          "q": 0
+        },
+        {
+          "u": "http://92.36.202.5:10001/play/a01s",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "starchannellatinamerica",
+      "name": "Star Channel Latin America",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://15.204.246.24:8080/STARCHANNELHD/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "starcinema",
       "name": "Star Cinema",
       "country": "RU",
@@ -16205,6 +19134,26 @@
         {
           "u": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:maamovies.smil/chunklist_b2628000.m3u8",
           "q": 720
+        }
+      ]
+    },
+    {
+      "id": "starmovies",
+      "name": "Star Movies",
+      "country": "PT",
+      "flag": "🇵🇹",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://znty.dyndns.org:5010/hls/foxm.m3u8",
+          "q": 0
+        },
+        {
+          "u": "http://92.36.202.5:10001/play/a01o",
+          "q": 0
         }
       ]
     },
@@ -16269,6 +19218,10 @@
         {
           "u": "https://jmp2.uk/plu-695c32e61ca20bb8ca802eb9.m3u8",
           "q": 0
+        },
+        {
+          "u": "https://jmp2.uk/plu-69776ce979545c21a1220bff.m3u8",
+          "q": 0
         }
       ]
     },
@@ -16284,6 +19237,10 @@
       "srcs": [
         {
           "u": "https://jmp2.uk/plu-69776b58036e883f39e5ab8a.m3u8",
+          "q": 0
+        },
+        {
+          "u": "https://jmp2.uk/plu-693add137e308621c051e733.m3u8",
           "q": 0
         }
       ]
@@ -16301,6 +19258,42 @@
         {
           "u": "https://jmp2.uk/plu-634dacf51d90320007fcd5fa.m3u8",
           "q": 0
+        },
+        {
+          "u": "https://jmp2.uk/plu-65787f2eb228b7000843fa5c.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "starutsavmovies",
+      "name": "Star Utsav Movies",
+      "country": "IN",
+      "flag": "🇮🇳",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://163.61.226.31:9981/stream/channelid/1225596390?profile=pass",
+          "q": 576
+        }
+      ]
+    },
+    {
+      "id": "startair",
+      "name": "START Air",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://176.118.197.101/START_AIR/index.m3u8",
+          "q": 1080
         }
       ]
     },
@@ -16317,6 +19310,22 @@
         {
           "u": "https://fs.uplink.kz/start_world/mono.m3u8?token=onlinetv",
           "q": 576
+        }
+      ]
+    },
+    {
+      "id": "starzcinema",
+      "name": "Starz Cinema",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://23.237.104.106:8080/USA_STARZ_CINEMA/index.m3u8",
+          "q": 720
         }
       ]
     },
@@ -16943,6 +19952,26 @@
       ]
     },
     {
+      "id": "sundancetv",
+      "name": "Sundance TV",
+      "country": "PL",
+      "flag": "🇵🇱",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://92.114.85.87:8003/play/a004/index.m3u8",
+          "q": 576
+        },
+        {
+          "u": "https://cdn.stmify.com/zapitv/stream/SUNDANCE_TV/sundance_hd.mpd",
+          "q": 0
+        }
+      ]
+    },
+    {
       "id": "SuperChannel12.mx",
       "name": "Super Channel 12",
       "country": "MX",
@@ -17038,6 +20067,22 @@
       "srcs": [
         {
           "u": "https://a-cdn.klowdtv.com/live3/swervewomenssports_720p/playlist.m3u8",
+          "q": 720
+        }
+      ]
+    },
+    {
+      "id": "syfy",
+      "name": "SYFY",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://23.237.104.106:8080/USA_SYFY/index.m3u8",
           "q": 720
         }
       ]
@@ -17275,6 +20320,86 @@
       ]
     },
     {
+      "id": "telecineaction",
+      "name": "Telecine Action",
+      "country": "BR",
+      "flag": "🇧🇷",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://46.151.196.223:14326",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "telecinecult",
+      "name": "Telecine Cult",
+      "country": "BR",
+      "flag": "🇧🇷",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://45.185.15.154:9080/stream/64/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "telecinefun",
+      "name": "Telecine Fun",
+      "country": "BR",
+      "flag": "🇧🇷",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://45.185.15.154:9080/stream/63/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "telecinepremium",
+      "name": "Telecine Premium",
+      "country": "BR",
+      "flag": "🇧🇷",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://45.185.15.154:9080/stream/28/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "telecinetouch",
+      "name": "Telecine Touch",
+      "country": "BR",
+      "flag": "🇧🇷",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://45.185.15.154:9080/stream/29/index.m3u8",
+          "q": 0
+        }
+      ]
+    },
+    {
       "id": "TeleFormula.mx",
       "name": "TeleFormula",
       "country": "MX",
@@ -17451,6 +20576,22 @@
         {
           "u": "https://5bf8041cb3fed.streamlock.net/Tevevida/Tevevida/.m3u8",
           "q": 480
+        }
+      ]
+    },
+    {
+      "id": "tf1seriesfilms",
+      "name": "TF1 Series Films",
+      "country": "FR",
+      "flag": "🇫🇷",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://149.62.177.107:9999/TF1_Series_Films/index.m3u8",
+          "q": 1080
         }
       ]
     },
@@ -17858,6 +20999,22 @@
       ]
     },
     {
+      "id": "thrill",
+      "name": "Thrill",
+      "country": "HK",
+      "flag": "🇭🇰",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "https://cdn10jtedge.indihometv.com/atm/DASH/thrill/manifest.mpd",
+          "q": 540
+        }
+      ]
+    },
+    {
       "id": "TinTV.us",
       "name": "Tin TV",
       "country": "US",
@@ -18199,6 +21356,38 @@
       ]
     },
     {
+      "id": "tv21",
+      "name": "TV 21",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://178.134.1.158:8081/TVXXI/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
+      "id": "tv21international",
+      "name": "TV 21 International",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://46.53.200.153:7777/play/TV-21M/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
       "id": "TVBUAP.mx",
       "name": "TV BUAP",
       "country": "MX",
@@ -18421,6 +21610,38 @@
         {
           "u": "https://5ca3e84a76d30.streamlock.net/universidadgto/videouniversidadgto/playlist.m3u8",
           "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "tv1000",
+      "name": "TV1000",
+      "country": "BG",
+      "flag": "🇧🇬",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/100/tracks-v1a1/mono.ts.m3u8?ads=1&filter.tracks=v1a1",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "tv1000russiankinoglobal",
+      "name": "TV1000 Russian Kino Global",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://213.91.179.28:8000/play/a0bx",
+          "q": 0
         }
       ]
     },
@@ -18921,6 +22142,22 @@
       ]
     },
     {
+      "id": "twentyseven",
+      "name": "Twentyseven",
+      "country": "IT",
+      "flag": "🇮🇹",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "https://live03-col.msf.cdn.mediaset.net/live/ch-ts/ts-clr.isml/manifest.mpd",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "UAATV.mx",
       "name": "UAA TV",
       "country": "MX",
@@ -19051,6 +22288,38 @@
       ]
     },
     {
+      "id": "universalcinema",
+      "name": "Universal Cinema",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://45.167.1.138:8000/play/a06m",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "universalcomedy",
+      "name": "Universal Comedy",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/universalcomedy/playlist.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
       "id": "UniversalCrime.us",
       "name": "Universal Crime",
       "country": "US",
@@ -19078,6 +22347,22 @@
       "srcs": [
         {
           "u": "https://d31z96rdrmwfsp.cloudfront.net/master.m3u8",
+          "q": 720
+        }
+      ]
+    },
+    {
+      "id": "usanetwork",
+      "name": "USA Network",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://200.32.231.178/USA_NETWORK/index.m3u8",
           "q": 720
         }
       ]
@@ -19243,6 +22528,86 @@
       ]
     },
     {
+      "id": "viasatkino",
+      "name": "Viasat Kino",
+      "country": "UA",
+      "flag": "🇺🇦",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://176.61.157.250/TV1000/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "viasatkinoaction",
+      "name": "Viasat Kino Action",
+      "country": "UA",
+      "flag": "🇺🇦",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://dtv.vol.net.ua/Viasat_Kino_Action_HD/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
+      "id": "viasatkinocomedy",
+      "name": "Viasat Kino Comedy",
+      "country": "UA",
+      "flag": "🇺🇦",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://777905.live.tvstitch.com/playlist.m3u8?master=249&source=aHR0cDovLzE3Ni4xMjIuMTAzLjI0MTo3MDAwL2NoNDQvdHJhY2tzLXYxYTEvbW9uby5tM3U4P2xpdmU9MSZpcD0xNzguMTM2LjQyLjIyMCZpZD05NDg4NjUmc2VjcmV0PW4xdTd1aTA2JnNzbD0xJjIxeW89MCZlPTE3OTA1OTk4Mzcmc3Q9UzRPS1VZemNocmREQWhnSTJkTDJ5QQ==",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "viasatkinoworld",
+      "name": "Viasat Kino World",
+      "country": "UA",
+      "flag": "🇺🇦",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://777905.live.tvstitch.com/playlist.m3u8?master=102&source=aHR0cDovLzE3Ni4xMjIuMTAzLjI0MTo3MDAwL2NoNDgvdHJhY2tzLXYxYTEvbW9uby5tM3U4P2xpdmU9MSZpcD0xNzguMTM2LjQyLjIyMCZpZD05NDg4NjUmc2VjcmV0PW4xdTd1aTA2JnNzbD0xJjIxeW89MCZlPTE3OTA1OTk5NDcmc3Q9N3ROblpCZy02WTBka1RuekRIZjU0QQ==",
+          "q": 0
+        }
+      ]
+    },
+    {
+      "id": "viasatserial",
+      "name": "Viasat Serial",
+      "country": "UA",
+      "flag": "🇺🇦",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://777905.live.tvstitch.com/playlist.m3u8?master=599&source=aHR0cDovLzE3Ni4xMjIuMTAzLjI0MTo3MDAwL2NoNDUvdHJhY2tzLXYyYTEvbW9uby5tM3U4P2xpdmU9MSZpcD0xNzguMTM2LjQyLjIyMCZpZD05NDg4NjUmc2VjcmV0PW4xdTd1aTA2JnNzbD0xJjIxeW89MCZlPTE3OTA2MDExNzAmc3Q9VS12czVHQmhOdF9WQXJ4bHVYVzR2dw==",
+          "q": 0
+        }
+      ]
+    },
+    {
       "id": "VICETV.us",
       "name": "VICE TV",
       "country": "US",
@@ -19269,6 +22634,102 @@
         {
           "u": "https://2-fss-2.streamhoster.com/pl_118/206436-3189488-1/playlist.m3u8",
           "q": 0
+        }
+      ]
+    },
+    {
+      "id": "vijutv1000",
+      "name": "viju TV1000",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://46.53.200.153:7777/play/TV_1000/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
+      "id": "vijutv1000action",
+      "name": "viju TV1000 action",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://46.53.200.153:7777/play/a01h/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
+      "id": "vijutv1000novella",
+      "name": "viju TV1000 novella",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://46.53.200.153:7777/play/VIJU_TV_1000_novella/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "vijutv1000russkoe",
+      "name": "viju TV1000 russkoe",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://46.53.200.153:7777/play/a01g/index.m3u8",
+          "q": 576
+        }
+      ]
+    },
+    {
+      "id": "vijumegahit",
+      "name": "viju+ Megahit",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://46.53.200.153:7777/play/Viju_Megahit_HD/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "vijupremiere",
+      "name": "viju+ Premiere",
+      "country": "RU",
+      "flag": "🇷🇺",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://46.53.200.153:7777/play/Viju_Premiere/index.m3u8",
+          "q": 1080
         }
       ]
     },
@@ -19399,6 +22860,38 @@
         {
           "u": "https://aegis-cloudfront-1.tubi.video/d5171dc7-f8c6-469c-81eb-e1ffaaed5721/playlist.m3u8",
           "q": 720
+        }
+      ]
+    },
+    {
+      "id": "warnerchannel",
+      "name": "Warner Channel",
+      "country": "US",
+      "flag": "🇺🇸",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://38.134.250.110:8000/play/a029/index.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "warnertv",
+      "name": "Warner TV",
+      "country": "CZ",
+      "flag": "🇨🇿",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://88.212.15.50/live/warner_tv/index.m3u8",
+          "q": 0
         }
       ]
     },
@@ -20162,6 +23655,22 @@
       "srcs": [
         {
           "u": "https://d1ewctnvcwvvvu.cloudfront.net/playlist.m3u8",
+          "q": 1080
+        }
+      ]
+    },
+    {
+      "id": "yesmoviesaction",
+      "name": "Yes Movies Action",
+      "country": "IL",
+      "flag": "🇮🇱",
+      "cats": [
+        "movies"
+      ],
+      "logo": "",
+      "srcs": [
+        {
+          "u": "http://stream.mcquack.net/380/index.m3u8",
           "q": 1080
         }
       ]

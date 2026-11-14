@@ -26,6 +26,14 @@ import {
 import { cn } from "@/lib/utils";
 import { qualityLabel, type StreamChannel } from "@/lib/stream";
 
+/* Route streams a browser cannot fetch directly from the page (plain-http
+   mixed content, DASH manifests, redirect short-links) through the
+   same-origin /api/stream-proxy; direct HTTPS HLS stays on the CDN path. */
+function resolvePlayUrl(u: string): string {
+  if (/^https:\/\/[^/?#]+\/[^?#]*\.m3u8(\?|$)/i.test(u)) return u;
+  return `/api/stream-proxy?u=${encodeURIComponent(u)}`;
+}
+
 type PlayerStatus = "connecting" | "playing" | "error";
 
 /* Hard deadline for a source to produce its first frame before we
@@ -145,6 +153,7 @@ function PlayerEngine({
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const hlsRef = useRef<Hls | null>(null);
+  const dashRef = useRef<{ reset(): void } | null>(null);
   const recoverAttempted = useRef(false);
   const statusRef = useRef<PlayerStatus>("connecting");
 
@@ -173,6 +182,7 @@ function PlayerEngine({
     const video = videoRef.current;
     const url = channel.srcs[srcIndex]?.u;
     if (!video || !url) return;
+    const playUrl = resolvePlayUrl(url);
 
     recoverAttempted.current = false;
     statusRef.current = "connecting";
@@ -232,6 +242,10 @@ function PlayerEngine({
         hlsRef.current.destroy();
         hlsRef.current = null;
       }
+      if (dashRef.current) {
+        dashRef.current.reset();
+        dashRef.current = null;
+      }
       if (!video) return;
       video.removeEventListener("error", onVideoError);
       video.removeEventListener("playing", onPlaying);
@@ -242,6 +256,33 @@ function PlayerEngine({
     cleanup();
     video.pause();
     video.addEventListener("error", onVideoError);
+
+    if (/\.mpd($|\?)/i.test(url)) {
+      /* DASH source (dash.js) — lazily imported engine, same fallback chain:
+         fatal errors advance to the next source / healthy channel. */
+      let cancelled = false;
+      import("dashjs").then(({ default: dashjs }) => {
+        if (cancelled) return;
+        const dash = dashjs.MediaPlayer().create();
+        dashRef.current = dash;
+        dash.initialize(video, playUrl, true);
+        dash.on(dashjs.MediaPlayer.events.ERROR, () => {
+          if (statusRef.current === "playing") {
+            statusRef.current = "error";
+            setStatus("error");
+            return;
+          }
+          advanceOrError();
+        });
+      });
+      return () => {
+        cancelled = true;
+        if (dashRef.current) {
+          dashRef.current.reset();
+          dashRef.current = null;
+        }
+      };
+    }
 
     if (Hls.isSupported()) {
       const hls = new Hls({
@@ -261,7 +302,7 @@ function PlayerEngine({
         fragLoadingRetryDelay: 400,
       });
       hlsRef.current = hls;
-      hls.loadSource(url);
+      hls.loadSource(playUrl);
       hls.attachMedia(video);
       hls.on(Hls.Events.ERROR, (_evt, data) => {
         if (!data.fatal) return;
@@ -281,7 +322,7 @@ function PlayerEngine({
     } else {
       // Native HLS (Safari) or unsupported browser: assign directly.
       // Failures surface through the <video> onError handler below.
-      video.src = url;
+      video.src = playUrl;
     }
 
     video.addEventListener("playing", onPlaying);
