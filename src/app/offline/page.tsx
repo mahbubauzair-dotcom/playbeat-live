@@ -7,7 +7,7 @@ export default function OfflinePage() {
   return (
     <main className="flex min-h-svh flex-col items-center justify-center bg-[#0c0c0e] px-6 text-center">
       <div className="relative">
-        <div className="absolute inset-0 -z-10 m-auto size-40 rounded-full bg-amber-500/15 blur-3xl" />
+        <div className="absolute inset-0 -z-10 m-auto size-40 rounded-full bg-theme/15 blur-3xl" />
         <div className="grid size-20 place-items-center rounded-3xl border border-theme/20 bg-white/[0.03] shadow-2xl shadow-theme/25">
           <WifiOff className="size-9 text-theme" />
         </div>
@@ -17,7 +17,7 @@ export default function OfflinePage() {
         You&apos;re offline
       </h1>
       <p className="mt-3 max-w-md text-sm leading-relaxed text-zinc-400">
-        Playbeat TV streams live channels, so it needs a connection. Your saved
+        Playbeat Live streams live channels, so it needs a connection. Your saved
         channels and settings are safe on this device — everything will pick up
         right where you left it once you&apos;re back online.
       </p>
@@ -39,7 +39,7 @@ export default function OfflinePage() {
 
       <p className="mt-10 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-zinc-600">
         <Radio className="size-3 text-theme/60" />
-        Playbeat TV — free live television, no login
+        Playbeat Live — free live television, no login
       </p>
     </main>
   );

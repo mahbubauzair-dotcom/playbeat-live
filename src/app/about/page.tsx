@@ -7,9 +7,9 @@ import { pageMetadata, webPageJsonLd } from "@/lib/seo";
 import { JsonLd } from "@/components/stream/json-ld";
 
 export const metadata: Metadata = pageMetadata({
-  title: "About Playbeat TV — Global Live TV Directory",
+  title: "About Playbeat Live — Global Live TV Directory",
   description:
-    "Learn about Playbeat TV, its channel directory, public streaming sources and how viewers discover free-to-air television.",
+    "Learn about Playbeat Live, its channel directory, public streaming sources and how viewers discover free-to-air television.",
   path: "/about",
 });
 
@@ -17,17 +17,17 @@ export default function AboutPage() {
   return (
     <>
       <JsonLd data={webPageJsonLd({
-        path: "https://playbeattv.buzz/about",
-        name: "About Playbeat TV — Global Live TV Directory",
+        path: "https://playbeat.live/about",
+        name: "About Playbeat Live — Global Live TV Directory",
         description:
-          "Learn about Playbeat TV, its channel directory, public streaming sources and how viewers discover free-to-air television.",
+          "Learn about Playbeat Live, its channel directory, public streaming sources and how viewers discover free-to-air television.",
       })} />
       <AppShell
         view="about"
         {...shellStats()}
         about={
           <AboutSection
-            channels={catalog.meta.channels}
+            channels={catalog.channels.length}
             generatedAt={catalog.meta.generatedAt.slice(0, 10)}
           />
         }

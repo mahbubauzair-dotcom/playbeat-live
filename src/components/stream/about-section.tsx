@@ -18,15 +18,15 @@ export function AboutSection({
   return (
     <section aria-label="About and content policy" className="mx-auto max-w-3xl space-y-6 pb-6">
       <h1 className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-        About Playbeat TV
+        About Playbeat Live
       </h1>
       <div>
         <h2 className="flex items-center gap-2 text-lg font-bold text-zinc-100">
           <ScrollText className="size-5 text-theme" />
-          What is Playbeat TV?
+          What is Playbeat Live?
         </h2>
         <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-          Playbeat TV is a free, open streaming guide: a player and directory
+          Playbeat Live is a free, open streaming guide: a player and directory
           for publicly available free-to-air television. Every channel comes
           from{" "}
           <a

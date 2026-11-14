@@ -1,4 +1,4 @@
-/* Central SEO helpers for PlayBeat TV.
+/* Central SEO helpers for Playbeat Live.
  *
  * Every indexable page builds its metadata here so that titles,
  * descriptions, canonical URLs and social tags stay unique, consistent
@@ -12,9 +12,9 @@ export const SITE_URL = "https://playbeat.live";
 /** Branded Open Graph image (official logo artwork — never regenerated). */
 export const OG_IMAGE = {
   url: `${SITE_URL}/brand/logo-full.png`,
-  width: 900,
-  height: 561,
-  alt: "Playbeat TV — free live TV",
+  width: 1200,
+  height: 630,
+  alt: "Playbeat Live — free live TV",
 };
 
 interface PageSeoInput {
@@ -72,7 +72,7 @@ export function websiteJsonLd() {
     name: SITE_NAME,
     url: `${SITE_URL}/`,
     description:
-      "Discover public free-to-air TV channels worldwide on Playbeat TV. Explore live news, sports, movies, music, kids' channels and more.",
+      "Discover public free-to-air TV channels worldwide on Playbeat Live. Explore live news, sports, movies, music, kids' channels and more.",
     publisher: {
       "@type": "Organization",
       name: SITE_NAME,

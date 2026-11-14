@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import { AppShell } from "@/components/stream/app-shell";
 import { homeData, shellStats } from "@/lib/shell-data";
 import { vodHomeRails } from "@/lib/vod-catalog";
-import { pageMetadata, webPageJsonLd } from "@/lib/seo";
+import { pageMetadata, webPageJsonLd, SITE_URL } from "@/lib/seo";
+import { homeTitle, homeDescription } from "@/lib/site-seo";
 import { JsonLd } from "@/components/stream/json-ld";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Playbeat TV — Watch Free Live TV Channels, Movies & Web Series",
-  description:
-    "Stream free live TV channels worldwide plus thousands of movies, web series and dramas on Playbeat TV. News, sports, cinema — free in your browser.",
-  path: "https://playbeattv.buzz/",
+  title: homeTitle(),
+  description: homeDescription(),
+  path: `${SITE_URL}/`,
 });
 
 // Live channels + VOD rails use no-store panel fetches, which crash ISR
@@ -22,10 +22,9 @@ export default async function Home() {
   return (
     <>
       <JsonLd data={webPageJsonLd({
-        path: "https://playbeattv.buzz/",
-        name: "Playbeat TV — Watch Free Live TV Channels, Movies & Web Series",
-        description:
-          "Stream free live TV channels worldwide plus thousands of movies, web series and dramas on Playbeat TV.",
+        path: `${SITE_URL}/`,
+        name: homeTitle(),
+        description: homeDescription(),
       })} />
       <AppShell view="home" vod={vod} {...homeData()} {...shellStats()} />
     </>

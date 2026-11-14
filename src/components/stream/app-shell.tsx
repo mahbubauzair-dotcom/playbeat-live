@@ -101,7 +101,7 @@ const EXTRA_CAT_ICONS: Record<string, React.ReactNode> = {
 };
 
 /**
- * Playbeat TV storefront chrome: sticky navbar, left browse rail,
+ * Playbeat Live storefront chrome: sticky navbar, left browse rail,
  * right "All channels" rail, shared HLS player and the site footer.
  * Route-driven: each URL (/ , /live-tv , /movies … /category/[id] ,
  * /about , legal pages) renders this shell with the
@@ -580,11 +580,11 @@ export function AppShell({
           <button
             onClick={() => goView("home")}
             className="pb-header-logo flex shrink-0 items-center gap-2.5 rounded-xl px-1.5 py-1"
-            aria-label="Playbeat TV home"
+            aria-label="Playbeat Live home"
           >
             <img
               src="/brand/logo-mark.png"
-              alt="PlayBeat TV logo"
+              alt="Playbeat Live logo"
               className="size-9 rounded-xl object-cover shadow-lg shadow-theme/25 ring-1 ring-theme/30"
             />
             <span className="hidden flex-col leading-none sm:flex">
@@ -603,7 +603,7 @@ export function AppShell({
           {/* search pill */}
           <button
             onClick={() => browseTv({ focusSearch: true })}
-            className="pb-header-search ml-1 hidden h-11 min-w-0 flex-1 items-center gap-2.5 overflow-hidden rounded-2xl border border-blue-200/20 bg-white/[0.07] px-4 text-left text-sm text-slate-300 transition-all hover:border-amber-300/50 hover:bg-white/10 md:flex lg:max-w-md"
+            className="pb-header-search ml-1 hidden h-11 min-w-0 flex-1 items-center gap-2.5 overflow-hidden rounded-2xl border border-blue-200/20 bg-white/[0.07] px-4 text-left text-sm text-slate-300 transition-all hover:border-theme/50 hover:bg-white/10 md:flex lg:max-w-md"
             aria-label="Search channels, movies, series"
           >
             <Search className="size-4 shrink-0" />
@@ -810,9 +810,9 @@ export function AppShell({
       </div>
 
       {/* Cinematic brand marquee above the footer */}
-      <section className="pb-brand-stage relative isolate overflow-hidden px-4 py-11 text-center sm:py-16" aria-label="PlayBeat TV">
+      <section className="pb-brand-stage relative isolate overflow-hidden px-4 py-11 text-center sm:py-16" aria-label="Playbeat Live">
         <div className="pb-brand-halo pointer-events-none absolute inset-0" aria-hidden="true" />
-        <p className="relative z-10 text-[10px] font-bold uppercase tracking-[0.45em] text-amber-300 sm:text-xs">Your world of entertainment</p>
+        <p className="relative z-10 text-[10px] font-bold uppercase tracking-[0.45em] text-theme sm:text-xs">Your world of entertainment</p>
         <p className="pb-brand-3d relative z-10 mx-auto mt-4 w-fit max-w-full text-[clamp(2.7rem,10vw,9rem)] font-black leading-none tracking-[-0.065em]">
           PLAYBEAT <span>LIVE</span>
         </p>
@@ -820,7 +820,7 @@ export function AppShell({
       </section>
 
       {/* ============================ FOOTER ============================ */}
-      <footer className="relative mt-auto overflow-hidden border-t border-amber-400/20 bg-gradient-to-b from-[#0c1c35] via-[#0a1023] to-[#070817] pb-[env(safe-area-inset-bottom)]">
+      <footer className="relative mt-auto overflow-hidden border-t border-theme/20 bg-gradient-to-b from-[#0c1c35] via-[#0a1023] to-[#070817] pb-[env(safe-area-inset-bottom)]">
         {/* ambient accents */}
         <div
           aria-hidden
@@ -841,7 +841,7 @@ export function AppShell({
             <div className="relative flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
               <div>
                 <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.24em] text-theme/80">
-                  PlayBeat TV · Free forever
+                  Playbeat Live · Free forever
                 </p>
                 <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
                   {total.toLocaleString()}+ live channels from {countriesCount} countries.{" "}
@@ -873,16 +873,16 @@ export function AppShell({
         </div>
 
         {/* Live, continuously scrolling category announcements */}
-        <div className="pb-ticker relative border-y border-amber-300/25 bg-gradient-to-r from-indigo-950 via-[#132446] to-fuchsia-950" aria-label="Browse channel categories">
+        <div className="pb-ticker relative border-y border-theme/25 bg-gradient-to-r from-indigo-950 via-[#132446] to-fuchsia-950" aria-label="Browse channel categories">
           <div className="mx-auto flex max-w-[1600px] items-center">
-            <span className="z-10 shrink-0 border-r border-amber-300/30 bg-amber-400 px-3 py-3 text-[10px] font-extrabold uppercase tracking-[0.1em] text-slate-950 sm:px-5">Explore now</span>
+            <span className="z-10 shrink-0 border-r border-theme/30 bg-theme px-3 py-3 text-[10px] font-extrabold uppercase tracking-[0.1em] text-slate-950 sm:px-5">Explore now</span>
             <div className="pb-ticker-viewport min-w-0 flex-1 overflow-hidden py-2.5">
               <div className="pb-ticker-track flex w-max items-center gap-2 px-2">
                 {[0, 1].map((copy) => (
                   <div key={copy} className="flex shrink-0 items-center gap-2" aria-hidden={copy === 1 ? true : undefined}>
                     {[...categories].sort((a, b) => a.name.localeCompare(b.name)).map((cat) => (
-                      <Link key={cat.id} href={categoryHref(cat.id)} tabIndex={copy === 1 ? -1 : undefined} className="pb-ticker-pill whitespace-nowrap rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold text-white transition-colors hover:border-amber-300 hover:bg-amber-300/20">
-                        <span className="mr-1.5 text-amber-300">✦</span>{categoryNames[cat.id] ?? cat.name}
+                      <Link key={cat.id} href={categoryHref(cat.id)} tabIndex={copy === 1 ? -1 : undefined} className="pb-ticker-pill whitespace-nowrap rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold text-white transition-colors hover:border-theme hover:bg-theme/20">
+                        <span className="mr-1.5 text-theme">✦</span>{categoryNames[cat.id] ?? cat.name}
                       </Link>
                     ))}
                   </div>
@@ -899,7 +899,7 @@ export function AppShell({
             <Link href="/" className="inline-flex items-center gap-2">
               <img
                 src="/brand/logo-mark.png"
-                alt="PlayBeat TV logo"
+                alt="Playbeat Live logo"
                 className="size-8 rounded-lg object-cover ring-1 ring-theme/30"
               />
               <span className="text-lg font-extrabold tracking-tight">
@@ -964,13 +964,13 @@ export function AppShell({
 
           {/* compact category discovery: all category routes remain available in the ticker below */}
           <div>
-            <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-300">
+            <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-theme">
               Discover
             </h3>
             <p className="mt-4 max-w-[220px] text-xs leading-6 text-slate-300">
               Explore live channels by genre, country and interest.
             </p>
-            <Link href="/live-tv" className="mt-3 inline-flex items-center rounded-full border border-amber-400/40 bg-amber-400/10 px-3 py-1.5 text-xs font-semibold text-amber-200 transition-colors hover:bg-amber-400/20">
+            <Link href="/live-tv" className="mt-3 inline-flex items-center rounded-full border border-theme/40 bg-theme/10 px-3 py-1.5 text-xs font-semibold text-theme transition-colors hover:bg-theme/20">
               Browse all categories →
             </Link>
           </div>
@@ -1010,9 +1010,9 @@ export function AppShell({
         {/* Legal: full-width, accessible compact bar, not an extra footer column */}
         <div className="relative mx-auto w-full max-w-[1600px] border-t border-blue-200/15 px-5 py-5 sm:px-7">
           <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
-            <span className="text-xs font-bold uppercase tracking-[0.17em] text-amber-300">Legal</span>
+            <span className="text-xs font-bold uppercase tracking-[0.17em] text-theme">Legal</span>
             {[{href:"/privacy-policy", label:"Privacy Policy"},{href:"/terms",label:"Terms of Service"},{href:"/dmca",label:"DMCA & Copyright"},{href:"/content-policy",label:"Content Policy"},{href:"/about",label:"About & credits"}].map(l=> (
-              <Link key={l.href} href={l.href} className="text-sm text-slate-300 transition-colors hover:text-amber-300">{l.label}</Link>
+              <Link key={l.href} href={l.href} className="text-sm text-slate-300 transition-colors hover:text-theme">{l.label}</Link>
             ))}
           </div>
         </div>
@@ -1049,7 +1049,7 @@ export function AppShell({
             </div>
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
               <p className="text-[11px] leading-relaxed text-zinc-600">
-                © 2026 Playbeat TV · Hosts no media — a player &amp; directory for publicly
+                © 2026 Playbeat Live · Hosts no media — a player &amp; directory for publicly
                 available free-to-air streams. Not affiliated with broadcasters.
               </p>
               <p className="text-[11px] text-zinc-600">
@@ -1072,7 +1072,7 @@ export function AppShell({
           <div className="flex items-center gap-2.5 border-b border-white/5 px-4 py-4">
             <img
               src="/brand/logo-mark.png"
-              alt="PlayBeat TV logo"
+              alt="Playbeat Live logo"
               className="size-8 rounded-lg object-cover ring-1 ring-theme/30"
             />
             <span className="text-sm font-extrabold tracking-tight">

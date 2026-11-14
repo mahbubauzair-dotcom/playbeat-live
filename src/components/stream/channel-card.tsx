@@ -40,7 +40,7 @@ export const ChannelCard = memo(function ChannelCard({
     <div
       className={cn(
         "group flex h-full cursor-pointer flex-col gap-2.5 rounded-2xl border border-zinc-800/80 bg-zinc-900/60 p-3 shadow-lg shadow-black/20 transition-all duration-300",
-        "hover:-translate-y-1 hover:border-theme/40 hover:bg-zinc-900 hover:shadow-2xl hover:shadow-amber-950/30 focus-visible:outline-2 focus-visible:outline-theme"
+        "hover:-translate-y-1 hover:border-theme/40 hover:bg-zinc-900 hover:shadow-2xl hover:shadow-theme/30 focus-visible:outline-2 focus-visible:outline-theme"
       )}
     >
       <div className="relative">
@@ -100,11 +100,11 @@ export const ChannelCard = memo(function ChannelCard({
         </button>
       </div>
       <div className="min-w-0 px-0.5">
-        <Link href={`/channel/${encodeURIComponent(channel.id)}`} className="block truncate text-sm font-semibold text-zinc-100 hover:text-amber-300" title={channel.name}>
+        <Link href={`/channel/${encodeURIComponent(channel.id)}`} className="block truncate text-sm font-semibold text-zinc-100 hover:text-theme" title={channel.name}>
           {channel.flag ? `${channel.flag} ` : ""}
           {channel.name}
         </Link>
-        <button type="button" onClick={()=>onPlay(channel)} className="mt-1 inline-flex items-center gap-1 text-xs font-semibold text-amber-300 hover:text-amber-200"><Play className="size-3"/> Play now</button>
+        <button type="button" onClick={()=>onPlay(channel)} className="mt-1 inline-flex items-center gap-1 text-xs font-semibold text-theme hover:text-theme"><Play className="size-3"/> Play now</button>
         <p className="truncate text-[11px] text-zinc-500">
           {channel.cats.slice(0, 2).join(" · ") || "general"}
           {channel.srcs.length > 1 ? ` · ${channel.srcs.length} sources` : ""}

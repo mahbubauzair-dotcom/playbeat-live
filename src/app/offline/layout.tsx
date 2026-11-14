@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "You're offline — Playbeat TV",
+  title: "You're offline — Playbeat Live",
   description:
-    "Playbeat TV is unavailable right now because your device is offline.",
+    "Playbeat Live is unavailable right now because your device is offline.",
   robots: { index: false },
 };
 

@@ -1,16 +1,21 @@
 {
   "id": "/",
-  "name": "Playbeat TV — Free Live TV & Streaming",
-  "short_name": "Playbeat TV",
-  "description": "Watch 7,985+ public free-to-air TV channels free — live news, sports, movies, series and anime. No login, no tracking, powered by the open-source iptv-org index.",
+  "name": "Playbeat Live: Live TV from the USA, Canada & Mexico",
+  "short_name": "Playbeat Live",
+  "description": "Free live TV from the USA, Canada & Mexico: news, sports, music, kids and entertainment. No sign-up, in your browser.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#080F1F",
-  "theme_color": "#080F1F",
+  "background_color": "#090c13",
+  "theme_color": "#090c13",
   "lang": "en",
   "dir": "ltr",
-  "categories": ["entertainment", "news", "sports", "music"],
+  "categories": [
+    "entertainment",
+    "news",
+    "sports",
+    "music"
+  ],
   "icons": [
     {
       "src": "/icons/pwa-192.png",

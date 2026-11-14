@@ -234,7 +234,7 @@ export function StreamApp({
               variant="outline"
               className="border-theme/30 bg-theme/10 font-mono text-[11px] text-theme"
             >
-              Playbeat TV · free live television
+              Playbeat Live · free live television
             </Badge>
             <Badge
               variant="outline"

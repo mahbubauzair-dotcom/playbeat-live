@@ -1,7 +1,7 @@
 "use client";
 
 /*
- * PWA installation for Playbeat TV.
+ * PWA installation for Playbeat Live.
  *
  * - Captures the Chromium `beforeinstallprompt` event once and shares it
  *   between every Install-App button via a tiny external store.
@@ -153,7 +153,7 @@ export function PwaInstaller() {
 /* ----------------------------- InstallAppButton --------------------------- */
 
 const GOLD_BTN =
-  "inline-flex h-9 items-center gap-1.5 rounded-full bg-gradient-to-r from-[#e2b34e] to-[#b88628] font-bold text-slate-950 shadow-[0_0_16px_rgba(226,179,78,0.35)] ring-1 ring-[#e2b34e]/50 transition-all duration-200 hover:shadow-[0_0_24px_rgba(226,179,78,0.5)] hover:brightness-110 active:scale-95";
+  "inline-flex h-9 items-center gap-1.5 rounded-full bg-gradient-to-r from-[var(--theme-c)] to-[var(--site-lo)] font-bold text-[var(--site-on-accent)] shadow-[0_0_16px_var(--theme-glow)] ring-1 ring-[var(--theme-c)]/50 transition-all duration-200 hover:shadow-[0_0_24px_var(--theme-glow)] hover:brightness-110 active:scale-95";
 
 export function InstallAppButton({ variant }: { variant: "header" | "footer" }) {
   const { state, promptInstall } = useInstall();
@@ -181,8 +181,8 @@ export function InstallAppButton({ variant }: { variant: "header" | "footer" }) 
         <button
           type="button"
           onClick={onClick}
-          aria-label="Install Playbeat TV app"
-          title="Install Playbeat TV App on your phone or PC"
+          aria-label="Install Playbeat Live app"
+          title="Install Playbeat Live App on your phone or PC"
           className={cn(GOLD_BTN, "px-3.5 sm:px-4 text-xs")}
         >
           <Download className="size-4" strokeWidth={2.5} />
@@ -199,7 +199,7 @@ export function InstallAppButton({ variant }: { variant: "header" | "footer" }) 
       <button
         type="button"
         onClick={onClick}
-        aria-label="Install Playbeat TV app"
+        aria-label="Install Playbeat Live app"
         className={cn(GOLD_BTN, "px-4 py-2 text-xs")}
       >
         <Download className="size-3.5" strokeWidth={2.5} /> Install App
@@ -223,10 +223,10 @@ function IosInstallSheet({ open, onClose }: { open: boolean; onClose: () => void
 
   return createPortal(
     <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/70 backdrop-blur-sm p-4 sm:items-center">
-      <div className="w-full max-w-sm rounded-3xl border border-[#e2b34e]/40 bg-[#0c1626] p-6 shadow-2xl text-zinc-100">
+      <div className="w-full max-w-sm rounded-3xl border border-[var(--theme-c)]/40 bg-[#0c1626] p-6 shadow-2xl text-zinc-100">
         <div className="flex items-center justify-between border-b border-white/10 pb-3">
           <div className="flex items-center gap-2">
-            <Smartphone className="size-5 text-[#e2b34e]" />
+            <Smartphone className="size-5 text-[var(--theme-c)]" />
             <h3 className="text-sm font-bold text-white">Install on iPhone / iPad</h3>
           </div>
           <button onClick={onClose} className="rounded-lg p-1 text-slate-400 hover:text-white">
@@ -236,22 +236,22 @@ function IosInstallSheet({ open, onClose }: { open: boolean; onClose: () => void
 
         <ol className="mt-4 space-y-3 text-xs text-slate-300">
           <li className="flex items-center gap-2.5">
-            <span className="flex size-6 items-center justify-center rounded-full bg-[#e2b34e]/20 font-bold text-[#e2b34e]">1</span>
+            <span className="flex size-6 items-center justify-center rounded-full bg-[var(--theme-c)]/20 font-bold text-[var(--theme-c)]">1</span>
             <span>Safari browser mein bottom bar par <strong>Share</strong> icon tap karein.</span>
           </li>
           <li className="flex items-center gap-2.5">
-            <span className="flex size-6 items-center justify-center rounded-full bg-[#e2b34e]/20 font-bold text-[#e2b34e]">2</span>
+            <span className="flex size-6 items-center justify-center rounded-full bg-[var(--theme-c)]/20 font-bold text-[var(--theme-c)]">2</span>
             <span>List ko scroll kar ke <strong>Add to Home Screen</strong> select karein.</span>
           </li>
           <li className="flex items-center gap-2.5">
-            <span className="flex size-6 items-center justify-center rounded-full bg-[#e2b34e]/20 font-bold text-[#e2b34e]">3</span>
+            <span className="flex size-6 items-center justify-center rounded-full bg-[var(--theme-c)]/20 font-bold text-[var(--theme-c)]">3</span>
             <span>Top-right par <strong>Add</strong> tap karein. App install ho jayegi!</span>
           </li>
         </ol>
 
         <button
           onClick={onClose}
-          className="mt-6 w-full rounded-xl bg-[#e2b34e] py-2.5 text-xs font-bold text-slate-950"
+          className="mt-6 w-full rounded-xl bg-[var(--theme-c)] py-2.5 text-xs font-bold text-[var(--site-on-accent)]"
         >
           Got it
         </button>
@@ -274,11 +274,11 @@ function DesktopInstallModal({ open, onClose }: { open: boolean; onClose: () => 
 
   return createPortal(
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
-      <div className="w-full max-w-md rounded-3xl border border-[#e2b34e]/40 bg-[#0c1626] p-6 shadow-2xl text-zinc-100">
+      <div className="w-full max-w-md rounded-3xl border border-[var(--theme-c)]/40 bg-[#0c1626] p-6 shadow-2xl text-zinc-100">
         <div className="flex items-center justify-between border-b border-white/10 pb-3">
           <div className="flex items-center gap-2">
-            <MonitorSmartphone className="size-5 text-[#e2b34e]" />
-            <h3 className="text-sm font-bold text-white">Install PlayBeat TV App</h3>
+            <MonitorSmartphone className="size-5 text-[var(--theme-c)]" />
+            <h3 className="text-sm font-bold text-white">Install Playbeat Live App</h3>
           </div>
           <button onClick={onClose} className="rounded-lg p-1 text-slate-400 hover:text-white">
             <X className="size-4" />
@@ -286,7 +286,7 @@ function DesktopInstallModal({ open, onClose }: { open: boolean; onClose: () => 
         </div>
 
         <div className="mt-4 space-y-3 text-xs leading-relaxed text-slate-300">
-          <p>PlayBeat TV ko aap apne computer ya mobile phone par ek real standalone app ki tarah chala sakte hain:</p>
+          <p>Playbeat Live ko aap apne computer ya mobile phone par ek real standalone app ki tarah chala sakte hain:</p>
           <div className="rounded-xl border border-white/10 bg-white/5 p-3 space-y-2">
             <p className="font-semibold text-white">Chrome / Edge Browser Mein:</p>
             <p>Browser ke top address bar mein URL ke sath right side par <strong>Install (⊕ / Computer icon)</strong> nazar aayega. Us par click kar ke <strong>Install</strong> kar dein!</p>
@@ -296,7 +296,7 @@ function DesktopInstallModal({ open, onClose }: { open: boolean; onClose: () => 
 
         <button
           onClick={onClose}
-          className="mt-6 w-full rounded-xl bg-gradient-to-r from-[#e2b34e] to-[#b88628] py-2.5 text-xs font-bold text-slate-950"
+          className="mt-6 w-full rounded-xl bg-gradient-to-r from-[var(--theme-c)] to-[var(--site-lo)] py-2.5 text-xs font-bold text-[var(--site-on-accent)]"
         >
           Done
         </button>

@@ -8,7 +8,7 @@ import { pageMetadata, webPageJsonLd } from "@/lib/seo";
 import { JsonLd } from "@/components/stream/json-ld";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Free Live TV Channels by Country & Category — Playbeat TV",
+  title: "Free Live TV Channels by Country & Category — Playbeat Live",
   description:
     "Explore live television channels by country, language and category. Find available free-to-air streams and watch on supported devices.",
   path: "/live-tv",
@@ -62,7 +62,7 @@ function LiveTvIntro({ total, countriesCount }: { total: number; countriesCount:
         Browse {total.toLocaleString("en-US")} public free-to-air channels from{" "}
         {countriesCount} countries. Filter by country and category, search by
         name, and start watching instantly in your browser — no account
-        needed. Playbeat TV is a discovery guide for third-party public
+        needed. Playbeat Live is a discovery guide for third-party public
         streams; individual channel availability varies by region and time of
         day.
       </p>
@@ -102,8 +102,8 @@ export default async function LiveTvPage({ searchParams }: Props) {
   return (
     <>
       <JsonLd data={webPageJsonLd({
-        path: "https://playbeattv.buzz/live-tv",
-        name: "Free Live TV Channels by Country & Category — Playbeat TV",
+        path: "https://playbeat.live/live-tv",
+        name: "Free Live TV Channels by Country & Category — Playbeat Live",
         description:
           "Explore live television channels by country, language and category. Find available free-to-air streams and watch on supported devices.",
       })} />

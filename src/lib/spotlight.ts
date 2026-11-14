@@ -14,6 +14,8 @@ export interface HeroItem {
   focusCategory: string;
   /** Label of the primary CTA button */
   primaryLabel: string;
+  /** Promo slide (e.g. a TV drama): no channel is claimed; links to `href` */
+  promo?: { title: string; badge: string; href: string };
 }
 
 export interface HomeRow {
@@ -47,6 +49,7 @@ interface HeroDef {
   eyebrow: string;
   focusCategory: string;
   primaryLabel: string;
+  promo?: { title: string; badge: string; href: string };
 }
 
 const HERO_DEFS: HeroDef[] = [

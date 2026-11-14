@@ -32,7 +32,7 @@ function ScoreDots({ value }: { value: number }) {
           key={i}
           className={cn(
             "size-1.5 rounded-full",
-            i <= Math.round(value) ? "bg-amber-400" : "bg-zinc-700"
+            i <= Math.round(value) ? "bg-theme" : "bg-zinc-700"
           )}
         />
       ))}

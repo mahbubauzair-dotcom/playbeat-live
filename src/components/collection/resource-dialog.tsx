@@ -59,7 +59,7 @@ function ScoreRow({ label, value }: { label: string; value: number | undefined }
               key={i}
               className={cn(
                 "size-3",
-                i <= value ? "fill-amber-400 text-amber-400" : "text-zinc-700"
+                i <= value ? "fill-theme text-theme" : "text-zinc-700"
               )}
             />
           ))}
@@ -108,7 +108,7 @@ export function ResourceDialog({
               href={item.url}
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="inline-flex items-center gap-1 font-mono text-amber-400/90 underline-offset-2 hover:underline"
+              className="inline-flex items-center gap-1 font-mono text-theme/90 underline-offset-2 hover:underline"
             >
               <Globe className="size-3" />
               {hostOf(item.url)}
@@ -241,7 +241,7 @@ export function ResourceDialog({
           <Button
             size="sm"
             asChild
-            className="bg-amber-500 text-zinc-950 hover:bg-amber-400"
+            className="bg-theme text-zinc-950 hover:bg-theme"
           >
             <a href={item.url} target="_blank" rel="noopener noreferrer nofollow">
               <ExternalLink className="size-3.5" />

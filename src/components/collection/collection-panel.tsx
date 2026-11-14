@@ -187,7 +187,7 @@ export function CollectionPanel() {
           className={cn(
             "inline-flex items-center gap-1.5 rounded-md px-3.5 py-1.5 text-sm font-medium transition-colors",
             view === "all"
-              ? "bg-amber-500/15 text-amber-300"
+              ? "bg-theme/15 text-theme"
               : "text-zinc-400 hover:text-zinc-200"
           )}
         >
@@ -201,7 +201,7 @@ export function CollectionPanel() {
           className={cn(
             "inline-flex items-center gap-1.5 rounded-md px-3.5 py-1.5 text-sm font-medium transition-colors",
             view === "playlist"
-              ? "bg-amber-500/15 text-amber-300"
+              ? "bg-theme/15 text-theme"
               : "text-zinc-400 hover:text-zinc-200"
           )}
         >
@@ -229,7 +229,7 @@ export function CollectionPanel() {
             className={cn(
               "rounded-xl border p-3 text-left transition-colors",
               availability === tab.key
-                ? "border-amber-500/50 bg-amber-500/10"
+                ? "border-theme/50 bg-theme/10"
                 : "border-zinc-800 bg-zinc-900/40 hover:border-zinc-700 hover:bg-zinc-900/70"
             )}
           >
@@ -397,7 +397,7 @@ function CategoryChip({
       className={cn(
         "inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors",
         active
-          ? "border-amber-500/60 bg-amber-500/15 text-amber-300"
+          ? "border-theme/60 bg-theme/15 text-theme"
           : "border-zinc-800 bg-zinc-900/40 text-zinc-400 hover:border-zinc-700 hover:bg-zinc-900 hover:text-zinc-200"
       )}
     >
@@ -406,7 +406,7 @@ function CategoryChip({
       <span
         className={cn(
           "rounded-full px-1.5 py-px font-mono text-[10px]",
-          active ? "bg-amber-500/20 text-amber-200" : "bg-zinc-800 text-zinc-500"
+          active ? "bg-theme/20 text-theme" : "bg-zinc-800 text-zinc-500"
         )}
       >
         {count}

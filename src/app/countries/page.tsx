@@ -7,7 +7,7 @@ import { pageMetadata, webPageJsonLd } from "@/lib/seo";
 import { JsonLd } from "@/components/stream/json-ld";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Live TV Channels by Country — Playbeat TV",
+  title: "Live TV Channels by Country — Playbeat Live",
   description:
     "Browse the international television directory by country and discover available public channels from different regions.",
   path: "/countries",
@@ -18,8 +18,8 @@ export default function CountriesPage() {
   return (
     <>
       <JsonLd data={webPageJsonLd({
-        path: "https://playbeattv.buzz/countries",
-        name: "Live TV Channels by Country — Playbeat TV",
+        path: "https://playbeat.live/countries",
+        name: "Live TV Channels by Country — Playbeat Live",
         description:
           "Browse the international television directory by country and discover available public channels from different regions.",
         type: "CollectionPage",

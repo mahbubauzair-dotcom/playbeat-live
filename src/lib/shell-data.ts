@@ -8,8 +8,8 @@ export function shellStats() {
     categories: catalog.categories,
     countries: catalog.countries,
     catCounts: countByCategory(),
-    total: catalog.meta.channels,
-    countriesCount: catalog.meta.countries,
+    total: catalog.channels.length,
+    countriesCount: catalog.countries.length,
     generatedAt: catalog.meta.generatedAt.slice(0, 10),
   };
 }

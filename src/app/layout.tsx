@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "./site-theme.css";
+import { SITE } from "@/lib/site";
+import { homeTitle, homeDescription } from "@/lib/site-seo";
 import { Toaster } from "@/components/ui/toaster";
 import { SITE_NAME, SITE_URL, OG_IMAGE, websiteJsonLd } from "@/lib/seo";
 import { JsonLd } from "@/components/stream/json-ld";
@@ -11,6 +14,13 @@ const monaSans = localFont({
   src: "./fonts/mona-sans-var.woff2",
   variable: "--font-mona",
   weight: "200 900",
+  display: "swap",
+});
+
+const siteDisplay = localFont({
+  src: "./fonts/site-display.woff2",
+  variable: "--font-site-display",
+  weight: "100 900",
   display: "swap",
 });
 
@@ -25,10 +35,10 @@ const THEME_INIT = `try{var t=localStorage.getItem("pb-theme");if(t)document.doc
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — Explore Free Live TV Channels Worldwide`,
+    default: `${homeTitle()}`,
     template: `%s`,
   },
-  description: `Browse publicly listed free-to-air TV channels on ${SITE_NAME}. Explore live news, sports, music, and regional stations by country.`,
+  description: `${homeDescription()}`,
   authors: [{ name: SITE_NAME }],
   icons: {
     icon: [
@@ -49,8 +59,8 @@ export const metadata: Metadata = {
     google: "google6512a067cc9e5944",
   },
   openGraph: {
-    title: `${SITE_NAME} — Explore Free Live TV Channels Worldwide`,
-    description: `Browse publicly listed free-to-air TV channels on ${SITE_NAME}. Explore live news, sports, music, and regional stations by country.`,
+    title: `${homeTitle()}`,
+    description: `${homeDescription()}`,
     siteName: SITE_NAME,
     url: `${SITE_URL}/`,
     images: [{ url: OG_IMAGE.url, width: OG_IMAGE.width, height: OG_IMAGE.height, alt: OG_IMAGE.alt }],
@@ -58,14 +68,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — Explore Free Live TV Channels Worldwide`,
-    description: `Browse publicly listed free-to-air TV channels on ${SITE_NAME}. Explore live news, sports, music, and regional stations by country.`,
+    title: `${homeTitle()}`,
+    description: `${homeDescription()}`,
     images: [OG_IMAGE.url],
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0d1020",
+  themeColor: SITE.themeColor,
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
@@ -77,12 +87,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning data-theme="violet">
+    <html lang="en" suppressHydrationWarning data-theme="violet" data-site={SITE.id}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
       </head>
       <body
-        className={`${monaSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+        className={`${monaSans.variable} ${siteDisplay.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
         <JsonLd data={websiteJsonLd()} />
         {children}

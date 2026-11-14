@@ -4,8 +4,8 @@ import { pageMetadata, webPageJsonLd } from "@/lib/seo";
 import { JsonLd } from "@/components/stream/json-ld";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Content Sourcing & Streaming Policy — Playbeat TV",
-  description: "Understand the Playbeat TV content sourcing guidelines, excluded streams, copyright considerations and channel removal process.",
+  title: "Content Sourcing & Streaming Policy — Playbeat Live",
+  description: "Understand the Playbeat Live content sourcing guidelines, excluded streams, copyright considerations and channel removal process.",
   path: "/content-policy",
 });
 
@@ -13,14 +13,14 @@ export default function ContentPolicyPage() {
   return (
     <>
       <JsonLd data={webPageJsonLd({
-        path: `https://playbeattv.buzz/content-policy`,
-        name: "Content Sourcing & Streaming Policy — Playbeat TV",
-        description: "Understand the Playbeat TV content sourcing guidelines, excluded streams, copyright considerations and channel removal process.",
+        path: `https://playbeat.live/content-policy`,
+        name: "Content Sourcing & Streaming Policy — Playbeat Live",
+        description: "Understand the Playbeat Live content sourcing guidelines, excluded streams, copyright considerations and channel removal process.",
       })} />
       <LegalPage title="Content Policy">
       <LegalSection title="One sourcing principle">
         <p>
-          Every channel on PlayBeat TV comes from a single, auditable source:
+          Every channel on Playbeat Live comes from a single, auditable source:
           the open-source{" "}
           <a
             href="https://github.com/iptv-org/iptv"
@@ -33,7 +33,7 @@ export default function ContentPolicyPage() {
           index of publicly available, free-to-air television channels. No
           exceptions, no &quot;grey area&quot; additions. If a stream is not
           published there as freely and publicly available, it is not on
-          PlayBeat TV.
+          Playbeat Live.
         </p>
       </LegalSection>
 
@@ -64,7 +64,7 @@ export default function ContentPolicyPage() {
             pirated re-hosts, illegal IPTV resellers and streaming sites: the
             research catalog this project grew out of flags roughly 76% of its
             own listings as high copyright risk, and every one of those
-            listings is excluded from PlayBeat TV;
+            listings is excluded from Playbeat Live;
           </li>
           <li>
             adult/NSFW content, and streams the upstream index has blocked or
@@ -80,7 +80,7 @@ export default function ContentPolicyPage() {
       <LegalSection title="No media hosting, ever">
         <p>
           We do not download, copy, store or re-transmit video. There is no
-          PlayBeat TV server holding content — the player in your browser
+          Playbeat Live server holding content — the player in your browser
           streams directly from each broadcaster&apos;s public servers. This
           is a structural choice, not just a policy: there is nothing on our
           infrastructure to take down except directory entries.
@@ -119,7 +119,7 @@ export default function ContentPolicyPage() {
           >
             iptv-org issue tracker
           </a>
-          . Entries blocked upstream disappear from PlayBeat TV on the next
+          . Entries blocked upstream disappear from Playbeat Live on the next
           data rebuild.
         </p>
       </LegalSection>

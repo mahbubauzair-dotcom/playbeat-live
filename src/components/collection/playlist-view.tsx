@@ -79,7 +79,7 @@ function PlaylistRow({
             href={item.url}
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="truncate text-sm font-medium text-zinc-100 hover:text-amber-400"
+            className="truncate text-sm font-medium text-zinc-100 hover:text-theme"
           >
             {displayName}
           </a>
@@ -170,11 +170,11 @@ export function PlaylistView() {
   return (
     <section className="flex-1" aria-label="Safe playlist">
       {/* Criteria banner */}
-      <div className="rounded-xl border border-amber-500/25 bg-amber-500/5 p-4">
+      <div className="rounded-xl border border-theme/25 bg-theme/5 p-4">
         <div className="flex items-start gap-3">
-          <Info className="mt-0.5 size-4 shrink-0 text-amber-400" />
+          <Info className="mt-0.5 size-4 shrink-0 text-theme" />
           <div className="space-y-1.5 text-sm leading-relaxed text-zinc-300">
-            <p className="font-medium text-amber-300">Safe playlist inclusion criteria</p>
+            <p className="font-medium text-theme">Safe playlist inclusion criteria</p>
             <p className="text-zinc-400">
               Important: <span className="text-rose-300">every online streaming site in this
               repository is flagged as high copyright risk by the maintainer itself</span>, so
@@ -254,7 +254,7 @@ export function PlaylistView() {
             >
               <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 border-b border-zinc-800 bg-zinc-900/60 px-4 py-3">
                 <h3 className="flex items-center gap-2 text-sm font-semibold text-zinc-100">
-                  <ListMusic className="size-4 text-amber-400" />
+                  <ListMusic className="size-4 text-theme" />
                   {group.label}
                   <span className="font-mono text-xs text-zinc-500">{group.items.length}</span>
                 </h3>

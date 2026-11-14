@@ -18,7 +18,7 @@ export function LegalPage({
     <AppShell view="legal" {...shellStats()}>
       <article className="mx-auto max-w-3xl px-3 py-6 pb-12 sm:px-5">
         <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.24em] text-theme/80">
-          PlayBeat TV · Legal
+          Playbeat Live · Legal
         </p>
         <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
           {title}

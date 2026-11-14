@@ -194,7 +194,7 @@ export function CategoryView({
               visible in the initial HTML for crawlers and no-JS visitors */}
           {featured && featured.featured.length > 0 && (
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-zinc-300/85">
-              Popular {catName} channels on Playbeat TV include{" "}
+              Popular {catName} channels on Playbeat Live include{" "}
               <span className="text-zinc-100">
                 {featured.featured.slice(0, 10).map((f) => f.name).join(", ")}
               </span>

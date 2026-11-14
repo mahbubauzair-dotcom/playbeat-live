@@ -4,8 +4,8 @@ import { pageMetadata, webPageJsonLd } from "@/lib/seo";
 import { JsonLd } from "@/components/stream/json-ld";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Terms of Service — Playbeat TV",
-  description: "Review the Playbeat TV Terms of Service, acceptable-use conditions, third-party broadcasting policies and service limitations.",
+  title: "Terms of Service — Playbeat Live",
+  description: "Review the Playbeat Live Terms of Service, acceptable-use conditions, third-party broadcasting policies and service limitations.",
   path: "/terms",
 });
 
@@ -13,14 +13,14 @@ export default function TermsPage() {
   return (
     <>
       <JsonLd data={webPageJsonLd({
-        path: `https://playbeattv.buzz/terms`,
-        name: "Terms of Service — Playbeat TV",
-        description: "Review the Playbeat TV Terms of Service, acceptable-use conditions, third-party broadcasting policies and service limitations.",
+        path: `https://playbeat.live/terms`,
+        name: "Terms of Service — Playbeat Live",
+        description: "Review the Playbeat Live Terms of Service, acceptable-use conditions, third-party broadcasting policies and service limitations.",
       })} />
       <LegalPage title="Terms of Service">
       <LegalSection title="1. Acceptance">
         <p>
-          By accessing or using PlayBeat TV (the &quot;Service&quot;), you
+          By accessing or using Playbeat Live (the &quot;Service&quot;), you
           agree to these Terms of Service. If you do not agree with any part
           of them, please do not use the Service. The Service is provided free
           of charge, requires no account, and is intended for personal,
@@ -30,7 +30,7 @@ export default function TermsPage() {
 
       <LegalSection title="2. What the Service is">
         <p>
-          PlayBeat TV is a searchable directory and player front-end for
+          Playbeat Live is a searchable directory and player front-end for
           publicly available, free-to-air television channels indexed by the
           open-source{" "}
           <a

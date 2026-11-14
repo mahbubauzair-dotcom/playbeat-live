@@ -29,9 +29,9 @@ export const AVAILABILITY_META: Record<
   },
   restricted: {
     label: "Restricted",
-    dot: "bg-amber-400",
+    dot: "bg-theme",
     badgeCls:
-      "border-amber-500/30 bg-amber-500/10 text-amber-300 hover:bg-amber-500/15",
+      "border-theme/30 bg-theme/10 text-theme hover:bg-theme/15",
     icon: <ShieldAlert className="size-3" />,
   },
   unreachable: {
@@ -74,7 +74,7 @@ export const RISK_META: Record<RiskLevel, { label: string; badgeCls: string }> =
   },
   medium: {
     label: "Medium risk",
-    badgeCls: "border-amber-500/30 bg-amber-500/10 text-amber-300 hover:bg-amber-500/15",
+    badgeCls: "border-theme/30 bg-theme/10 text-theme hover:bg-theme/15",
   },
   low: {
     label: "Low risk",
@@ -111,7 +111,7 @@ export const VERIFICATION_META: Record<
   },
   caution: {
     label: "Use with caution",
-    badgeCls: "border-amber-500/30 bg-amber-500/10 text-amber-300 hover:bg-amber-500/15",
+    badgeCls: "border-theme/30 bg-theme/10 text-theme hover:bg-theme/15",
     icon: <AlertTriangle className="size-3" />,
   },
   removed: {
@@ -136,7 +136,7 @@ export function VerificationBadge({ status }: { status: VerificationStatus }) {
 export function FeaturedStar({ className }: { className?: string }) {
   return (
     <Star
-      className={cn("size-3.5 fill-amber-400 text-amber-400", className)}
+      className={cn("size-3.5 fill-theme text-theme", className)}
       aria-label="Featured"
     />
   );

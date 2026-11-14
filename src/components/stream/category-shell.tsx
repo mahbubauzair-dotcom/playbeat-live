@@ -57,7 +57,7 @@ export function CategoryShell({ categoryId }: { categoryId: string }) {
     <>
       <JsonLd
         data={webPageJsonLd({
-          path: `https://playbeattv.buzz${path}`,
+          path: `https://playbeat.live${path}`,
           name: title,
           description,
           type: "CollectionPage",
@@ -88,13 +88,13 @@ function categoryCanonicalPath(id: string): string {
    headline categories get hand-written titles, everything else follows a
    unique-by-construction pattern (`${name}` is unique per category). */
 const SEO_TITLES: Record<string, string> = {
-  movies: "Free Movie TV Channels & Cinema — Playbeat TV",
-  series: "Live Drama & TV Series Channels — Playbeat TV",
-  sports: "Live Sports TV Channels Worldwide — Playbeat TV",
-  news: "Live International News TV Channels — Playbeat TV",
-  music: "Music TV Channels & Live Entertainment — Playbeat TV",
-  kids: "Kids TV Channels & Cartoons — Playbeat TV",
-  documentary: "Documentary & Science TV Channels — Playbeat TV",
+  movies: "Free Movie TV Channels & Cinema — Playbeat Live",
+  series: "Live Drama & TV Series Channels — Playbeat Live",
+  sports: "Live Sports TV Channels Worldwide — Playbeat Live",
+  news: "Live International News TV Channels — Playbeat Live",
+  music: "Music TV Channels & Live Entertainment — Playbeat Live",
+  kids: "Kids TV Channels & Cartoons — Playbeat Live",
+  documentary: "Documentary & Science TV Channels — Playbeat Live",
 };
 
 /* Meta descriptions for the headline categories (on-page blurbs stay
@@ -119,10 +119,10 @@ function categorySeo(categoryId: string): {
   const name = categoryName(categoryId);
   const meta = categoryPageMeta(categoryId);
   const title =
-    SEO_TITLES[categoryId] ?? `${name} TV Channels — Live & Free — Playbeat TV`;
+    SEO_TITLES[categoryId] ?? `${name} TV Channels — Live & Free — Playbeat Live`;
   const description =
     SEO_DESCRIPTIONS[categoryId] ??
     meta?.blurb ??
-    `Watch ${name} channels live and free on PlayBeat TV — no login, no tracking.`;
+    `Watch ${name} channels live and free on Playbeat Live — no login, no tracking.`;
   return { title, description, path: categoryCanonicalPath(categoryId) };
 }

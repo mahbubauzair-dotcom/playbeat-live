@@ -1,0 +1,118 @@
+/* =====================================================================
+   Playbeat network: four distinct design systems, selected by
+   <html data-site="live|asia|arena|digital">.  Loaded AFTER globals.css.
+   Each site differs in: palette, display typeface, corner shape,
+   background texture, header treatment, hero grading and button finish.
+   ===================================================================== */
+
+/* ---------- shared plumbing ---------- */
+html[data-site] .font-display { font-family: var(--font-site-display), var(--font-mona), ui-sans-serif, system-ui, sans-serif; }
+html[data-site] body { background-image: var(--site-bg); background-attachment: fixed; background-repeat: repeat; }
+html[data-site] .pb-header {
+  background: color-mix(in srgb, var(--surface-1) 90%, transparent) !important;
+  border-color: var(--site-line) !important;
+  backdrop-filter: blur(16px) saturate(140%);
+}
+/* hero artwork graded to the site palette (the 5-6 slides keep their own art) */
+html[data-site] [class*="min-h-[440px]"] > div[aria-hidden="true"] img { filter: var(--site-hero-filter); }
+html[data-site] [class*="min-h-[440px]"] { border-color: var(--site-line) !important; box-shadow: var(--site-hero-shadow); }
+/* the hard-coded gold finishes follow the site accent instead */
+html[data-site] .pb-gold-text { background: linear-gradient(115deg, var(--site-hi), var(--theme-c) 62%, var(--site-lo)); background-clip: text; -webkit-background-clip: text; color: transparent; }
+html[data-site] .pb-gold-button { background: linear-gradient(120deg, var(--site-hi), var(--theme-c) 52%, var(--site-lo)); color: var(--site-on-accent); box-shadow: 0 8px 28px var(--theme-glow), inset 0 1px 0 rgba(255,255,255,.35); }
+html[data-site] ::selection { background: color-mix(in srgb, var(--theme-c) 45%, transparent); color: #fff; }
+html[data-site] a:focus-visible, html[data-site] button:focus-visible { outline: 2px solid var(--theme-c); outline-offset: 3px; }
+
+/* =====================================================================
+   LIVE: "Newsroom". Ink-blue black, signal red, cream; Archivo; tight corners
+   ===================================================================== */
+html[data-site="live"] {
+  --canvas: #090c13; --surface-1: #10141d; --surface-2: #171c28; --surface-3: #212838;
+  --ink-2: #f3f0e9c4; --ink-3: #d0d4de; --ink-4: #9aa2b6;
+  --theme-c: #ff3b47; --theme-glow: rgba(255, 59, 71, .42);
+  --site-hi: #ffb3b8; --site-lo: #b01f2b; --site-on-accent: #ffffff;
+  --site-line: rgba(255, 255, 255, .11);
+  --radius: .5rem; --radius-xl: .625rem; --radius-2xl: .75rem; --radius-3xl: .875rem;
+  --site-bg:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.022) 0 1px, transparent 1px 4px),
+    radial-gradient(900px 480px at 10% -8%, rgba(255,59,71,.15), transparent 62%),
+    radial-gradient(700px 420px at 100% 0%, rgba(90,120,255,.08), transparent 60%);
+  --site-hero-filter: grayscale(.6) contrast(1.1) brightness(.88);
+  --site-hero-shadow: 0 24px 60px -24px rgba(0,0,0,.8), 0 0 0 1px rgba(255,59,71,.28);
+}
+html[data-site="live"] .font-display { font-weight: 800; letter-spacing: -0.025em; }
+html[data-site="live"] h2.font-display { border-left: 4px solid var(--theme-c); padding-left: .75rem; }
+html[data-site="live"] .pb-header { border-bottom: 2px solid var(--theme-c) !important; }
+
+/* =====================================================================
+   ASIA: "Stadium Spice". Espresso black, saffron + emerald; Big Shoulders; uppercase
+   ===================================================================== */
+html[data-site="asia"] {
+  --canvas: #0d0905; --surface-1: #17100a; --surface-2: #22170e;
+  --surface-3: #33220f;
+  --ink-2: #fff4e5c4; --ink-3: #e6d6c2; --ink-4: #b39d84;
+  --theme-c: #ff9a1f; --theme-glow: rgba(255, 154, 31, .42);
+  --site-hi: #ffe2a8; --site-lo: #c0620a; --site-on-accent: #1d0f00;
+  --site-line: rgba(255, 190, 110, .16);
+  --radius: .625rem; --radius-xl: .75rem; --radius-2xl: 1rem; --radius-3xl: 1.25rem;
+  --site-bg:
+    repeating-linear-gradient(135deg, rgba(255,154,31,.04) 0 2px, transparent 2px 16px),
+    radial-gradient(900px 520px at 85% -10%, rgba(255,154,31,.20), transparent 60%),
+    radial-gradient(800px 500px at 0% 105%, rgba(25,195,125,.12), transparent 60%);
+  --site-hero-filter: sepia(.55) saturate(1.5) hue-rotate(-12deg) brightness(.92);
+  --site-hero-shadow: 0 24px 60px -24px rgba(0,0,0,.85), 0 0 0 1px rgba(255,154,31,.30);
+}
+html[data-site="asia"] .font-display { text-transform: uppercase; font-weight: 800; letter-spacing: .005em; line-height: .98; }
+html[data-site="asia"] h1.font-display { font-size: clamp(2.6rem, 7vw, 5.6rem) !important; }
+html[data-site="asia"] .pb-header { border-bottom: 3px solid transparent !important; border-image: linear-gradient(90deg, #ff9a1f, #f7f0e2 50%, #19c37d) 1 !important; }
+
+/* =====================================================================
+   ARENA: "Neon Arena". Midnight navy, electric cyan + lime; Unbounded; sharp edges
+   ===================================================================== */
+html[data-site="arena"] {
+  --canvas: #04060d; --surface-1: #0a1022; --surface-2: #101a36; --surface-3: #192853;
+  --ink-2: #eaf6ffc4; --ink-3: #c3d4ea; --ink-4: #8ea3c4;
+  --theme-c: #22d3ee; --theme-glow: rgba(34, 211, 238, .45);
+  --site-hi: #b9f6ff; --site-lo: #0a8fa8; --site-on-accent: #00161c;
+  --site-line: rgba(34, 211, 238, .20);
+  --radius: .25rem; --radius-xl: .375rem; --radius-2xl: .5rem; --radius-3xl: .625rem;
+  --site-bg:
+    linear-gradient(rgba(34,211,238,.045) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(90deg, rgba(34,211,238,.045) 1px, transparent 1px) 0 0 / 48px 48px,
+    radial-gradient(900px 520px at 15% -10%, rgba(34,211,238,.20), transparent 60%),
+    radial-gradient(700px 420px at 100% 100%, rgba(182,255,59,.10), transparent 60%);
+  --site-hero-filter: hue-rotate(-62deg) saturate(1.35) brightness(.95) contrast(1.08);
+  --site-hero-shadow: 0 0 0 1px rgba(34,211,238,.45), 0 0 46px -8px rgba(34,211,238,.35);
+}
+html[data-site="arena"] .font-display { text-transform: uppercase; font-weight: 700; letter-spacing: 0; }
+html[data-site="arena"] h1.font-display { font-size: clamp(1.9rem, 4.6vw, 4.1rem) !important; line-height: 1.08 !important; }
+html[data-site="arena"] h2.font-display { font-size: clamp(1.25rem, 2.4vw, 1.9rem) !important; }
+html[data-site="arena"] .pb-header { border-bottom: 1px solid rgba(34,211,238,.45) !important; box-shadow: 0 6px 30px -12px rgba(34,211,238,.35); }
+
+/* =====================================================================
+   DIGITAL: "Golden Mosaic". Deep teal black, gold + mint; Playfair Display; geometric star pattern
+   ===================================================================== */
+html[data-site="digital"] {
+  --canvas: #061210; --surface-1: #0b1d1a; --surface-2: #112a26; --surface-3: #1a3c36;
+  --ink-2: #fdf6e3c4; --ink-3: #e3dcc6; --ink-4: #a9b3a4;
+  --theme-c: #e8b94a; --theme-glow: rgba(232, 185, 74, .40);
+  --site-hi: #fff0bf; --site-lo: #b5811d; --site-on-accent: #1c1300;
+  --site-line: rgba(232, 185, 74, .20);
+  --radius: 1rem; --radius-xl: 1.25rem; --radius-2xl: 1.5rem; --radius-3xl: 2rem;
+  --site-star: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'><g fill='none' stroke='%23e8b94a' stroke-opacity='.06' stroke-width='1'><rect x='20' y='20' width='32' height='32'/><rect x='20' y='20' width='32' height='32' transform='rotate(45 36 36)'/><circle cx='36' cy='36' r='8'/></g></svg>");
+  --site-bg:
+    var(--site-star),
+    radial-gradient(900px 520px at 50% -12%, rgba(232,185,74,.18), transparent 62%),
+    radial-gradient(800px 500px at 0% 100%, rgba(61,214,176,.12), transparent 60%);
+  --site-hero-filter: hue-rotate(-150deg) saturate(.9) sepia(.35) brightness(.92);
+  --site-hero-shadow: 0 24px 60px -24px rgba(0,0,0,.85), 0 0 0 1px rgba(232,185,74,.34);
+}
+html[data-site="digital"] .font-display { font-weight: 800; letter-spacing: -0.01em; }
+html[data-site="digital"] .pb-header { border-bottom: 1px solid rgba(232,185,74,.45) !important; }
+
+/* ---------- the legacy navy wrapper/footer must not hide the palette ---------- */
+html[data-site] .pb-shell { background-color: transparent !important; }
+html[data-site] footer { background: linear-gradient(180deg, var(--surface-1), var(--canvas) 85%) !important; border-color: var(--site-line) !important; }
+html[data-site] .pb-home .pb-install {
+  background: radial-gradient(ellipse at 0 100%, color-mix(in srgb, var(--theme-c) 22%, transparent), transparent 52%), linear-gradient(105deg, var(--surface-2), var(--surface-1) 75%, var(--surface-3));
+  box-shadow: 0 0 26px var(--theme-glow);
+}

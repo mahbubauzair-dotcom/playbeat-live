@@ -45,6 +45,7 @@ import {
   type StreamChannel,
 } from "@/lib/stream";
 import type { CountryChip, HeroItem, HomeRow } from "@/lib/spotlight";
+import { HeroThumbs, PromoPill, SpotlightBand } from "./home-extras";
 import type { VodHomeData } from "@/lib/vod-catalog";
 import { VodRails } from "./vod-rails";
 import { AdSlot } from "./ad-slot";
@@ -181,6 +182,7 @@ export function HomeView({
   }, [prefersReducedMotion]);
 
   const current = hero[active];
+  const heroReal = hero.some((h) => !h.promo) ? hero.filter((h) => !h.promo) : hero;
   const fav = current ? isFavorite(current.channel.id) : false;
 
   const chipCategories = useMemo(() => {
@@ -275,7 +277,9 @@ export function HomeView({
               {current.description}
             </p>
 
-            {/* now streaming — real playable channel from the catalog */}
+            {current.promo ? (
+              <PromoPill promo={current.promo} />
+            ) : (
             <button
               onClick={() => onPlay(current.channel)}
               className="group/ch mt-4 inline-flex max-w-fit items-center gap-2 rounded-full border border-white/10 bg-black/30 px-3.5 py-1.5 text-left backdrop-blur transition-colors hover:border-theme/50"
@@ -289,13 +293,15 @@ export function HomeView({
                 · {current.channel.srcs.length} source
                 {current.channel.srcs.length === 1 ? "" : "s"}
               </span>
-            </button>
+            </button>)}
 
             {/* actions */}
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <button
                 onClick={() =>
-                  current.focusCategory === "all"
+                  current.promo
+                    ? window.location.assign(current.promo.href)
+                    : current.focusCategory === "all"
                     ? onBrowseAll()
                     : onBrowseCategory(current.focusCategory)
                 }
@@ -313,7 +319,9 @@ export function HomeView({
                 Browse by country
               </button>
 
-              <Popover>
+              {!current.promo && (
+              <>
+<Popover>
                 <PopoverTrigger asChild>
                   <button
                     aria-label="View channel details"
@@ -353,7 +361,11 @@ export function HomeView({
               >
                 <Heart className={cn("size-4.5", fav && "fill-theme")} />
               </button>
+              </>
+            )}
             </div>
+
+            <HeroThumbs hero={hero} active={active} go={go} />
 
             {/* bottom bar: dots left, counter + arrows right */}
             <div className="mt-9 flex items-center justify-between gap-4">
@@ -414,11 +426,11 @@ export function HomeView({
 
       {/* ====================== SSR INTRO (crawlable) ====================== */}
       <section
-        aria-label="About Playbeat TV"
+        aria-label="About Playbeat Live"
         className="mx-auto mt-8 w-full max-w-[1400px] px-3 sm:px-5"
       >
         <p className="max-w-3xl text-sm leading-relaxed text-zinc-400">
-          Playbeat TV is a free streaming guide to {total.toLocaleString("en-US")}+ public
+          Playbeat Live is a free streaming guide to {total.toLocaleString("en-US")}+ public
           free-to-air television channels from {countriesCount} countries — live
           news, sports, movies, series, music, kids and documentary channels,
           organised by country and category. No account, no fees: pick a
@@ -446,7 +458,7 @@ export function HomeView({
         >
           <div>
             <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.24em] text-theme">
-              Playbeat TV · Live &amp; 24/7
+              Playbeat Live · Live &amp; 24/7
             </p>
             <h2 className="font-display mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
               Your world.{" "}
@@ -468,12 +480,12 @@ export function HomeView({
         <section aria-label="Channel spotlight" className="mt-6">
           <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_340px]">
             <SpotlightCard
-              channel={hero[0].channel}
+              channel={heroReal[0].channel}
               categories={categories}
               onPlay={onPlay}
             />
             <ChannelSpotlightCard
-              channel={hero[1] ? hero[1].channel : hero[0].channel}
+              channel={heroReal[1] ? heroReal[1].channel : heroReal[0].channel}
               categories={categories}
               onPlay={onPlay}
               isFavorite={isFavorite}
@@ -578,6 +590,15 @@ export function HomeView({
             }
           />
         ))}
+
+        <SpotlightBand
+          channels={popular[0]?.channels ?? rows[0]?.channels ?? []}
+          backdrops={hero.map((h) => h.backdrop)}
+          categories={categories}
+          onPlay={onPlay}
+          isFavorite={isFavorite}
+          onToggleFavorite={onToggleFavorite}
+        />
 
         {/* ==================== CINEMA DISCOVERY TILES ==================== */}
         <CinemaTiles onBrowseCategory={onBrowseCategory} />
@@ -1121,7 +1142,7 @@ function PersonalRails({
         <ContentRow
           row={{
             id: "home-recents",
-            title: "Recently Watched",
+            title: "Continue Watching",
             subtitle: "Pick up where you left off.",
             variant: "poster",
             hue: "from-surface-2 via-surface-1 to-canvas",
@@ -1192,7 +1213,7 @@ function SpotlightCard({
           <p className="font-mono text-[9px] font-semibold uppercase tracking-[0.24em] text-zinc-500">
             In the spotlight
           </p>
-          <h3 className="font-display mt-1 truncate text-xl font-extrabold tracking-tight text-white sm:text-2xl"><Link href={`/channel/${encodeURIComponent(channel.id)}`} className="hover:text-amber-300">{channel.name}</Link></h3>
+          <h3 className="font-display mt-1 truncate text-xl font-extrabold tracking-tight text-white sm:text-2xl"><Link href={`/channel/${encodeURIComponent(channel.id)}`} className="hover:text-theme">{channel.name}</Link></h3>
           <p className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-500">
             {channel.country || "INT"} ·{" "}
             {channel.cats[0]
@@ -1642,7 +1663,7 @@ export const PosterCard = memo(function PosterCard({
       </div>
 
       <div className="mt-2.5 px-0.5">
-        <Link href={`/channel/${encodeURIComponent(channel.id)}`} className="block truncate text-[14px] font-semibold text-slate-100 hover:text-amber-300" title={channel.name}>
+        <Link href={`/channel/${encodeURIComponent(channel.id)}`} className="block truncate text-[14px] font-semibold text-slate-100 hover:text-theme" title={channel.name}>
           {channel.flag ? `${channel.flag} ` : ""}
           {channel.name}
         </Link>
@@ -1732,7 +1753,7 @@ const WideCard = memo(function WideCard({
       </div>
 
       <div className="mt-2.5 px-0.5">
-        <Link href={`/channel/${encodeURIComponent(channel.id)}`} className="block truncate text-[14px] font-semibold text-slate-100 hover:text-amber-300" title={channel.name}>
+        <Link href={`/channel/${encodeURIComponent(channel.id)}`} className="block truncate text-[14px] font-semibold text-slate-100 hover:text-theme" title={channel.name}>
           {channel.flag ? `${channel.flag} ` : ""}
           {channel.name}
         </Link>

@@ -4,8 +4,8 @@ import { pageMetadata, webPageJsonLd } from "@/lib/seo";
 import { JsonLd } from "@/components/stream/json-ld";
 
 export const metadata: Metadata = pageMetadata({
-  title: "DMCA & Copyright Policy — Playbeat TV",
-  description: "Learn how copyright owners can report concerns about television channels listed in the Playbeat TV directory.",
+  title: "DMCA & Copyright Policy — Playbeat Live",
+  description: "Learn how copyright owners can report concerns about television channels listed in the Playbeat Live directory.",
   path: "/dmca",
 });
 
@@ -13,14 +13,14 @@ export default function DmcaPage() {
   return (
     <>
       <JsonLd data={webPageJsonLd({
-        path: `https://playbeattv.buzz/dmca`,
-        name: "DMCA & Copyright Policy — Playbeat TV",
-        description: "Learn how copyright owners can report concerns about television channels listed in the Playbeat TV directory.",
+        path: `https://playbeat.live/dmca`,
+        name: "DMCA & Copyright Policy — Playbeat Live",
+        description: "Learn how copyright owners can report concerns about television channels listed in the Playbeat Live directory.",
       })} />
       <LegalPage title="DMCA &amp; Copyright Policy">
       <LegalSection title="Our role">
         <p>
-          PlayBeat TV is a directory and player — not a host. We do not
+          Playbeat Live is a directory and player — not a host. We do not
           upload, store, cache, transcode or re-transmit any video or audio.
           Every channel listed here is a publicly available, free-to-air
           stream indexed by the open-source{" "}
@@ -42,7 +42,7 @@ export default function DmcaPage() {
       <LegalSection title="How to report infringement">
         <p>
           If you are a rights holder (or an authorized agent) and believe a
-          channel indexed by PlayBeat TV infringes your copyright, send a
+          channel indexed by Playbeat Live infringes your copyright, send a
           notice to{" "}
           <a
             href={`mailto:${LEGAL_CONTACT_EMAIL}?subject=DMCA%20takedown%20request`}
@@ -59,7 +59,7 @@ export default function DmcaPage() {
             infringed;
           </li>
           <li>
-            the exact channel name as shown on PlayBeat TV, and the page URL
+            the exact channel name as shown on Playbeat Live, and the page URL
             or deep link where it appears (for example{" "}
             <code className="rounded bg-zinc-800 px-1.5 py-0.5 font-mono text-xs text-zinc-300">
               /live-tv#watch=&lt;channel-id&gt;
@@ -90,7 +90,7 @@ export default function DmcaPage() {
       <LegalSection title="What we will do">
         <p>
           For valid, complete notices we will remove or disable the reported
-          channel from the PlayBeat TV catalog, normally within{" "}
+          channel from the Playbeat Live catalog, normally within{" "}
           <strong className="text-zinc-300">five business days</strong> of
           receipt. Because our catalog is generated data, removal also flows
           into every subsequent rebuild so the channel does not silently

@@ -17,7 +17,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const valid = catalog.categories.some((c) => c.id === id);
-  if (!valid) return { title: "Category not found — PlayBeat TV" };
+  if (!valid) return { title: "Category not found — Playbeat Live" };
   return categoryMetadata(id);
 }
 
